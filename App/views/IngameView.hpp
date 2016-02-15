@@ -8,12 +8,13 @@
 
 #include "IView.hpp"
 
-class IngameView  : public IView{
+class IngameView : public IView {
 public:
     IngameView();
+
     ~IngameView();
 
-    virtual  void render(sf::RenderWindow & window) const;
+    virtual void render(sf::RenderWindow &window) const;
 
 };
 

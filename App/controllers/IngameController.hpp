@@ -12,21 +12,25 @@ class IngameController : public IController {
 public:
 
     IngameController();
+
     ~IngameController();
 
-    virtual void handleInputs(sf::Event & event);
-    virtual void update(sf::Time deltaTime = sf::Time::Zero);
-    virtual void render(sf::RenderWindow& window);
+    virtual void handleInputs(sf::Event &event);
 
-    virtual void setSubController(IController* newSubController);
+    virtual void update(sf::Time deltaTime = sf::Time::Zero);
+
+    virtual void render(sf::RenderWindow &window);
+
+    virtual void setSubController(IController *newSubController);
 
     virtual void onClose();
 
 
 private:
-    IController * subController;
+    IController *subController;
 
     bool subControllerExist() const;
+
     bool viewExist() const;
 };
 

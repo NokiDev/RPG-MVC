@@ -15,28 +15,30 @@
  * */
 class IController {
 public:
-    virtual ~IController(){};
+    virtual ~IController() { };
 
     /*
      * @brief behaviour to adopt for all window events (key pressed, key released, window resized, window closed etc...)
      * @params sf::Event, the event to handle
      */
-    virtual void handleInputs(sf::Event& event)=0;
+    virtual void handleInputs(sf::Event &event) = 0;
+
     /*
      * @brief update all components of the controllers
      * @params sf::Time, time between two frames or default zero
      */
-    virtual void update(sf::Time deltaTime = sf::Time::Zero)=0;
+    virtual void update(sf::Time deltaTime = sf::Time::Zero) = 0;
+
     /*
      * @brief render the view attached to the controller
      * @params sf::RenderWindow, window to render on
      */
-    virtual void render(sf::RenderWindow & window)=0;
+    virtual void render(sf::RenderWindow &window) = 0;
 
     virtual void onClose() = 0;
 
 protected:
-    const IView* view;
+    const IView *view;
 };
 
 

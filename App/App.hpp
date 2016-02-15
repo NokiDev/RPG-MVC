@@ -11,14 +11,15 @@
 class App {
 public:
     App();
+
     ~App();
 
     void run();
 
-    void setMainController(IController* newMainController);
+    void setMainController(IController *newMainController);
 
 private:
-    IController * currentMainController;
+    IController *currentMainController;
     sf::RenderWindow window;
     sf::Event event;
     bool running;

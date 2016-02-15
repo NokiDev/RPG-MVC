@@ -15,19 +15,18 @@ IngameController::~IngameController() {
 }
 
 void IngameController::handleInputs(sf::Event &event) {
-    if(subControllerExist())
+    if (subControllerExist())
         subController->handleInputs(event);
 }
 
 void IngameController::update(sf::Time deltaTime) {
-    if(subControllerExist())
+    if (subControllerExist())
         subController->update(deltaTime);
 }
 
 void IngameController::render(sf::RenderWindow &window) {
-    if(viewExist())
-    {
-        if(subControllerExist())
+    if (viewExist()) {
+        if (subControllerExist())
             subController->render(window);
         view->render(window);
     }
@@ -39,8 +38,7 @@ bool IngameController::subControllerExist() const { return subController != null
 
 
 void IngameController::setSubController(IController *newSubController) {
-    if(subController != nullptr)
-    {
+    if (subController != nullptr) {
         subController->onClose();
         delete subController;
     }

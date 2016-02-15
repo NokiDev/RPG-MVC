@@ -8,7 +8,7 @@
 App::App() {
 
     ///Load Settings Preferences
-    window.create(sf::VideoMode(50,50), "title");
+    window.create(sf::VideoMode(50, 50), "title");
 }
 
 App::~App() {
@@ -19,8 +19,7 @@ App::~App() {
 void App::run() {
     running = true;
     currentMainController = new IngameController();
-    while(running)
-    {
+    while (running) {
         handleEvents();
         window.clear();
         currentMainController->update();
@@ -29,20 +28,19 @@ void App::run() {
     }
 }
 
-void App::handleEvents(){
-    while(window.pollEvent(event))
-    {
-        if(event.type == sf::Event::Closed) {
+void App::handleEvents() {
+    while (window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
             window.close();
             running = false;
         }
-        else if(event.type == sf::Event::Resized) {
+        else if (event.type == sf::Event::Resized) {
 
         }
-        else if(event.type == sf::Event::LostFocus) {
+        else if (event.type == sf::Event::LostFocus) {
 
         }
-        else if(event.type == sf::Event::GainedFocus) {
+        else if (event.type == sf::Event::GainedFocus) {
 
         }
         else {
@@ -52,8 +50,7 @@ void App::handleEvents(){
 }
 
 void App::setMainController(IController *newMainController) {
-    if(mainControllerExist())
-    {
+    if (mainControllerExist()) {
         currentMainController->onClose();
         delete currentMainController;
     }

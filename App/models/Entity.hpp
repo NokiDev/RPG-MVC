@@ -11,19 +11,22 @@ class Entity {
 public :
 
     virtual ~Entity() = 0;
+
     /**
      * @brief Update the entity each frame
      * @params time between two frames
     **/
-    virtual void update(sf::Time deltaTime = sf::Time::Zero)=0;
+    virtual void update(sf::Time deltaTime = sf::Time::Zero) = 0;
+
     /**
      * @brief Update Physics velocity and position
      */
-    virtual void physicsUpdate()=0;
+    virtual void physicsUpdate() = 0;
+
     /**
      * @brief Behaviour to adopt when entering on collision
      */
-    virtual void onCollision()=0;
+    virtual void onCollision() = 0;
 
 protected :
     sf::Vector2f position;

@@ -10,8 +10,9 @@
 
 class IView {
 public:
-    virtual ~IView(){};
-    virtual void render(sf::RenderWindow & window)const =0;
+    virtual ~IView() { };
+
+    virtual void render(sf::RenderWindow &window) const = 0;
 
 protected:
     //Buttons
