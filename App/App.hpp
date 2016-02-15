@@ -13,7 +13,9 @@ public:
     App();
 
     ~App();
-
+    /*
+     * @brief Main loop of the application
+     */
     void run();
 
     void setMainController(IController *newMainController);

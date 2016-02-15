@@ -11,7 +11,10 @@
 class IView {
 public:
     virtual ~IView() { };
-
+    /*
+     * @brief draw the wiew on window
+     * @params sf::RenderWindow, window to draw on
+     */
     virtual void render(sf::RenderWindow &window) const = 0;
 
 protected:
