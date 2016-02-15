@@ -3,3 +3,25 @@
 //
 
 #include "Player.hpp"
+
+
+Player::Player() {
+
+}
+
+Player::~Player() {
+
+}
+
+void Player::update(sf::Time deltaTime) {
+
+}
+
+void Player::physicsUpdate() {
+
+}
+
+
+void Player::onCollision() {
+
+}

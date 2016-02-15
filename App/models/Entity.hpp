@@ -10,7 +10,7 @@
 class Entity {
 public :
 
-    virtual ~Entity() = 0;
+    virtual ~Entity() {};
 
     /**
      * @brief Update the entity each frame
@@ -28,8 +28,9 @@ public :
      */
     virtual void onCollision() = 0;
 
-protected :
     sf::Vector2f position;
+protected :
+    //sf::Vector2f position;
     sf::Vector2f velocity;
 
 
