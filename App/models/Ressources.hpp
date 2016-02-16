@@ -15,6 +15,7 @@ public:
     ~Ressources();
 
     static sf::Texture & Load(std::string textureName);
+    //static  Load(std::string fileName);
    // static sf::Shader & LoadShader(std::string shader);
 
 private:

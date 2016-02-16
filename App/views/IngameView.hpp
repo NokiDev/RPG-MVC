@@ -6,6 +6,7 @@
 #define RPG_MVC_INGAMEVIEW_HPP
 
 
+#include <App/Systems/RenderSystem/RenderSystem.hpp>
 #include "IView.hpp"
 
 class IngameView : public IView {
@@ -15,6 +16,9 @@ public:
     ~IngameView();
 
     virtual void render(sf::RenderWindow &window) const;
+
+private:
+    RenderSystem * renderSystem;
 
 };
 

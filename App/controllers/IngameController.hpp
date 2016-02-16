@@ -6,6 +6,7 @@
 #define RPG_MVC_INGAMECONTROLLER_HPP
 
 
+#include <App/models/Player.hpp>
 #include "IController.hpp"
 
 class IngameController : public IController {
@@ -25,9 +26,11 @@ public:
 
     virtual void onClose();
 
+    IController* getSubController();
 
 private:
     IController *subController;
+    Player* thePlayer;
 
     bool subControllerExist() const;
 

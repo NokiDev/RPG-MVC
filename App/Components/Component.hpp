@@ -13,6 +13,9 @@ public:
     virtual ~Component() {};
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero)=0;
+    Entity& getOwner() const {
+        return *owner;
+    }
 
 protected:
 

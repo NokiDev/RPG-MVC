@@ -12,11 +12,25 @@
 class RenderComponent : public Component {
 
 public:
+
+    struct depthCompare {
+        /**
+         * @brief Overload () operator for comparing SpriteRenderers
+         * @param lSprite left side SpriteRenderer var
+         * @param rSprite right side SpriteRenderer var
+        **/
+        bool operator() (const RenderComponent* lSprite, const RenderComponent* rSprite) const
+        {
+            return lSprite->sprite.getPosition().y > rSprite->sprite.getPosition().y;
+        }
+    };
+
     RenderComponent(Entity* owner, std::string textureName);
     ~RenderComponent();
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
-    void draw(sf::RenderWindow & window);
+    virtual void draw(sf::RenderWindow & window);
+    virtual void rotate(int scaley, int scalex = -1);
 
 protected:
     sf::Sprite sprite;

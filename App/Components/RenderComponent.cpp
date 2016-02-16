@@ -3,23 +3,24 @@
 //
 
 #include <App/models/Ressources.hpp>
+#include <App/Systems/RenderSystem/RenderSystem.hpp>
 #include "RenderComponent.hpp"
 
 RenderComponent::RenderComponent(Entity *owner, std::string textureName) {
     this->owner = owner;
-    sprite.setTexture(Ressources::Load(textureName));
-    sprite.setPosition(owner->position);
-   // sprite.setColor()
-    //RenderSystem::addSprite(this);
+    sprite.setTexture(Ressources::Load(textureName + ".png"));
+    sprite.setPosition(owner->getPosition());
 
+   // sprite.setColor()
+    RenderSystem::renderSystem->addSprite(this);
 }
 
 RenderComponent::~RenderComponent() {
-    //RenderSystem::delSprite(this);
+    RenderSystem::renderSystem->delSprite(this);
 }
 
 void RenderComponent::update(sf::Time deltaTime) {
-    sprite.setPosition(owner->position);
+    sprite.setPosition(owner->getPosition());
 }
 
 void RenderComponent::draw(sf::RenderWindow &window) {
@@ -36,4 +37,6 @@ void RenderComponent::setVertexShader(std::string fileName) {
 
 void RenderComponent::setShader(sf::Shader *shader) {
 
-}*/
+}*/void RenderComponent::rotate(int scaley , int scalex) {
+    sprite.setScale(scalex, scaley);
+}

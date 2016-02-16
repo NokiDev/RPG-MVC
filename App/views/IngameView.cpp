@@ -5,7 +5,7 @@
 #include "IngameView.hpp"
 
 IngameView::IngameView() {
-
+    renderSystem = new RenderSystem();
 }
 
 IngameView::~IngameView() {
@@ -13,5 +13,6 @@ IngameView::~IngameView() {
 }
 
 void IngameView::render(sf::RenderWindow &window) const {
-
+    renderSystem->update();
+    renderSystem->draw(window);
 }

@@ -37,8 +37,9 @@ public:
 
     virtual void onClose() = 0;
 
-protected:
     const IView *view;
+
+protected:
 };
 
 

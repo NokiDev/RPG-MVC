@@ -7,6 +7,7 @@
 
 #include "Entity.hpp"
 
+class RenderComponent;
 class Player : public Entity {
 public :
     Player();
@@ -29,7 +30,7 @@ public :
 
 
 protected:
-
+    RenderComponent* render;
 };
 
 

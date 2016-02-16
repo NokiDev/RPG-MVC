@@ -7,6 +7,7 @@
 
 IngameController::IngameController() {
     view = new IngameView();
+    thePlayer = new Player();
     subController = nullptr;
 }
 
@@ -22,6 +23,8 @@ void IngameController::handleInputs(sf::Event &event) {
 void IngameController::update(sf::Time deltaTime) {
     if (subControllerExist())
         subController->update(deltaTime);
+    thePlayer->update(deltaTime);
+    thePlayer->physicsUpdate();
 }
 
 void IngameController::render(sf::RenderWindow &window) {
@@ -47,4 +50,8 @@ void IngameController::setSubController(IController *newSubController) {
 
 void IngameController::onClose() {
     //Save The Game;
+}
+
+IController *IngameController::getSubController() {
+    return subController;
 }

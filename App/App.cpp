@@ -8,24 +8,12 @@
 App::App() {
 
     ///Load Settings Preferences
-    window.create(sf::VideoMode(50, 50), "title");
+    window.create(sf::VideoMode(720, 480), "title");
+    time.restart();
 }
 
 App::~App() {
 
-}
-
-
-void App::run() {
-    running = true;
-    currentMainController = new IngameController();
-    while (running) {
-        handleEvents();
-        window.clear();
-        currentMainController->update();
-        currentMainController->render(window);
-        window.display();
-    }
 }
 
 void App::handleEvents() {
@@ -49,6 +37,19 @@ void App::handleEvents() {
     }
 }
 
+void App::run() {
+    running = true;
+    currentMainController = new IngameController();
+    while (running) {
+        handleEvents();
+        deltaTime = time.restart();
+        window.clear();
+        currentMainController->update(deltaTime);
+        currentMainController->render(window);
+        window.display();
+    }
+}
+
 void App::setMainController(IController *newMainController) {
     if (mainControllerExist()) {
         currentMainController->onClose();
@@ -57,4 +58,19 @@ void App::setMainController(IController *newMainController) {
     currentMainController = newMainController;
 }
 
-bool App::mainControllerExist() const { return currentMainController != nullptr; }
+bool App::mainControllerExist() const {
+    return currentMainController != nullptr;
+}
+
+IController *App::getCurrentMainController() const {
+    return currentMainController;
+}
+
+
+bool App::isRunning() const {
+    return running;
+}
+
+bool App::isPaused() const {
+    return paused;
+}
