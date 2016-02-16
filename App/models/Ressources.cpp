@@ -25,7 +25,7 @@ sf::Texture &Ressources::get(std::string index) {
 
 void Ressources::add(std::string index) {
     sf::Texture texture;
-    texture.loadFromFile("Ressources/"+ index);
+    texture.loadFromFile("Ressources/sprites/"+ index);
     textures[index] = texture;
 }
 
