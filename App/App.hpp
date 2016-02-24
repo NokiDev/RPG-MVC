@@ -6,6 +6,7 @@
 #define RPG_MVC_APP_HPP
 
 
+#include <App/controllers/ControllersManager.hpp>
 #include "IController.hpp"
 
 class App {
@@ -18,25 +19,19 @@ public:
      */
     void run();
 
-    void setMainController(IController *newMainController);
-    IController* getCurrentMainController() const;
-
     bool isRunning() const;
     bool isPaused() const;
+    sf::Time &DeltaTime();
 
 private:
-    IController *currentMainController;
-    sf::RenderWindow window;
-    sf::Event event;
+
+    ControllersManager * manager;
+
     bool running;
     bool paused;
 
     sf::Clock time;
     sf::Time deltaTime;
-
-    bool mainControllerExist() const;
-
-    void handleEvents();
 
 
 };

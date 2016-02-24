@@ -15,9 +15,9 @@ IngameController::~IngameController() {
 
 }
 
-void IngameController::handleInputs(sf::Event &event) {
+void IngameController::handleEvents(sf::Event &event) {
     if (subControllerExist())
-        subController->handleInputs(event);
+        subController->handleEvents(event);
 }
 
 void IngameController::update(sf::Time deltaTime) {

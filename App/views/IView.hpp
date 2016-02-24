@@ -7,6 +7,7 @@
 
 
 #include <SFML/Graphics.hpp>
+#include "GuiButtonView.hpp"
 
 class IView {
 public:
@@ -15,9 +16,13 @@ public:
      * @brief draw the wiew on window
      * @params sf::RenderWindow, window to draw on
      */
+    virtual void addButton(GuiButtonView* buttonView){
+        buttons.push_back(buttonView);
+    };
     virtual void render(sf::RenderWindow &window) const = 0;
-
+    virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default) = 0;
 protected:
+    std::vector<GuiButtonView*> buttons;
     //Buttons
 };
 

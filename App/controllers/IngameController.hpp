@@ -16,7 +16,7 @@ public:
 
     ~IngameController();
 
-    virtual void handleInputs(sf::Event &event);
+    virtual void handleEvents(sf::Event &event);
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
 

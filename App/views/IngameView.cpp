@@ -12,7 +12,13 @@ IngameView::~IngameView() {
 
 }
 
+
+
 void IngameView::render(sf::RenderWindow &window) const {
     renderSystem->update();
     renderSystem->draw(window);
+}
+
+void IngameView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {
+
 }

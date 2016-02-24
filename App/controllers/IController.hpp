@@ -10,6 +10,7 @@
 #include <SFML/Graphics.hpp>
 #include <App/views/IView.hpp>
 
+class GUIButton;
 /**
  * @brief Interface for all controllers
  * */
@@ -21,7 +22,7 @@ public:
      * @brief behaviour to adopt for all window events (key pressed, key released, window resized, window closed etc...)
      * @params sf::Event, the event to handle
      */
-    virtual void handleInputs(sf::Event &event) = 0;
+    virtual void handleEvents(sf::Event &event) = 0;
 
     /*
      * @brief update all components of the controllers
@@ -37,9 +38,12 @@ public:
 
     virtual void onClose() = 0;
 
-    const IView *view;
+    IView* getView(){
+        return view;
+    };
 
 protected:
+    IView *view;
 };
 
 

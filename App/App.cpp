@@ -6,66 +6,23 @@
 #include "App.hpp"
 
 App::App() {
-
     ///Load Settings Preferences
-    window.create(sf::VideoMode(720, 480), "title");
+    manager = new ControllersManager(this);
+    paused =false;
     time.restart();
 }
 
 App::~App() {
-
-}
-
-void App::handleEvents() {
-    while (window.pollEvent(event)) {
-        if (event.type == sf::Event::Closed) {
-            window.close();
-            running = false;
-        }
-        else if (event.type == sf::Event::Resized) {
-
-        }
-        else if (event.type == sf::Event::LostFocus) {
-
-        }
-        else if (event.type == sf::Event::GainedFocus) {
-
-        }
-        else {
-            currentMainController->handleInputs(event);
-        }
-    }
+    delete manager;
 }
 
 void App::run() {
     running = true;
-    currentMainController = new IngameController();
-    while (running) {
-        handleEvents();
+    while (isRunning()) {
         deltaTime = time.restart();
-        window.clear();
-        currentMainController->update(deltaTime);
-        currentMainController->render(window);
-        window.display();
+        manager->run();
     }
 }
-
-void App::setMainController(IController *newMainController) {
-    if (mainControllerExist()) {
-        currentMainController->onClose();
-        delete currentMainController;
-    }
-    currentMainController = newMainController;
-}
-
-bool App::mainControllerExist() const {
-    return currentMainController != nullptr;
-}
-
-IController *App::getCurrentMainController() const {
-    return currentMainController;
-}
-
 
 bool App::isRunning() const {
     return running;
@@ -73,4 +30,8 @@ bool App::isRunning() const {
 
 bool App::isPaused() const {
     return paused;
+}
+
+sf::Time & App::DeltaTime(){
+    return deltaTime;
 }

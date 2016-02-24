@@ -14,9 +14,8 @@ public:
     IngameView();
 
     ~IngameView();
-
     virtual void render(sf::RenderWindow &window) const;
-
+    virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 private:
     RenderSystem * renderSystem;
 

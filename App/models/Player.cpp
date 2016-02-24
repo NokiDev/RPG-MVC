@@ -3,6 +3,7 @@
 //
 
 #include <App/Components/RenderComponent.hpp>
+#include <iostream>
 #include "Player.hpp"
 
 
@@ -17,6 +18,7 @@ Player::Player() : Entity() {
 Player::~Player() {
     delete render;
 }
+
 
 void Player::update(sf::Time deltaTime) {
     velocity = sf::Vector2f(0.f,0.f);
