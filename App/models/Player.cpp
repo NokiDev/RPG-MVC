@@ -42,8 +42,16 @@ void Player::update(sf::Time deltaTime) {
 void Player::physicsUpdate() {
     position += velocity;
 
-    sprite.setPosition(position);
+    if (position.x < 0)
+        position.x = 0;
+    if (position.x > 720-64)
+        position.x = 720-64;
+    if (position.y < 0)
+        position.y = 0;
+    if (position.y > 480-64)
+        position.y = 480-64;
 
+    sprite.setPosition(position);
 }
 
 
