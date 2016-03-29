@@ -42,3 +42,7 @@ sf::RenderWindow &ViewsManager::Window() {
 void ViewsManager::clean() {
     window.clear();
 }
+
+void ViewsManager::close() {
+    window.close();
+}

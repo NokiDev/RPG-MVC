@@ -24,6 +24,8 @@ public:
 
     void clean();
 
+    void close();
+
 private:
     sf::RenderWindow window;
 

@@ -21,9 +21,9 @@ ControllersManager::~ControllersManager() {
 
 void ControllersManager::handleEvents(sf::Event &event) {
     ///Events de base
-    if(event.Closed == sf::Event::Closed)
+    if(event.type == sf::Event::Closed)
     {
-
+        viewsManager->close();
     }
     currentMainController->handleEvents(event);
 }
