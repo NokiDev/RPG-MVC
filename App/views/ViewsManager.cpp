@@ -59,3 +59,8 @@ void ViewsManager::close() {
 ViewsManager *ViewsManager::get() {
     return viewsManager;
 }
+
+sf::Vector2u ViewsManager::getWindowSize() {
+    std::cout << "Fenetre : " << window.getSize().x << std::endl;
+    return window.getSize();
+}

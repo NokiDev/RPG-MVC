@@ -35,6 +35,8 @@ public :
      * @params time between two frames
     **/
 
+    sf::Vector2f getSpriteSize();
+
 
 protected:
     sf::Sprite sprite;

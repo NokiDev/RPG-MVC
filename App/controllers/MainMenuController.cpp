@@ -8,8 +8,8 @@
 
 MainMenuController::MainMenuController() {
     view = new MainMenuView();
-   // GUIButton* button = new GUIButton(sf::Vector2f(150.f, 150.f) , sf::Vector2u(20, 50), "default.button", "START GAME !");
-    //view->addButton(new GuiButtonView(new GUIButton(sf::Vector2f(150.f, 150.f) , sf::Vector2u(20, 50), "default.button", "START GAME !")));
+//    GUIButton* button = new GUIButton(sf::Vector2f(150.f, 150.f) , sf::Vector2u(20, 50), "default.button", "START GAME !");
+//    view->addButton(new GuiButtonView(new GUIButton(sf::Vector2f(150.f, 150.f) , sf::Vector2u(20, 50), "default.button", "START GAME !")));
 }
 
 

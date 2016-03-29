@@ -21,6 +21,8 @@ public:
     void run();
     void display();
 
+    sf::Vector2u getWindowSize();
+
     void clean();
 
     void close();
