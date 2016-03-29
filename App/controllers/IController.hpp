@@ -18,6 +18,14 @@ class IController {
 public:
     virtual ~IController() { };
 
+    virtual void askForEvents(){
+        view->handleEvent();
+    }
+
+    virtual void askForRender(){
+        view->render();
+    }
+
     /*
      * @brief behaviour to adopt for all window events (key pressed, key released, window resized, window closed etc...)
      * @params sf::Event, the event to handle

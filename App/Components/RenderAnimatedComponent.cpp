@@ -12,7 +12,6 @@ RenderAnimatedComponent::RenderAnimatedComponent(Entity *owner, std::string anim
     this->currentFrame = 0;
     this->looped = looped;
     this->paused = paused;
-
 }
 
 RenderAnimatedComponent::~RenderAnimatedComponent() {

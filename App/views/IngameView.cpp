@@ -3,22 +3,22 @@
 //
 
 #include "IngameView.hpp"
-#include "ViewsManager.hpp"
+#include "WindowManager.hpp"
 
 IngameView::IngameView() {
-    manager = ViewsManager::get();
+    manager = WindowManager::get();
 }
 
 IngameView::~IngameView() {
 
 }
 
-void IngameView::initView() {
-
-}
-
-void IngameView::render(sf::RenderWindow &window) const {
-
+void IngameView::render() const {
+    for(auto component : components)
+    {
+        //component->draw();
+    }
+    manager->display();
 }
 
 void IngameView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {

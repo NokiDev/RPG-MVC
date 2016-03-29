@@ -14,11 +14,8 @@ MainMenuView::~MainMenuView() {
 
 }
 
-void MainMenuView::initView() {
 
-}
-
-void MainMenuView::render(sf::RenderWindow &window) const{
+void MainMenuView::render() const{
 
 }
 

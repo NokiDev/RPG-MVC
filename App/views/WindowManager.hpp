@@ -10,36 +10,37 @@
 #include <SFML/Window.hpp>
 
 class ControllersManager;
-class ViewsManager {
+class WindowManager {
 
 public:
-    ViewsManager(ControllersManager * manager);
-    ~ViewsManager();
+    WindowManager(ControllersManager * manager);
+    ~WindowManager();
 
     void createWindow(sf::VideoMode mode, std::string title,sf::Uint32 style = sf::Style::Default , sf::ContextSettings context = sf::ContextSettings());
 
-    void run();
+    bool isKeyPressed(sf::Keyboard::Key key);
+
+    void handleEvent();
+
     void display();
 
-    sf::Vector2u getWindowSize();
-
-    void clean();
+    void clear();
 
     void close();
 
     sf::RenderWindow & Window();
 
-    static ViewsManager* get();
+    sf::Vector2u getWindowSize();
+
+    static WindowManager * get();
 
 private:
-
-    static ViewsManager * viewsManager;
-
+    static WindowManager * windowManager;
     sf::RenderWindow window;
 
     ControllersManager* manager;
+
     sf::Event event;
-    void handleEvent();
 };
 
 

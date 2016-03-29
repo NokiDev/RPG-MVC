@@ -9,6 +9,7 @@
 #include <App/models/Player.hpp>
 #include "IController.hpp"
 
+class CollisionSystem;
 class Map;
 class IngameController : public IController {
 public:
@@ -33,6 +34,7 @@ private:
     IController *subController;
     Player* thePlayer;
     Map * theMap;
+    CollisionSystem* collSys;
 
     bool subControllerExist() const;
 

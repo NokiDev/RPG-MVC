@@ -6,12 +6,12 @@
 #include "MainMenuController.hpp"
 #include "IngameController.hpp"
 #include <App/App.hpp>
-#include <App/views/ViewsManager.hpp>
+#include "WindowManager.hpp"
 
 ControllersManager::ControllersManager(App* app) {
     this->app = app;
-    viewsManager = new ViewsManager(this);
-    viewsManager->createWindow(sf::VideoMode(720,480), "MYGAME");
+    windowManager = new WindowManager(this);
+    windowManager->createWindow(sf::VideoMode(720,480), "MYGAME");
     currentMainController = new IngameController();
 }
 
@@ -25,6 +25,8 @@ void ControllersManager::handleEvents(sf::Event &event) {
     {
         app->close();
     }
+    if(currentMainController == nullptr)
+        std::cout<<"ERRORNO"<<std::endl;
     currentMainController->handleEvents(event);
 }
 
@@ -38,9 +40,7 @@ void ControllersManager::setCurrentMainController(IController *newMainController
 
 void ControllersManager::run() {
     /*idéalement à lancer dans un thread à part*/
-    viewsManager->run();
+    currentMainController->askForEvents();
     currentMainController->update(app->DeltaTime());
-    viewsManager->clean();
-    currentMainController->render();
-    viewsManager->display();
+    currentMainController->askForRender();
 }

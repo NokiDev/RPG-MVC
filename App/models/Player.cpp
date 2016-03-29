@@ -17,7 +17,9 @@ Player::Player() : Entity() {
     name = "Player";
     sf::Texture &text = Ressources::Load("player.png");
     sprite.setTexture(text);
-    addComponent(typeid(BoxColliderComponent).name(), new BoxColliderComponent(this, sf::Vector2u(64, 64)));
+    addComponent(typeid(BoxColliderComponent).name(), new BoxColliderComponent(this, sf::Vector2u(64,64)));
+    BoxColliderComponent* component = getComponent<BoxColliderComponent>();
+
 }
 
 Player::~Player() {
@@ -26,7 +28,7 @@ Player::~Player() {
 
 
 void Player::update(sf::Time deltaTime) {
-    velocity = sf::Vector2f(0.f, 0.f);
+    velocity = sf::Vector2f(0.f,0.f);
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         velocity.x -= speed * deltaTime.asSeconds();
     }
@@ -55,7 +57,6 @@ void Player::physicsUpdate() {
     else if (position.y > wallBottom)
         position.y = wallBottom;
 
-    sprite.setPosition(position);
 }
 
 
@@ -63,8 +64,8 @@ void Player::onCollision() {
 
 }
 
-void Player::render(IView &view) {
-    view.draw(sprite);
+void Player::render(IView& view) {
+    sprite.setPosition(position);
 }
 
 sf::Vector2f Player::getSpriteSize() {

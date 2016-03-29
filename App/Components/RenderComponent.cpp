@@ -8,10 +8,10 @@
 
 RenderComponent::RenderComponent(Entity *owner, std::string textureName) {
     this->owner = owner;
+
     sprite.setTexture(Ressources::Load(textureName + ".png"));
     sprite.setPosition(owner->getPosition());
 
-   // sprite.setColor()
     RenderSystem::renderSystem->addSprite(this);
 }
 

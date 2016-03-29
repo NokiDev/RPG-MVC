@@ -10,7 +10,7 @@
 #include "IController.hpp"
 
 class App;
-class ViewsManager;
+class WindowManager;
 class ControllersManager{
 public:
     ControllersManager(App* app);
@@ -28,7 +28,7 @@ public:
 private:
 
     App* app;
-    ViewsManager * viewsManager;
+    WindowManager * windowManager;
     IController *currentMainController;
 };
 

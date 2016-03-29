@@ -7,17 +7,15 @@
 
 
 #include "IView.hpp"
-#include "ViewsManager.hpp"
+#include "WindowManager.hpp"
 
 class IngameView : public IView {
 public:
     IngameView();
     ~IngameView();
-    virtual void initView();
-    virtual void render(sf::RenderWindow &window) const;
+    virtual void render() const;
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 private:
-    ViewsManager* manager;
 };
 
 

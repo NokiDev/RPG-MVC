@@ -51,13 +51,10 @@ public :
 
     template <class T>
     T* getComponent(){
-
-        std::cout<< typeid(T).name()<<std::endl;
         if(components.find(typeid(T).name()) != components.end())
         {
             return dynamic_cast<T*>(components[typeid(T).name()]);
         }
-        std::cout<<"Component not found"<<std::endl;
         return nullptr;
     }
 

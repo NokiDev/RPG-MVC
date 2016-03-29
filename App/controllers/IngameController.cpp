@@ -4,6 +4,7 @@
 
 #include <App/views/IngameView.hpp>
 #include <App/models/Map.hpp>
+#include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
@@ -11,6 +12,8 @@ IngameController::IngameController() {
     thePlayer = new Player();
     theMap = new Map(thePlayer);
     subController = nullptr;
+    collSys = new CollisionSystem();
+    //inputSys = new InputSystem();
 }
 
 IngameController::~IngameController() {
@@ -22,6 +25,7 @@ IngameController::~IngameController() {
 void IngameController::handleEvents(sf::Event &event) {
     if (subControllerExist())
         subController->handleEvents(event);
+    //inputSys->handleEvents(event);
 }
 
 void IngameController::update(sf::Time deltaTime) {
@@ -29,6 +33,7 @@ void IngameController::update(sf::Time deltaTime) {
         subController->update(deltaTime);
     thePlayer->update(deltaTime);
     thePlayer->physicsUpdate();
+    collSys->checkCollisions();
 }
 
 void IngameController::render() {
