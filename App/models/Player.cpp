@@ -5,6 +5,7 @@
 #include <iostream>
 #include <SFML/Window/Keyboard.hpp>
 #include "Player.hpp"
+#include "Ressources.hpp"
 
 
 Player::Player() : Entity() {
@@ -12,6 +13,8 @@ Player::Player() : Entity() {
     velocity = sf::Vector2f(0.f, 0.f);
     speed = 250;
     name = "Player";
+    sf::Texture &text = Ressources::Load("player.png");
+    sprite.setTexture(text);
 
 }
 
@@ -38,6 +41,9 @@ void Player::update(sf::Time deltaTime) {
 
 void Player::physicsUpdate() {
     position += velocity;
+
+    sprite.setPosition(position);
+
 }
 
 
@@ -46,5 +52,5 @@ void Player::onCollision() {
 }
 
 void Player::render(IView& view) {
-    //view.draw(renderComponent)
+    view.draw(sprite);
 }

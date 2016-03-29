@@ -30,9 +30,14 @@ public :
     virtual void onCollision();
 
     virtual void render(IView& view);
+    /**
+     * @brief Update the entity each frame
+     * @params time between two frames
+    **/
 
 
 protected:
+    sf::Sprite sprite;
     //RenderComponent* render;
 };
 

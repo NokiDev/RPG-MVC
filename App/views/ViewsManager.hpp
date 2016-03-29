@@ -15,18 +15,24 @@ class ViewsManager {
 public:
     ViewsManager(ControllersManager * manager);
     ~ViewsManager();
+
     void createWindow(sf::VideoMode mode, std::string title,sf::Uint32 style = sf::Style::Default , sf::ContextSettings context = sf::ContextSettings());
+
     void run();
-
     void display();
-
-    sf::RenderWindow & Window();
 
     void clean();
 
     void close();
 
+    sf::RenderWindow & Window();
+
+    static ViewsManager* get();
+
 private:
+
+    static ViewsManager * viewsManager;
+
     sf::RenderWindow window;
 
     ControllersManager* manager;

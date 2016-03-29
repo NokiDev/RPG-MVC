@@ -4,10 +4,19 @@
 
 #include "ViewsManager.hpp"
 #include <App/controllers/ControllersManager.hpp>
+#include <iostream>
 
-
+ViewsManager* ViewsManager::viewsManager;
 
 ViewsManager::ViewsManager(ControllersManager* manager) : manager(manager){
+    if(viewsManager == nullptr)
+    {
+        viewsManager = this;
+    }
+    else{
+        std::cerr<<"Warning : Instantiate viewsManager for the 2nd Time, but it's singleton, Fix This !"<<std::endl;
+        delete this;
+    }
 }
 
 ViewsManager::~ViewsManager() {
@@ -45,4 +54,8 @@ void ViewsManager::clean() {
 
 void ViewsManager::close() {
     window.close();
+}
+
+ViewsManager *ViewsManager::get() {
+    return viewsManager;
 }

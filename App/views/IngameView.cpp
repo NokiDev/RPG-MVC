@@ -6,7 +6,7 @@
 #include "ViewsManager.hpp"
 
 IngameView::IngameView() {
-
+    manager = ViewsManager::get();
 }
 
 IngameView::~IngameView() {
@@ -22,5 +22,5 @@ void IngameView::render(sf::RenderWindow &window) const {
 }
 
 void IngameView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {
-
+    manager->Window().draw(drawable, states);
 }
