@@ -14,7 +14,7 @@ BoxColliderComponent::BoxColliderComponent(Entity *owner, sf::Vector2u size, boo
     this->owner = owner;
     sf::Vector2f pos = owner->getPosition();
     box = sf::FloatRect(pos.x + offset.x, pos.y + offset.y, size.x, size.y);
-    CollisionSystem::collisionSystem->addBoxCollider(this);
+    //CollisionSystem::collisionSystem->addBoxCollider(this);
 }
 
 BoxColliderComponent::~BoxColliderComponent() {
@@ -28,8 +28,7 @@ void BoxColliderComponent::update(sf::Time deltaTime) {
 }
 
 sf::FloatRect BoxColliderComponent::getNextBox()const {
-    sf::Vector2f vel(0.0f,0.0f);
-    //sf::Vector2f vel = owner->velocity;
+    sf::Vector2f & vel = owner->getVelocity();
     return sf::FloatRect(box.left + vel.x, box.top + vel.y, box.width, box.height);
 }
 

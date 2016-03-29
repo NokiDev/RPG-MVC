@@ -6,6 +6,8 @@
 #include <SFML/Window/Keyboard.hpp>
 #include "Player.hpp"
 #include "Ressources.hpp"
+#include <Components/RenderComponent.hpp>
+#include <App/Components/BoxColliderComponent.hpp>
 
 
 Player::Player() : Entity() {
@@ -15,7 +17,7 @@ Player::Player() : Entity() {
     name = "Player";
     sf::Texture &text = Ressources::Load("player.png");
     sprite.setTexture(text);
-
+    addComponent(typeid(BoxColliderComponent).name(), new BoxColliderComponent(this, sf::Vector2u(64,64)));
 }
 
 Player::~Player() {

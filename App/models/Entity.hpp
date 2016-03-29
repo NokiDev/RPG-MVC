@@ -29,11 +29,11 @@ public :
      */
     virtual void onCollision() = 0;
 
-    sf::Vector2f getPosition() const {
+    sf::Vector2f& getPosition() {
         return position;
     }
 
-    sf::Vector2f getVelocity() const {
+    sf::Vector2f& getVelocity() {
         return velocity;
     }
 
@@ -52,19 +52,21 @@ public :
     template <class T>
     T* getComponent(){
 
+        std::cout<< typeid(T).name()<<std::endl;
         if(components.find(typeid(T).name()) != components.end())
         {
             return dynamic_cast<T*>(components[typeid(T).name()]);
         }
+        std::cout<<"Component not found"<<std::endl;
         return nullptr;
     }
 
     void addComponent(std::string type, Component* component) {
-        if(components.find(typeid(type).name()) != components.end()){
+        if(components.find(type) != components.end()){
             std::cerr<<"Components already exist"<<std::endl;
         }
         else{
-            components[typeid(type).name()] = component;
+            components[type] = component;
         }
     }
 
