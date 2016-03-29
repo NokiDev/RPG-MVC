@@ -35,3 +35,7 @@ bool App::isPaused() const {
 sf::Time & App::DeltaTime(){
     return deltaTime;
 }
+
+void App::close() {
+    running = false;
+}

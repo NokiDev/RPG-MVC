@@ -14,7 +14,9 @@ IngameController::IngameController() {
 }
 
 IngameController::~IngameController() {
-
+    delete theMap;
+    delete thePlayer;
+    delete view;
 }
 
 void IngameController::handleEvents(sf::Event &event) {

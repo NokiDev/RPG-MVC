@@ -21,6 +21,8 @@ public:
 
     bool isRunning() const;
     bool isPaused() const;
+
+    void close();
     sf::Time &DeltaTime();
 
 private:

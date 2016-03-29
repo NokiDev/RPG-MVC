@@ -16,14 +16,14 @@ ControllersManager::ControllersManager(App* app) {
 }
 
 ControllersManager::~ControllersManager() {
-
+    delete currentMainController;
 }
 
 void ControllersManager::handleEvents(sf::Event &event) {
     ///Events de base
     if(event.type == sf::Event::Closed)
     {
-        viewsManager->close();
+        app->close();
     }
     currentMainController->handleEvents(event);
 }
