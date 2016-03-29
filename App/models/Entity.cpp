@@ -3,5 +3,6 @@
 //
 
 #include "Entity.hpp"
+#include <Components/Component.hpp>
 
 int Entity::nextId = 0;

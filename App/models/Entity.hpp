@@ -6,7 +6,11 @@
 #define RPG_MVC_ENTITY_HPP
 
 #include <SFML/System.hpp>
+#include <map>
+#include <typeinfo>
+#include <iostream>
 
+class Component;
 class Entity {
 public :
 
@@ -45,6 +49,36 @@ public :
         return id;
     }
 
+    template <class T>
+    T* getComponent(){
+
+        if(components.find(typeid(T).name()) != components.end())
+        {
+            return dynamic_cast<T*>(components[typeid(T).name()]);
+        }
+        return nullptr;
+    }
+
+    void addComponent(std::string type, Component* component) {
+        if(components.find(typeid(type).name()) != components.end()){
+            std::cerr<<"Components already exist"<<std::endl;
+        }
+        else{
+            components[typeid(type).name()] = component;
+        }
+    }
+
+    template <class T>
+    void removeComponent(){
+        if(components.find(typeid(T).name()) != components.end())
+        {
+            components[typeid(T).name()] = nullptr;
+        }
+        else{
+            std::cerr<<"Components don't exist !"<<std::endl;
+        }
+    }
+
 protected :
     Entity() : id(nextId++){};
     sf::Vector2f position;
@@ -54,6 +88,8 @@ protected :
     std::string name;
     const int id;
     static int nextId;
+
+    std::map<std::string, Component*> components;
 
 
 };
