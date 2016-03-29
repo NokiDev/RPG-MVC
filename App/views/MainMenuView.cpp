@@ -11,13 +11,15 @@ MainMenuView::MainMenuView() {
 
 MainMenuView::~MainMenuView() {
 
+
+}
+
+void MainMenuView::initView() {
+
 }
 
 void MainMenuView::render(sf::RenderWindow &window) const{
-    for(GuiButtonView * button : buttons)
-    {
-        button->render(window);
-    }
+
 }
 
 void MainMenuView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {

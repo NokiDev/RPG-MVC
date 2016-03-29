@@ -3,20 +3,22 @@
 //
 
 #include "IngameView.hpp"
+#include "ViewsManager.hpp"
 
 IngameView::IngameView() {
-    renderSystem = new RenderSystem();
+
 }
 
 IngameView::~IngameView() {
 
 }
 
+void IngameView::initView() {
 
+}
 
 void IngameView::render(sf::RenderWindow &window) const {
-    renderSystem->update();
-    renderSystem->draw(window);
+
 }
 
 void IngameView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {

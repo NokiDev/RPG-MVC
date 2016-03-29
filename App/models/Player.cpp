@@ -2,21 +2,21 @@
 // Created by Noki, Timothé Van Deputte on 14/02/2016.
 //
 
-#include <App/Components/RenderComponent.hpp>
 #include <iostream>
+#include <SFML/Window/Keyboard.hpp>
 #include "Player.hpp"
 
 
 Player::Player() : Entity() {
-    render = new RenderComponent(this, "player");
     position = sf::Vector2f(0.f, 0.f);
     velocity = sf::Vector2f(0.f, 0.f);
     speed = 250;
     name = "Player";
+
 }
 
 Player::~Player() {
-    delete render;
+
 }
 
 
@@ -43,4 +43,8 @@ void Player::physicsUpdate() {
 
 void Player::onCollision() {
 
+}
+
+void Player::render(IView& view) {
+    //view.draw(renderComponent)
 }

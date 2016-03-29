@@ -34,7 +34,7 @@ public:
      * @brief render the view attached to the controller
      * @params sf::RenderWindow, window to render on
      */
-    virtual void render(sf::RenderWindow &window) = 0;
+    virtual void render() = 0;
 
     virtual void onClose() = 0;
 

@@ -5,6 +5,7 @@
 #ifndef RPG_MVC_PLAYER_HPP
 #define RPG_MVC_PLAYER_HPP
 
+#include <App/views/IView.hpp>
 #include "Entity.hpp"
 
 class RenderComponent;
@@ -28,9 +29,11 @@ public :
      */
     virtual void onCollision();
 
+    virtual void render(IView& view);
+
 
 protected:
-    RenderComponent* render;
+    //RenderComponent* render;
 };
 
 

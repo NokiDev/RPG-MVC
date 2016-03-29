@@ -9,6 +9,7 @@
 #include <App/models/Player.hpp>
 #include "IController.hpp"
 
+class Map;
 class IngameController : public IController {
 public:
 
@@ -20,7 +21,7 @@ public:
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
 
-    virtual void render(sf::RenderWindow &window);
+    virtual void render();
 
     virtual void setSubController(IController *newSubController);
 
@@ -31,6 +32,7 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
+    Map * theMap;
 
     bool subControllerExist() const;
 

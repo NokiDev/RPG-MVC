@@ -41,6 +41,6 @@ void ControllersManager::run() {
     viewsManager->run();
     currentMainController->update(app->DeltaTime());
     viewsManager->clean();
-    currentMainController->render(viewsManager->Window());
+    currentMainController->render();
     viewsManager->display();
 }

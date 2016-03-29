@@ -3,11 +3,13 @@
 //
 
 #include <App/views/IngameView.hpp>
+#include <App/models/Map.hpp>
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
     view = new IngameView();
     thePlayer = new Player();
+    theMap = new Map(thePlayer);
     subController = nullptr;
 }
 
@@ -27,11 +29,11 @@ void IngameController::update(sf::Time deltaTime) {
     thePlayer->physicsUpdate();
 }
 
-void IngameController::render(sf::RenderWindow &window) {
+void IngameController::render() {
     if (viewExist()) {
         if (subControllerExist())
-            subController->render(window);
-        view->render(window);
+            subController->render();
+        theMap->render(*view);
     }
 }
 
