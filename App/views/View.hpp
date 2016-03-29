@@ -7,19 +7,27 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <App/controllers/IController.hpp>
 #include "IViewComponent.hpp"
-#include "WindowManager.hpp"
 
-class IView {
+class WindowManager;
+class IController;
+class View {
 public:
-    virtual ~IView() { };
+
+    View(IController * controller);
+
+    virtual ~View() { };
     /*
      * @brief init default components for the view and default behaviours
      *
      */
-    virtual void handleEvent(){
-        manager->handleEvent();
-    }
+    virtual void askForEvent();
+    /*
+     *
+     *
+     */
+    virtual void sendEvent(sf::Event&event);
     /*
      *
      *
@@ -40,6 +48,7 @@ public:
 
 protected:
     WindowManager * manager;
+    IController * controller;
     std::vector<IViewComponent*> components;
 };
 

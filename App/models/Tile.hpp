@@ -6,7 +6,7 @@
 #define RPG_MVC_TILE_HPP
 
 #include <SFML/Graphics/Rect.hpp>
-#include <App/views/IView.hpp>
+#include "View.hpp"
 #include "Entity.hpp"
 
 
@@ -15,7 +15,7 @@ public:
     Tile(std::string texture, float x, float y, float z, sf::FloatRect box = sf::FloatRect(0.f,0.f, 32,32), sf::Vector2f offset = sf::Vector2f(0.f,0.f), bool isTrigger = true);
     ~Tile();
 
-    void render(IView & view);
+    void render(View & view);
 private:
 };
 

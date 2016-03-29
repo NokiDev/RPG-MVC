@@ -19,8 +19,6 @@ public:
 
     void run();
 
-    void handleEvents(sf::Event &event);
-
     virtual void setCurrentMainController(IController *newSubController);
 
     IController* getCurrentMainController() const;

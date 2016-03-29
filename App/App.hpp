@@ -25,8 +25,10 @@ public:
     void close();
     sf::Time &DeltaTime();
 
-private:
+    static App* get();
 
+private:
+    static App* app;
     ControllersManager * manager;
 
     bool running;

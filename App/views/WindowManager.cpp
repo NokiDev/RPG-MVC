@@ -27,10 +27,10 @@ void WindowManager::createWindow(sf::VideoMode mode, std::string title, sf::Uint
     window.create(mode, title, style, context);
 }
 
-void WindowManager::handleEvent() {
+void WindowManager::handleEvent(View & view) {
     while(window.pollEvent(event))
     {
-        manager->handleEvents(event);
+        view.sendEvent(event);
     }
 }
 

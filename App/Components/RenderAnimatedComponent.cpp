@@ -21,7 +21,6 @@ RenderAnimatedComponent::~RenderAnimatedComponent() {
 
 void RenderAnimatedComponent::update(sf::Time deltaTime) {
 
-
 }
 
 void RenderAnimatedComponent::draw(sf::RenderWindow &window) {

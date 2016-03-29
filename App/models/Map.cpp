@@ -22,7 +22,7 @@ void Map::instantiate(Entity *entity) {
 
 }
 
-void Map::render(IView &view) {
+void Map::render(View &view) {
     for(auto tile : tiles){
         tile->render(view);
     }

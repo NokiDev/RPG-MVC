@@ -6,16 +6,18 @@
 #define RPG_MVC_INGAMEVIEW_HPP
 
 
-#include "IView.hpp"
+#include <App/Systems/RenderSystem/RenderSystem.hpp>
+#include "View.hpp"
 #include "WindowManager.hpp"
 
-class IngameView : public IView {
+class IngameView : public View {
 public:
-    IngameView();
+    IngameView(IController* controller);
     ~IngameView();
     virtual void render() const;
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 private:
+    IController * controller;
 };
 
 

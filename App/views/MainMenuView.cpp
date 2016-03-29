@@ -4,7 +4,7 @@
 
 #include "MainMenuView.hpp"
 
-MainMenuView::MainMenuView() {
+MainMenuView::MainMenuView(IController * controller) : View(controller){
 
 
 }

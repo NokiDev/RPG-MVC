@@ -6,7 +6,7 @@
 #define RPG_MVC_MAP_HPP
 
 #include <string>
-#include <App/views/IView.hpp>
+#include "View.hpp"
 #include "Entity.hpp"
 #include "Tile.hpp"
 #include "Player.hpp"
@@ -27,7 +27,7 @@ public :
     void checkCollisions();
     void load(std::string mapName);
     void instantiate(Entity*entity);
-    void render(IView & view);
+    void render(View & view);
 
 private:
 

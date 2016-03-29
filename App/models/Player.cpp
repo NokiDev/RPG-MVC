@@ -56,7 +56,6 @@ void Player::physicsUpdate() {
         position.y = 0;
     else if (position.y > wallBottom)
         position.y = wallBottom;
-
 }
 
 
@@ -64,8 +63,9 @@ void Player::onCollision() {
 
 }
 
-void Player::render(IView& view) {
+void Player::render(View & view) {
     sprite.setPosition(position);
+    view.draw(sprite);
 }
 
 sf::Vector2f Player::getSpriteSize() {

@@ -3,15 +3,16 @@
 //
 
 #include "IngameView.hpp"
-#include "WindowManager.hpp"
 
-IngameView::IngameView() {
+IngameView::IngameView(IController* controller) : View(controller) {
+    this->controller = controller;
     manager = WindowManager::get();
 }
 
 IngameView::~IngameView() {
 
 }
+
 
 void IngameView::render() const {
     for(auto component : components)

@@ -5,11 +5,19 @@
 #include <App/controllers/IngameController.hpp>
 #include "App.hpp"
 
+App* App::app;
+
 App::App() {
-    ///Load Settings Preferences
-    manager = new ControllersManager(this);
-    paused =false;
-    time.restart();
+    if(app == nullptr){
+        //Load Settings Preferences
+        app = this;
+        manager = new ControllersManager(this);
+        paused =false;
+        time.restart();
+    }
+    else{
+        delete this;
+    }
 }
 
 App::~App() {
@@ -38,4 +46,8 @@ sf::Time & App::DeltaTime(){
 
 void App::close() {
     running = false;
+}
+
+App *App::get() {
+    return app;
 }

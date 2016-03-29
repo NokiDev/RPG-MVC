@@ -19,17 +19,6 @@ ControllersManager::~ControllersManager() {
     delete currentMainController;
 }
 
-void ControllersManager::handleEvents(sf::Event &event) {
-    ///Events de base
-    if(event.type == sf::Event::Closed)
-    {
-        app->close();
-    }
-    if(currentMainController == nullptr)
-        std::cout<<"ERRORNO"<<std::endl;
-    currentMainController->handleEvents(event);
-}
-
 IController *ControllersManager::getCurrentMainController() const {
     return currentMainController;
 }
@@ -39,8 +28,12 @@ void ControllersManager::setCurrentMainController(IController *newMainController
 }
 
 void ControllersManager::run() {
+    windowManager->clear();
     /*idéalement à lancer dans un thread à part*/
     currentMainController->askForEvents();
     currentMainController->update(app->DeltaTime());
-    currentMainController->askForRender();
+    currentMainController->render();
+
+    windowManager->display();
+    //currentMainController->askForRender();
 }

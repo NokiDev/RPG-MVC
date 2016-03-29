@@ -8,6 +8,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
+#include "View.hpp"
 
 class ControllersManager;
 class WindowManager {
@@ -20,7 +21,7 @@ public:
 
     bool isKeyPressed(sf::Keyboard::Key key);
 
-    void handleEvent();
+    void handleEvent(View & view);
 
     void display();
 

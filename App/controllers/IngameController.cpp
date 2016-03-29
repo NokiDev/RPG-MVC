@@ -8,7 +8,7 @@
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
-    view = new IngameView();
+    view = new IngameView(this);
     thePlayer = new Player();
     theMap = new Map(thePlayer);
     subController = nullptr;
@@ -23,6 +23,7 @@ IngameController::~IngameController() {
 }
 
 void IngameController::handleEvents(sf::Event &event) {
+    IController::handleEvents(event);
     if (subControllerExist())
         subController->handleEvents(event);
     //inputSys->handleEvents(event);
@@ -41,6 +42,7 @@ void IngameController::render() {
         if (subControllerExist())
             subController->render();
         theMap->render(*view);
+
     }
 }
 

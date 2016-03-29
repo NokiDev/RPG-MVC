@@ -13,6 +13,6 @@ Tile::~Tile() {
 
 }
 
-void Tile::render(IView &view) {
+void Tile::render(View &view) {
 
 }
