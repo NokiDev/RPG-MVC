@@ -5,6 +5,8 @@
 #include "WindowManager.hpp"
 #include <App/controllers/ControllersManager.hpp>
 #include <iostream>
+#include "View.hpp"
+
 
 WindowManager *WindowManager::windowManager;
 

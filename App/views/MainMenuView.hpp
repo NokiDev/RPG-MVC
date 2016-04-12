@@ -5,8 +5,6 @@
 #ifndef RPG_MVC_MAINMENUVIEW_HPP
 #define RPG_MVC_MAINMENUVIEW_HPP
 
-
-#include <App/controllers/MainMenuController.hpp>
 #include "View.hpp"
 
 class MainMenuView : public View {
@@ -19,6 +17,7 @@ public:
 
 private:
 
+    sf::Sprite background;
     IController* controller;
 
 };

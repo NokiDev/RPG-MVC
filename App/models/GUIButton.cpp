@@ -5,6 +5,9 @@
 #include "GUIButton.hpp"
 #include <iostream>
 #include "Ressources.hpp"
+#include <App/views/ViewTextComponent.hpp>
+#include <App/views/ViewSpriteComponent.hpp>
+#include "IController.hpp"
 
 
 GUIButton::GUIButton(IController* boss, sf::Vector2f pos, std::string text, GUIButton::StateButton state) {
@@ -19,16 +22,14 @@ GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std
         textStr(text),
         state(state){
 
-    viewRenderer = new ViewComponent(texture);
+    //SpriteRenderer reference, allow us to keep dependency
+    viewRenderer = boss->newSpriteRenderer(texture);
     viewRenderer->updateRect(sf::IntRect(0,0, size.x, size.y));
     viewRenderer->updatePosition(pos);
 
-    boss->getView()->addViewComponent(viewRenderer);
-
-    textRenderer = new ViewTextComponent(text);
+    //TextRenderer reference, allow us to keep dependency
+    textRenderer = boss->newTextRenderer(text);
     textRenderer->updatePosition(pos);
-
-    boss->getView()->addViewComponent(textRenderer);
 }
 
 GUIButton::~GUIButton() {

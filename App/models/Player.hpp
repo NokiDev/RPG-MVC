@@ -5,9 +5,10 @@
 #ifndef RPG_MVC_PLAYER_HPP
 #define RPG_MVC_PLAYER_HPP
 
-#include "View.hpp"
+#include <SFML/Graphics/Sprite.hpp>
 #include "Entity.hpp"
 
+class View;
 class RenderComponent;
 class Player : public Entity {
 public :

@@ -8,6 +8,8 @@
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
+#include <App/views/ViewSpriteComponent.hpp>
+#include <App/views/ViewTextComponent.hpp>
 
 class View;
 class GUIButton;
@@ -41,6 +43,10 @@ public:
     virtual void render() = 0;
 
     virtual void onClose() = 0;
+
+    virtual ViewSpriteComponent* newSpriteRenderer(std::string textureName);
+
+    virtual ViewTextComponent* newTextRenderer(std::string text);
 
     View * getView();
 

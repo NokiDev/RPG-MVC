@@ -8,9 +8,10 @@
 
 #include <SFML/System/Vector2.hpp>
 #include <string>
-#include <App/views/View.hpp>
-#include <App/views/ViewTextComponent.hpp>
 
+class IController;
+class ViewSpriteComponent;
+class ViewTextComponent;
 class GUIButton {
 public:
     enum StateButton {DISABLED =-1, NORMAL , HOVER, SELECTED, CLICK};
@@ -45,7 +46,7 @@ private:
     std::string texture;
 
 
-    ViewComponent* viewRenderer;
+    ViewSpriteComponent* viewRenderer;
     ViewTextComponent * textRenderer;
 };
 

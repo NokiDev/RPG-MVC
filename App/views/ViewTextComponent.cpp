@@ -3,7 +3,6 @@
 //
 
 #include "ViewTextComponent.hpp"
-#include "View.hpp"
 
 ViewTextComponent::ViewTextComponent(std::string text) {
     font.loadFromFile("Ressources/fonts/space age.ttf");

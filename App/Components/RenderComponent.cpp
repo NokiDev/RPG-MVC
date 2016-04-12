@@ -4,7 +4,7 @@
 
 #include <App/models/Ressources.hpp>
 #include <App/Systems/RenderSystem/RenderSystem.hpp>
-#include "ViewComponent.hpp"
+#include "IViewComponent.hpp"
 #include "RenderComponent.hpp"
 
 RenderComponent::RenderComponent(Entity *owner, std::string textureName) {

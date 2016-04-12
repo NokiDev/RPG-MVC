@@ -8,6 +8,7 @@
 #include "Ressources.hpp"
 #include <Components/RenderComponent.hpp>
 #include <App/Components/BoxColliderComponent.hpp>
+#include <View.hpp>
 
 
 Player::Player() : Entity() {

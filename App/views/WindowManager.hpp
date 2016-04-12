@@ -8,8 +8,8 @@
 
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include "View.hpp"
 
+class View;
 class ControllersManager;
 class WindowManager {
 

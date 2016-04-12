@@ -26,7 +26,7 @@ MainMenuController::~MainMenuController() {
 void MainMenuController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
     if (event.type == sf::Event::KeyPressed) {
-        std::cout<<"KeyCode:"<<event.key.code<<std::endl;
+        ///EVENT FOR BUTTONS :
         if (event.key.code == sf::Keyboard::Return) {
             fireButton();
         }

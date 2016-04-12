@@ -3,21 +3,24 @@
 //
 
 #include "MainMenuView.hpp"
+#include <App/controllers/MainMenuController.hpp>
+#include <App/models/Ressources.hpp>
 #include "WindowManager.hpp"
+#include "IViewComponent.hpp"
 
 MainMenuView::MainMenuView(IController * controller) : View(controller){
     this->controller = controller;
     manager = WindowManager::get();
+    background.setTexture(Ressources::Load("mainBackground.jpg"));
 }
 
 MainMenuView::~MainMenuView() {
 
-
 }
 
-
 void MainMenuView::render(){
-    for(ViewComponent* component : components){
+    draw(background);
+    for(IViewComponent* component : components){
         component->draw(*this);
     }
 }
