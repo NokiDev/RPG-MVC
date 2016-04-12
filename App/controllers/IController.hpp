@@ -42,6 +42,8 @@ public:
 
     virtual void onClose() = 0;
 
+    View * getView();
+
 protected:
     View *view;
 };

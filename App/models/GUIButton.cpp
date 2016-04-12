@@ -3,18 +3,46 @@
 //
 
 #include "GUIButton.hpp"
+#include <iostream>
+#include "Ressources.hpp"
 
-GUIButton::GUIButton(sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, GUIButton::StateButton state) :
+
+GUIButton::GUIButton(IController* boss, sf::Vector2f pos, std::string text, GUIButton::StateButton state) {
+    GUIButton(boss, pos, sf::Vector2u(100, 50), "GuiMenu.png", text, state);
+}
+
+GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, GUIButton::StateButton state) :
+        boss(boss),
         position(pos),
         size(size),
         texture(texture),
-        text(text),
+        textStr(text),
         state(state){
+
+    viewRenderer = new ViewComponent(texture);
+    viewRenderer->updateRect(sf::IntRect(0,0, size.x, size.y));
+    viewRenderer->updatePosition(pos);
+
+    boss->getView()->addViewComponent(viewRenderer);
+
+    font.loadFromFile("Ressources/fonts/blake2.ttf");
+
+    this->text = sf::Text(text,font);
+
+    this->text.setPosition(pos.x+ size.x/2, pos.y);
 
 }
 
 GUIButton::~GUIButton() {
 
+}
+
+void GUIButton::update() {
+
+}
+
+void GUIButton::render(View &view) {
+    view.draw(text);
 }
 
 void GUIButton::setPosition(sf::Vector2f pos) {
@@ -26,7 +54,7 @@ void GUIButton::setSize(sf::Vector2u size) {
 }
 
 void GUIButton::setText(std::string text) {
-    this->text = text;
+    this->textStr = text;
 }
 
 void GUIButton::setState(GUIButton::StateButton state) {
@@ -46,9 +74,11 @@ sf::Vector2u GUIButton::getSize() {
 }
 
 std::string GUIButton::getText() {
-    return text;
+    return textStr;
 }
 
 GUIButton::StateButton GUIButton::getState() {
     return state;
 }
+
+

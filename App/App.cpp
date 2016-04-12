@@ -51,3 +51,7 @@ void App::close() {
 App *App::get() {
     return app;
 }
+
+ControllersManager *App::getManager() {
+    return App::app->manager;
+}

@@ -13,11 +13,20 @@ class MainMenuView : public View {
 public:
     MainMenuView(IController* controller);
     ~MainMenuView();
-    virtual void render() const;
+
+
+
+    virtual void render() ;
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
+
+
+
+
+
+
 private:
 
-    MainMenuController* controller;
+    IController* controller;
 
 };
 

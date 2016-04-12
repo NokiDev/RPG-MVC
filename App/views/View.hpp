@@ -8,7 +8,7 @@
 
 #include <SFML/Graphics.hpp>
 #include <App/controllers/IController.hpp>
-#include "IViewComponent.hpp"
+#include "ViewComponent.hpp"
 
 class WindowManager;
 class IController;
@@ -32,14 +32,14 @@ public:
      *
      *
      */
-    void addViewComponent(IViewComponent* component){
+    void addViewComponent(ViewComponent * component){
         components.push_back(component);
     };
     /*
      * @brief draw the wiew on window
      * @params sf::RenderWindow, window to draw on
      */
-    virtual void render() const = 0;
+    virtual void render()  = 0;
     /*
      *
      *
@@ -49,7 +49,7 @@ public:
 protected:
     WindowManager * manager;
     IController * controller;
-    std::vector<IViewComponent*> components;
+    std::vector<ViewComponent *> components;
 };
 
 

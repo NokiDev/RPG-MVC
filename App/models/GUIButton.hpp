@@ -8,13 +8,19 @@
 
 #include <SFML/System/Vector2.hpp>
 #include <string>
+#include <App/views/View.hpp>
 
 class GUIButton {
 public:
     enum StateButton {DISABLED =-1, NORMAL , HOVER, SELECTED, CLICK};
 
-    GUIButton(sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, StateButton state = StateButton::NORMAL);
+    GUIButton(IController * boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, StateButton state = StateButton::NORMAL);
+    GUIButton(IController* boss, sf::Vector2f pos,std::string text, StateButton state = StateButton::NORMAL);
     ~GUIButton();
+
+    void update();
+
+    void render(View & view);
 
     void setPosition(sf::Vector2f pos);
 
@@ -30,11 +36,25 @@ public:
     StateButton getState();
 
 private:
+
+    IController * boss;
+
     sf::Vector2f position;
     sf::Vector2u size;
-    std::string text;
+    std::string textStr;
     StateButton state;
     std::string texture;
+
+
+    ViewComponent* viewRenderer;
+    ///TO REMOVE WHEN WE UPGRADE ARCHI
+
+    sf::Sprite sprite;
+    sf::Texture tex;
+    sf::Text text;
+
+
+    sf::Font font;
 };
 
 

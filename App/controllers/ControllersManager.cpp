@@ -12,14 +12,14 @@ ControllersManager::ControllersManager(App* app) {
     this->app = app;
     windowManager = new WindowManager(this);
     windowManager->createWindow(sf::VideoMode(720,480), "MYGAME");
-    currentMainController = new IngameController();
+    currentMainController = new MainMenuController();
 }
 
 ControllersManager::~ControllersManager() {
     delete currentMainController;
 }
 
-IController *ControllersManager::getCurrentMainController() const {
+IController *ControllersManager::getCurrentMainController() {
     return currentMainController;
 }
 

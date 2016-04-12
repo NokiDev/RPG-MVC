@@ -27,6 +27,8 @@ public:
 
     static App* get();
 
+    static ControllersManager* getManager();
+
 private:
     static App* app;
     ControllersManager * manager;

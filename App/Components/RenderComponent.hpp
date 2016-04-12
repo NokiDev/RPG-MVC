@@ -7,6 +7,7 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <App/views/ViewComponent.hpp>
 #include "Component.hpp"
 
 class RenderComponent : public Component {
@@ -34,6 +35,7 @@ public:
 
 protected:
     sf::Sprite sprite;
+    ViewComponent* viewComponent;
 };
 
 

@@ -24,6 +24,7 @@ WindowManager::~WindowManager() {
 }
 
 void WindowManager::createWindow(sf::VideoMode mode, std::string title, sf::Uint32 style, sf::ContextSettings context) {
+    std::cout<<"CREATING WINDOW ...";
     window.create(mode, title, style, context);
 }
 

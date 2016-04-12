@@ -6,6 +6,7 @@
 #define RPG_MVC_MAINMENUCONTROLLER_HPP
 
 
+#include <App/models/GUIButton.hpp>
 #include "IController.hpp"
 
 class GuiButtonView;
@@ -14,10 +15,23 @@ class MainMenuController : public IController {
 public:
     MainMenuController();
     ~MainMenuController();
+
+
+    virtual void handleEvents(sf::Event &event);
+
+    virtual void update(sf::Time deltaTime = sf::Time::Zero);
+
+    virtual void render();
+
+    virtual void setSubController(IController *newSubController);
+
+    virtual void onClose();
+
+
 private:
 
 
-    std::vector<GuiButtonView*> buttons;
+    std::vector<GUIButton*> buttons;
 };
 
 

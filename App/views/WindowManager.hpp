@@ -42,6 +42,7 @@ private:
     ControllersManager* manager;
 
     sf::Event event;
+
 };
 
 

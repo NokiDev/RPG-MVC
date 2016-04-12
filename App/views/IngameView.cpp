@@ -14,7 +14,7 @@ IngameView::~IngameView() {
 }
 
 
-void IngameView::render() const {
+void IngameView::render() {
     for(auto component : components)
     {
         //component->draw();

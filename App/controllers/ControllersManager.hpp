@@ -21,7 +21,7 @@ public:
 
     virtual void setCurrentMainController(IController *newSubController);
 
-    IController* getCurrentMainController() const;
+    IController* getCurrentMainController();
 
 private:
 

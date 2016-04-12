@@ -9,13 +9,19 @@
 #include <SFML/Graphics/Sprite.hpp>
 #include <App/models/Entity.hpp>
 
-class IViewComponent {
+class View;
+class ViewComponent {
 
 public:
+    ViewComponent(std::string textureName);
+
+    void draw(View & view);
+    void updatePosition(sf::Vector2f position);
+    void updateRect(sf::IntRect textRect);
+
 
 protected:
-    Entity* owner;
-    std::string textureName;
+    sf::Texture texture;
     sf::Sprite sprite;
 };
 

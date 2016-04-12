@@ -4,14 +4,11 @@
 
 #include <App/models/Ressources.hpp>
 #include <App/Systems/RenderSystem/RenderSystem.hpp>
+#include "ViewComponent.hpp"
 #include "RenderComponent.hpp"
 
 RenderComponent::RenderComponent(Entity *owner, std::string textureName) {
     this->owner = owner;
-
-    sprite.setTexture(Ressources::Load(textureName + ".png"));
-    sprite.setPosition(owner->getPosition());
-
     RenderSystem::renderSystem->addSprite(this);
 }
 

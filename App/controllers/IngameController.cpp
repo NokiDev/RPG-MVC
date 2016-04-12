@@ -42,7 +42,6 @@ void IngameController::render() {
         if (subControllerExist())
             subController->render();
         theMap->render(*view);
-
     }
 }
 

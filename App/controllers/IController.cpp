@@ -21,3 +21,7 @@ void IController::handleEvents(sf::Event &event) {
         App::get()->close();
     }
 }
+
+View *IController::getView() {
+    return view;
+}

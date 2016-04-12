@@ -40,6 +40,7 @@ public :
 
 protected:
     sf::Sprite sprite;
+
     //RenderComponent* render;
 };
 
