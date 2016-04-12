@@ -9,7 +9,7 @@
 
 IngameController::IngameController() {
     view = new IngameView(this);
-    thePlayer = new Player();
+    thePlayer = new Player(this);
     theMap = new Map(thePlayer);
     subController = nullptr;
     collSys = new CollisionSystem();
@@ -41,7 +41,7 @@ void IngameController::render() {
     if (viewExist()) {
         if (subControllerExist())
             subController->render();
-        theMap->render(*view);
+        view->render();
     }
 }
 

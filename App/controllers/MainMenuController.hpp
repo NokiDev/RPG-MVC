@@ -30,6 +30,10 @@ public:
 
     void fireButton();
 
+    void goDown();
+
+    void goUp();
+
 
 private:
 

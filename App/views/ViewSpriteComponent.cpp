@@ -2,7 +2,7 @@
 // Created by bluedragonfly on 4/12/16.
 //
 
-#include <App/models/Ressources.hpp>
+#include <App/Helpers/Ressources.hpp>
 #include "ViewSpriteComponent.hpp"
 
 ViewSpriteComponent::ViewSpriteComponent(std::string textureName) {

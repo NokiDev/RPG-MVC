@@ -6,13 +6,15 @@
 #define RPG_MVC_PLAYER_HPP
 
 #include <SFML/Graphics/Sprite.hpp>
+#include <App/views/ViewSpriteComponent.hpp>
+#include <App/controllers/IController.hpp>
 #include "Entity.hpp"
 
 class View;
 class RenderComponent;
 class Player : public Entity {
 public :
-    Player();
+    Player(IController* boss);
     ~Player();
     /**
      * @brief Update the entity each frame
@@ -29,8 +31,6 @@ public :
      * @brief Behaviour to adopt when entering on collision
      */
     virtual void onCollision();
-
-    virtual void render(View & view);
     /**
      * @brief Update the entity each frame
      * @params time between two frames
@@ -40,8 +40,8 @@ public :
 
 
 protected:
-    sf::Sprite sprite;
-
+    IController* boss;
+    ViewSpriteComponent* spriteRenderer;
     //RenderComponent* render;
 };
 

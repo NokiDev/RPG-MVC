@@ -22,16 +22,6 @@ void Map::instantiate(Entity *entity) {
 
 }
 
-void Map::render(View &view) {
-    for(auto tile : tiles){
-        tile->render(view);
-    }
-    for(auto entity : entities) {
-        //entity->render(view);
-    }
-    thePlayer->render(view);
-}
-
 void Map::update() {
 
 }

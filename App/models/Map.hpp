@@ -27,7 +27,6 @@ public :
     void checkCollisions();
     void load(std::string mapName);
     void instantiate(Entity*entity);
-    void render(View & view);
 
 private:
 

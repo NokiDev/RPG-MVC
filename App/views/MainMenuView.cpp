@@ -4,7 +4,7 @@
 
 #include "MainMenuView.hpp"
 #include <App/controllers/MainMenuController.hpp>
-#include <App/models/Ressources.hpp>
+#include <App/Helpers/Ressources.hpp>
 #include "WindowManager.hpp"
 #include "IViewComponent.hpp"
 
@@ -20,7 +20,7 @@ MainMenuView::~MainMenuView() {
 
 void MainMenuView::render(){
     draw(background);
-    for(IViewComponent* component : components){
+    for(auto component : components){
         component->draw(*this);
     }
 }

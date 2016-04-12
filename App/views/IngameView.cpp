@@ -3,6 +3,7 @@
 //
 
 #include "IngameView.hpp"
+#include "IViewComponent.hpp"
 
 IngameView::IngameView(IController* controller) : View(controller) {
     this->controller = controller;
@@ -17,9 +18,8 @@ IngameView::~IngameView() {
 void IngameView::render() {
     for(auto component : components)
     {
-        //component->draw();
+        component->draw(*this);
     }
-    manager->display();
 }
 
 void IngameView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {

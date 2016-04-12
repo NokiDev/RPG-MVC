@@ -81,6 +81,7 @@ public :
 protected :
     Entity() : id(nextId++){};
     sf::Vector2f position;
+    sf::Vector2u size;
     float z; ///Depth for render ===NOT USED===
     sf::Vector2f velocity;
     int speed;

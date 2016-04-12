@@ -6,7 +6,6 @@
 #define RPG_MVC_INGAMEVIEW_HPP
 
 
-#include <App/Systems/RenderSystem/RenderSystem.hpp>
 #include "View.hpp"
 #include "WindowManager.hpp"
 

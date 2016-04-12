@@ -29,7 +29,7 @@ GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std
 
     //TextRenderer reference, allow us to keep dependency
     textRenderer = boss->newTextRenderer(text);
-    textRenderer->updatePosition(pos);
+    textRenderer->updatePosition(sf::Vector2f(pos.x + size.x/2 - 50, pos.y));
 }
 
 GUIButton::~GUIButton() {
@@ -61,6 +61,9 @@ void GUIButton::setState(GUIButton::StateButton state) {
             break;
         case NORMAL :
             viewRenderer->updateRect(sf::IntRect(0, 0, size.x, size.y));
+            break;
+        case DISABLED:
+            viewRenderer->updateRect(sf::IntRect(0, 80, size.x, size.y));
             break;
         default:
             break;
