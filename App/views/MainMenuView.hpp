@@ -14,15 +14,8 @@ public:
     MainMenuView(IController* controller);
     ~MainMenuView();
 
-
-
     virtual void render() ;
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
-
-
-
-
-
 
 private:
 

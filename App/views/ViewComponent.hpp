@@ -13,11 +13,12 @@ class View;
 class ViewComponent {
 
 public:
+    ViewComponent();
     ViewComponent(std::string textureName);
 
-    void draw(View & view);
-    void updatePosition(sf::Vector2f position);
-    void updateRect(sf::IntRect textRect);
+    virtual void draw(View & view);
+    virtual void updatePosition(sf::Vector2f position);
+    virtual void updateRect(sf::IntRect textRect);
 
 
 protected:

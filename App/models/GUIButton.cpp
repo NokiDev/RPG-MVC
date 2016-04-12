@@ -25,12 +25,10 @@ GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std
 
     boss->getView()->addViewComponent(viewRenderer);
 
-    font.loadFromFile("Ressources/fonts/blake2.ttf");
+    textRenderer = new ViewTextComponent(text);
+    textRenderer->updatePosition(pos);
 
-    this->text = sf::Text(text,font);
-
-    this->text.setPosition(pos.x+ size.x/2, pos.y);
-
+    boss->getView()->addViewComponent(textRenderer);
 }
 
 GUIButton::~GUIButton() {
@@ -41,12 +39,10 @@ void GUIButton::update() {
 
 }
 
-void GUIButton::render(View &view) {
-    view.draw(text);
-}
-
 void GUIButton::setPosition(sf::Vector2f pos) {
     position = pos;
+    viewRenderer->updatePosition(pos);
+    textRenderer->updatePosition(pos);
 }
 
 void GUIButton::setSize(sf::Vector2u size) {
@@ -58,6 +54,16 @@ void GUIButton::setText(std::string text) {
 }
 
 void GUIButton::setState(GUIButton::StateButton state) {
+    switch(state){
+        case SELECTED:
+            viewRenderer->updateRect(sf::IntRect(0, 40, size.x, size.y));
+            break;
+        case NORMAL :
+            viewRenderer->updateRect(sf::IntRect(0, 0, size.x, size.y));
+            break;
+        default:
+            break;
+    }
     this->state = state;
 }
 
@@ -80,5 +86,3 @@ std::string GUIButton::getText() {
 GUIButton::StateButton GUIButton::getState() {
     return state;
 }
-
-

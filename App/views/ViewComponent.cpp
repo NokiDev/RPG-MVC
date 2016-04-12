@@ -23,3 +23,7 @@ void ViewComponent::updatePosition(sf::Vector2f position) {
 void ViewComponent::updateRect(sf::IntRect textRect) {
     sprite.setTextureRect(textRect);
 }
+
+ViewComponent::ViewComponent() {
+
+}

@@ -28,10 +28,14 @@ public:
     virtual void onClose();
 
 
+    void fireButton();
+
+
 private:
 
 
     std::vector<GUIButton*> buttons;
+    std::vector<GUIButton*>::iterator selectedButton;
 };
 
 

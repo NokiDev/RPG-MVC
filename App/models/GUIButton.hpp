@@ -9,6 +9,7 @@
 #include <SFML/System/Vector2.hpp>
 #include <string>
 #include <App/views/View.hpp>
+#include <App/views/ViewTextComponent.hpp>
 
 class GUIButton {
 public:
@@ -19,8 +20,6 @@ public:
     ~GUIButton();
 
     void update();
-
-    void render(View & view);
 
     void setPosition(sf::Vector2f pos);
 
@@ -47,14 +46,7 @@ private:
 
 
     ViewComponent* viewRenderer;
-    ///TO REMOVE WHEN WE UPGRADE ARCHI
-
-    sf::Sprite sprite;
-    sf::Texture tex;
-    sf::Text text;
-
-
-    sf::Font font;
+    ViewTextComponent * textRenderer;
 };
 
 
