@@ -6,7 +6,7 @@
 #include "View.hpp"
 
 ViewTextComponent::ViewTextComponent(std::string text) {
-    font.loadFromFile("Ressources/fonts/blake2.ttf");
+    font.loadFromFile("Ressources/fonts/space age.ttf");
     this->text = sf::Text(text,font);
 }
 
