@@ -19,7 +19,9 @@ MainMenuView::~MainMenuView() {
 }
 
 void MainMenuView::render(){
+    manager->Window().setView(sf::View(sf::Vector2f(360,240), sf::Vector2f(720,480)));
     draw(background);
+    manager->Window().setView(manager->Window().getDefaultView());
     for(auto component : components){
         component->draw(*this);
     }

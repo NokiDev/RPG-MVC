@@ -29,10 +29,11 @@ public:
      * @enum NOT USED
     **/
     enum CollisionBorder{NONE, TOPBORDER, BOTBORDER, LEFTBORDER, RIGHTBORDER};
-    /**
+    /**#include "Tile.hpp"
+
      * @brief Destructor
     **/
-    virtual ~ICollisionHelper();
+    //virtual ~ICollisionHelper();
     /**
      * @brief Test Collision between two AABB
      * @param box1 first box to test
@@ -40,17 +41,10 @@ public:
     **/
     static bool AABBCollision(sf::FloatRect box1, sf::FloatRect box2)
     {
-        if((box2.left >= box1.left + box1.width)      // trop � droite
-           || (box2.left + box2.width <= box1.left) // trop � gauche
-           || (box2.top >= box1.top + box1.height) // trop en bas
-           || (box2.top + box2.height <= box1.top))  // trop en haut
-        {
-            return false;
-        }
-        else
-        {
-            return true;
-        }
+        return !((box2.left >= box1.left + box1.width)      // trop à droite
+       || (box2.left + box2.width <= box1.left) // trop à gauche
+       || (box2.top >= box1.top + box1.height) // trop en bas
+       || box2.top + box2.height <= box1.top);
     }
     /**
      * @brief NOT USED
@@ -115,14 +109,7 @@ public:
     static bool PointInCircleCollision(Circle& C, float x, float y)
     {
         float d = (x-C.x)*(x-C.x) + (y-C.y)*(y-C.y);
-        if(d <= (C.rayon*C.rayon))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return d <= (C.rayon * C.rayon);
     }
 };
 

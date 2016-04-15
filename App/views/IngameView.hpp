@@ -17,6 +17,9 @@ public:
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 private:
     IController * controller;
+
+    sf::Sprite background;
+
 };
 
 

@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <App/views/WindowManager.hpp>
 #include "CollisionSystem.hpp"
 #include "IDetectionHelper.hpp"
 #include "ICollisionHelper.hpp"
@@ -31,6 +32,10 @@ void CollisionSystem::addBoxCollider(BoxColliderComponent *boxCollider) {
 
 void CollisionSystem::delBoxCollider(BoxColliderComponent *boxCollider) {
     boxColliders.erase(boxCollider);
+}
+
+void CollisionSystem::addMovingBoxCollider(BoxColliderComponent *boxCollider) {
+    movingColliders.insert(boxCollider);
 }
 
 void CollisionSystem::checkCollisions() {
@@ -86,8 +91,17 @@ void CollisionSystem::checkCollisions() {
             triggerCollisions.erase(collision);
         }
     }
+    for(BoxColliderComponent* collider : movingColliders)
+    {
+        sf::Vector2u winSize = WindowManager::get()->Window().getSize();
+        sf::FloatRect winBox = sf::FloatRect(0,0,winSize.x, winSize.y);
+        if(!ICollisionHelper::NotAABBCollision(collider->getOwner().getPosition(),winBox, collider->getBox()));
+        {
+            collider->onCollision(winBox);
+        }
+    }
+    movingColliders.clear();
 }
-
 
 TriggerCollision::TriggerCollision(BoxColliderComponent *trigger, BoxColliderComponent *collider) {
 

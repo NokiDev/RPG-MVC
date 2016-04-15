@@ -7,10 +7,12 @@
 
 #include <SFML/Graphics/Sprite.hpp>
 #include <App/views/ViewSpriteComponent.hpp>
-#include <App/controllers/IController.hpp>
+#include <App/Components/BoxColliderComponent.hpp>
+#include <App/Components/EventHandlerComponent.hpp>
 #include "Entity.hpp"
 
 class View;
+class EventsHandler;
 class RenderComponent;
 class Player : public Entity {
 public :
@@ -30,18 +32,18 @@ public :
     /**
      * @brief Behaviour to adopt when entering on collision
      */
-    virtual void onCollision();
+    virtual void onCollision(BoxColliderComponent * collider);
+
     /**
      * @brief Update the entity each frame
      * @params time between two frames
     **/
 
-    sf::Vector2f getSpriteSize();
-
 
 protected:
-    IController* boss;
     ViewSpriteComponent* spriteRenderer;
+    BoxColliderComponent * boxCollider;
+    EventHandlerComponent * eventHandler;
     //RenderComponent* render;
 };
 

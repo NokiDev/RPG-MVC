@@ -7,6 +7,7 @@
 
 
 #include <App/models/Player.hpp>
+#include <App/Systems/EventSystem/EventsSystem.hpp>
 #include "IController.hpp"
 
 class CollisionSystem;
@@ -19,6 +20,8 @@ public:
     ~IngameController();
 
     virtual void handleEvents(sf::Event &event);
+
+    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2f direction);
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
 
@@ -33,8 +36,10 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
+    std::vector<Entity*> entities;
     Map * theMap;
     CollisionSystem* collSys;
+    EventsSystem* eventSys;
 
     bool subControllerExist() const;
 

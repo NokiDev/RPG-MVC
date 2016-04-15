@@ -5,15 +5,16 @@
 #include <App/views/IngameView.hpp>
 #include <App/models/Map.hpp>
 #include <App/Systems/CollisionSystem/CollisionSystem.hpp>
+#include <App/Systems/EventSystem/EventsSystem.hpp>
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
     view = new IngameView(this);
+    collSys = new CollisionSystem();
+    eventSys = new EventsSystem();
     thePlayer = new Player(this);
     theMap = new Map(thePlayer);
     subController = nullptr;
-    collSys = new CollisionSystem();
-    //inputSys = new InputSystem();
 }
 
 IngameController::~IngameController() {
@@ -26,7 +27,7 @@ void IngameController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
     if (subControllerExist())
         subController->handleEvents(event);
-    //inputSys->handleEvents(event);
+    eventSys->handleEvents(event);
 }
 
 void IngameController::update(sf::Time deltaTime) {
@@ -34,6 +35,10 @@ void IngameController::update(sf::Time deltaTime) {
         subController->update(deltaTime);
     thePlayer->update(deltaTime);
     thePlayer->physicsUpdate();
+    for(auto entity : entities){
+        entity->update();
+        entity->physicsUpdate();
+    }
     collSys->checkCollisions();
 }
 
@@ -64,4 +69,13 @@ void IngameController::onClose() {
 
 IController *IngameController::getSubController() {
     return subController;
+}
+
+Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf::Vector2f direction) {
+
+    entities.push_back(entity);
+    entity->setPosition(position);
+    entity->setDirection(direction);
+
+    return entity;
 }

@@ -30,6 +30,12 @@ public:
      */
     virtual void handleEvents(sf::Event &event);
 
+
+    /**
+     *
+    **/
+    virtual bool isKeyPressed(sf::Keyboard::Key key);
+
     /*
      * @brief update all components of the controllers
      * @params sf::Time, time between two frames or default zero

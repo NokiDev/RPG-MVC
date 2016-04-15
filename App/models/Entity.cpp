@@ -3,6 +3,14 @@
 //
 
 #include "Entity.hpp"
-#include <Components/Component.hpp>
+
 
 int Entity::nextId = 0;
+
+void Entity::setDirection(sf::Vector2f dir) {
+    direction = dir;
+}
+
+sf::Vector2f Entity::getDirection() {
+    return direction;
+}

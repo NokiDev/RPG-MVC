@@ -9,8 +9,6 @@
 #include <App/models/GUIButton.hpp>
 #include "IController.hpp"
 
-class GuiButtonView;
-
 class MainMenuController : public IController {
 public:
     MainMenuController();

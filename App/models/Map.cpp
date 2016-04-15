@@ -19,10 +19,10 @@ void Map::load(std::string mapName) {
 }
 
 void Map::instantiate(Entity *entity) {
-
+    entities.push_back(entity);
 }
 
-void Map::update() {
+void Map::update(sf::Time time1) {
 
 }
 

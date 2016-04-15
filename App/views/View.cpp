@@ -27,3 +27,7 @@ void View::addViewComponent(IViewComponent *component) {
 sf::Vector2u View::getSize() {
     return manager->getWindowSize();
 }
+
+bool View::isKeyPressed(sf::Keyboard::Key key) {
+    return sf::Keyboard::isKeyPressed(key);
+}

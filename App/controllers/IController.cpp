@@ -40,3 +40,8 @@ ViewTextComponent * IController::newTextRenderer(std::string text) {
     view->addViewComponent(textRenderer);
     return textRenderer;
 }
+
+
+bool IController::isKeyPressed(sf::Keyboard::Key key) {
+    return view->isKeyPressed(key);
+}

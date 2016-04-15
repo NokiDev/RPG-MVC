@@ -32,6 +32,7 @@ public :
     ~CollisionSystem();
 
     void addBoxCollider(BoxColliderComponent* boxCollider);
+    void addMovingBoxCollider(BoxColliderComponent* boxCollider);
     void delBoxCollider(BoxColliderComponent* boxCollider);
 
     void checkCollisions();

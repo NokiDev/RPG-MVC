@@ -9,16 +9,19 @@
 #include <App/Components/BoxColliderComponent.hpp>
 #include <View.hpp>
 #include <App/controllers/IController.hpp>
+#include <App/Components/EventHandlers/PlayerEventsHandler.hpp>
 
 
-Player::Player(IController* boss) : Entity(), boss(boss){
+Player::Player(IController* boss) : Entity(){
+    this->boss = boss;
     position = sf::Vector2f(0.f, 0.f);
     velocity = sf::Vector2f(0.f, 0.f);
-    size = sf::Vector2u(64,64);;
-    speed = 250;
+    direction = sf::Vector2f(0.f,0.f);
+    size = sf::Vector2u(64,64);
+    speed = 350;
     name = "Player";
-    addComponent(typeid(BoxColliderComponent).name(), new BoxColliderComponent(this, size));
-    BoxColliderComponent* component = getComponent<BoxColliderComponent>();
+    eventHandler = new PlayerEventsHandler(this);
+    boxCollider = new BoxColliderComponent(this, size);
     spriteRenderer = boss->newSpriteRenderer("player.png");
 }
 
@@ -28,19 +31,9 @@ Player::~Player() {
 
 
 void Player::update(sf::Time deltaTime) {
-    velocity = sf::Vector2f(0.f,0.f);
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
-        velocity.x -= speed * deltaTime.asSeconds();
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
-        velocity.x += speed * deltaTime.asSeconds();
-    }
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
-        velocity.y -= speed * deltaTime.asSeconds();
-    }
-    else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-        velocity.y += speed * deltaTime.asSeconds();
-    }
+    eventHandler->update(deltaTime);
+    boxCollider->update(deltaTime);
+
 }
 
 void Player::physicsUpdate() {
@@ -49,6 +42,6 @@ void Player::physicsUpdate() {
 }
 
 
-void Player::onCollision() {
+void Player::onCollision(BoxColliderComponent* collider) {
 
 }

@@ -18,7 +18,7 @@ public:
     /**
      * @brief Destructor
     **/
-    virtual ~IDetectionHelper();
+    //virtual ~IDetectionHelper();
     /**
      * @brief Detect if the box is near to the other
      * @param dist maximum distance where the box is detect
@@ -27,11 +27,7 @@ public:
     **/
     static bool DetectIsNear(int dist, sf::FloatRect box1, sf::FloatRect box2)
     {
-        if (CalculateDistanceBetweenBoxes(box1, box2) <= dist)
-        {
-            return true;
-        }
-        return false;
+        return CalculateDistanceBetweenBoxes(box1, box2) <= dist;
     }
     /**
      * @brief Calculate distance between two boxes as Int
@@ -50,7 +46,7 @@ public:
         if (yDistance <0)
             yDistance *= -1;
 
-        int distance = xDistance + yDistance;
+        int distance = (int) (xDistance + yDistance);
 
         return distance;
     }

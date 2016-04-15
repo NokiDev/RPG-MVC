@@ -8,7 +8,6 @@
 #include <string>
 #include "View.hpp"
 #include "Entity.hpp"
-#include "Tile.hpp"
 #include "Player.hpp"
 
 
@@ -22,7 +21,7 @@ public :
     Map(Player* player);
     ~Map();
 
-    void update();
+    void update(sf::Time time1);
     void updatePhysics();
     void checkCollisions();
     void load(std::string mapName);
@@ -32,7 +31,6 @@ private:
 
     Player* thePlayer;
     std::vector<Entity*> entities; //Represent all entities in the Map
-    std::vector<Tile*> tiles; //Represent all tiles of the Map
 
 };
 

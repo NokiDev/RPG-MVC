@@ -24,6 +24,8 @@ public:
      *
      */
     virtual void askForEvent();
+
+    virtual bool isKeyPressed(sf::Keyboard::Key key);
     /*
      *
      *
