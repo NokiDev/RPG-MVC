@@ -124,10 +124,11 @@ protected :
 
     IController* boss;
     sf::Vector2f position;
+    sf::Vector2f direction;
     sf::Vector2u size;
     float z; ///Depth for render ===NOT USED===
+
     sf::Vector2f velocity;
-    sf::Vector2f direction;
     int speed;
     std::string name;
     const int id;

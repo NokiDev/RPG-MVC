@@ -15,7 +15,7 @@
 Player::Player(IController* boss) : Entity(boss){
     position = sf::Vector2f(0.f, 0.f);
     velocity = sf::Vector2f(0.f, 0.f);
-    direction = sf::Vector2f(0.f,0.f);
+    direction = sf::Vector2f(1.f,0.f);//Facing est
     size = sf::Vector2u(64,64);
     name = "Player";
     speed = 350;

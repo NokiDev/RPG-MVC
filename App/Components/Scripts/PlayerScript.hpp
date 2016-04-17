@@ -19,6 +19,8 @@ public :
     }
 
 private:
+
+
     float attackSpeed; //Amount attack by seconds
 };
 
