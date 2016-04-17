@@ -35,24 +35,23 @@ void PlayerEventsHandler::update(sf::Time deltaTime) {
             timer = 0.f;
             IngameController* ingameController = dynamic_cast<IngameController*> (owner->getBoss());
             Laser* laser = new Laser(owner->getBoss());
-            ingameController->instantiate(laser, owner->getPosition() + sf::Vector2f(owner->getSize().x, owner->getSize().y/2), owner->getDirection());
+            ingameController->instantiate(laser, owner->getPosition() + sf::Vector2f(owner->getSize().x, owner->getSize().y/2), sf::Vector2f(1.0f,0.f));
 
         }
     }
     owner->setVelocity(sf::Vector2f(0.f,0.f));
-    int speed = owner->getSpeed();
     float x=0,y=0;
     if (owner->getBoss()->isKeyPressed(sf::Keyboard::Left)) {
-        x -= speed *0.7* deltaTime.asSeconds();
+        x= -1.0f;
     }
     else if (owner->getBoss()->isKeyPressed(sf::Keyboard::Right)) {
-        x += speed * 0.5* deltaTime.asSeconds();
+        x = 1.0f;
     }
     if (owner->getBoss()->isKeyPressed(sf::Keyboard::Up)) {
-        y -= speed *0.7* deltaTime.asSeconds();
+        y = -1.0f;
     }
     else if (owner->getBoss()->isKeyPressed(sf::Keyboard::Down)) {
-        y += speed *0.9* deltaTime.asSeconds();
+        y = 1.0f;
     }
-    owner->setVelocity(sf::Vector2f(x,y));
+    owner->setDirection(sf::Vector2f(x,y));
 }

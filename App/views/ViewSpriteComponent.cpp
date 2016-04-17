@@ -29,3 +29,7 @@ void ViewSpriteComponent::updateRect(sf::IntRect textRect) {
 void ViewSpriteComponent::update(sf::Time deltaTime) {
 
 }
+
+void ViewSpriteComponent::updateColor(sf::Color color) {
+    sprite.setColor(color);
+}

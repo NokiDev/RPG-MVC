@@ -8,6 +8,7 @@
 
 #include <App/models/Player.hpp>
 #include <App/Systems/EventSystem/EventsSystem.hpp>
+#include <App/models/Enemy.hpp>
 #include "IController.hpp"
 
 class ScriptSystem;
@@ -38,6 +39,7 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
+    Enemy* theEnemy;
     std::set<Entity*> entities;
     std::vector<Entity*> entitiesToDestroy;
     Map * theMap;

@@ -7,6 +7,7 @@
 #include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include <App/Systems/ScriptSystem/ScriptSystem.hpp>
+
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
@@ -15,6 +16,7 @@ IngameController::IngameController() {
     scriptSys = new ScriptSystem();
     eventSys = new EventsSystem();
     thePlayer = new Player(this);
+    entities.insert(new Enemy(this));
     theMap = new Map(thePlayer);
     subController = nullptr;
 }
@@ -33,6 +35,7 @@ void IngameController::handleEvents(sf::Event &event) {
 }
 
 void IngameController::update(sf::Time deltaTime) {
+
     for(auto entity : entitiesToDestroy){
         delete entity;
     }

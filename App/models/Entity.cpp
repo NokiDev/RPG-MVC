@@ -13,11 +13,6 @@ Entity::Entity(IController* boss) : id(nextId++), boss(boss){
 };
 
 
-
-void Entity::setDirection(sf::Vector2f dir) {
-    direction = dir;
-}
-
 sf::Vector2f Entity::getDirection() {
     return direction;
 }

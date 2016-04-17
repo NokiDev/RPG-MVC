@@ -16,6 +16,9 @@ public :
     virtual void draw(View & view);
     void updatePosition(sf::Vector2f position);
     void updateRect(sf::IntRect textRect);
+    void updateColor(sf::Color color);
+
+
 
 
 protected:

@@ -5,9 +5,13 @@
 #include "PlayerScript.hpp"
 
 PlayerScript::PlayerScript(Entity *owner) : ScriptComponent(owner){
-    attackSpeed = 0.3f;
+    attackSpeed = 0.2f;
 }
 
 PlayerScript::~PlayerScript() {
 
+}
+
+float PlayerScript::getAttackSpeed(){
+    return attackSpeed;
 }

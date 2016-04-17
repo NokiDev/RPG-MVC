@@ -14,9 +14,7 @@ public :
     PlayerScript(Entity* owner);
     ~PlayerScript();
 
-    float getAttackSpeed(){
-        return attackSpeed;
-    }
+    float getAttackSpeed();
 
 private:
 

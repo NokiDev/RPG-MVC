@@ -14,13 +14,23 @@ Enemy::Enemy(IController *boss) : Entity(boss) {
     size = sf::Vector2u(64,64);
 
     addComponent(new BoxColliderComponent(this, size));
-
-    //addComponent(new EnnemyScript())
-
-    spriteRenderer = boss->newSpriteRenderer("player.png");
-
+    //addComponent(ne EnnemyScript())
+    spriteRenderer = boss->newSpriteRenderer("enemy.png");
+    spriteRenderer->updateColor(sf::Color(115,120,190));
 }
 
 Enemy::~Enemy() {
+
+}
+
+void Enemy::onCollision(BoxColliderComponent *collider) {
+    Entity::onCollision(collider);
+}
+
+void Enemy::physicsUpdate() {
+
+}
+
+void Enemy::update(sf::Time deltaTime) {
 
 }

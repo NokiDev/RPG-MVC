@@ -25,7 +25,8 @@ Laser::~Laser() {
 }
 
 void Laser::update(sf::Time deltaTime){
-    velocity.x = speed * deltaTime.asSeconds();
+    velocity.x = speed * deltaTime.asSeconds()*direction.x;
+    velocity.y = speed * deltaTime.asSeconds()*direction.y;
 }
 
 void Laser::physicsUpdate() {

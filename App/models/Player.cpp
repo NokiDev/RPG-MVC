@@ -34,6 +34,15 @@ Player::~Player() {
 
 
 void Player::update(sf::Time deltaTime) {
+    float modifier  = 1.f;
+
+    if(direction.x <0)
+        modifier = 0.5;
+    velocity.x= speed * deltaTime.asSeconds() *direction.x * modifier;
+
+    if (direction.y != 0)
+        modifier = 0.7;
+    velocity.y= speed * deltaTime.asSeconds()  * direction.y * modifier;
 }
 
 void Player::physicsUpdate() {

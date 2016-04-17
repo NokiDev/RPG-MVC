@@ -50,6 +50,20 @@ public :
         position= pos;
     }
 
+    void setDirectionX(float x)
+    {
+        setDirection(sf::Vector2f(x, direction.y));
+    }
+
+    void setDirectionY(float y)
+    {
+        setDirection(sf::Vector2f(direction.x, y));
+    }
+
+    void setDirection(sf::Vector2f dir){
+        direction = dir;
+    }
+
     sf::Vector2f& getPosition() {
         return position;
     }
@@ -110,8 +124,6 @@ public :
     IController* getBoss(){
         return boss;
     }
-
-    void setDirection(sf::Vector2f dir);
 
     sf::Vector2f getDirection();
 
