@@ -8,9 +8,13 @@
 #include <string>
 #include "View.hpp"
 
-class IViewComponent {
+class IViewComponent{
 
 public:
+
+    virtual ~IViewComponent(){};
+
+    virtual void update(sf::Time deltaTime){};
     virtual void draw(View & view) = 0;
 };
 

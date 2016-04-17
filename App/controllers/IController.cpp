@@ -45,3 +45,7 @@ ViewTextComponent * IController::newTextRenderer(std::string text) {
 bool IController::isKeyPressed(sf::Keyboard::Key key) {
     return view->isKeyPressed(key);
 }
+
+void IController::delSpriteRenderer(IViewComponent *sprite) {
+    view->delViewComponent(sprite);
+}

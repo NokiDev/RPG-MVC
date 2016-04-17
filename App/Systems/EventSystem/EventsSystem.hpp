@@ -15,6 +15,7 @@ class EventsSystem {
         void addEventHandler(EventHandlerComponent* eventHandler);
         void delEventHandler(EventHandlerComponent* eventHandler);
         void handleEvents(sf::Event event);
+        void update(sf::Time deltaTime);
     private:
         std::set<EventHandlerComponent*> eventHandlers;
 };

@@ -26,8 +26,8 @@ WindowManager::~WindowManager() {
 }
 
 void WindowManager::createWindow(sf::VideoMode mode, std::string title, sf::Uint32 style, sf::ContextSettings context) {
-    std::cout<<"CREATING WINDOW ...";
     window.create(mode, title, style, context);
+    window.setVerticalSyncEnabled(true);
 }
 
 void WindowManager::handleEvent(View & view) {
@@ -63,6 +63,5 @@ WindowManager *WindowManager::get() {
 }
 
 sf::Vector2u WindowManager::getWindowSize() {
-    std::cout << "Fenetre : " << window.getSize().x << std::endl;
     return window.getSize();
 }

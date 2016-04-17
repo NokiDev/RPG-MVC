@@ -7,6 +7,7 @@
 
 
 #include <SFML/Graphics.hpp>
+#include <set>
 
 
 class IController;
@@ -15,6 +16,8 @@ class IController;
 class IViewComponent;
 class View {
 public:
+
+    static View* currentView;
 
     View(IController * controller);
 
@@ -36,6 +39,9 @@ public:
      *
      */
     void addViewComponent(IViewComponent * component);
+
+
+    void delViewComponent(IViewComponent * component);
     /*
      * @brief draw the wiew on window
      * @params sf::RenderWindow, window to draw on
@@ -52,7 +58,7 @@ public:
 protected:
     WindowManager * manager;
     IController * controller;
-    std::vector<IViewComponent *> components;
+    std::set<IViewComponent *> components;
 };
 
 

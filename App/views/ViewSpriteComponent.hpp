@@ -11,7 +11,8 @@ class ViewSpriteComponent : public IViewComponent{
 
 public :
     ViewSpriteComponent(std::string textureName);
-
+    ~ViewSpriteComponent();
+    virtual void update(sf::Time deltaTime);
     virtual void draw(View & view);
     void updatePosition(sf::Vector2f position);
     void updateRect(sf::IntRect textRect);

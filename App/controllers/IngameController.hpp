@@ -10,6 +10,7 @@
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include "IController.hpp"
 
+class ScriptSystem;
 class CollisionSystem;
 class Map;
 class IngameController : public IController {
@@ -22,6 +23,7 @@ public:
     virtual void handleEvents(sf::Event &event);
 
     virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2f direction);
+    virtual void destroy(Entity*entity);
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
 
@@ -36,10 +38,12 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
-    std::vector<Entity*> entities;
+    std::set<Entity*> entities;
+    std::vector<Entity*> entitiesToDestroy;
     Map * theMap;
     CollisionSystem* collSys;
     EventsSystem* eventSys;
+    ScriptSystem* scriptSys;
 
     bool subControllerExist() const;
 

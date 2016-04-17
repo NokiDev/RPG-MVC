@@ -33,7 +33,8 @@ GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std
 }
 
 GUIButton::~GUIButton() {
-
+    delete textRenderer;
+    delete viewRenderer;
 }
 
 void GUIButton::update() {

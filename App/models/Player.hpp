@@ -40,11 +40,11 @@ public :
     **/
 
 
+
+
 protected:
     ViewSpriteComponent* spriteRenderer;
-    BoxColliderComponent * boxCollider;
     EventHandlerComponent * eventHandler;
-    //RenderComponent* render;
 };
 
 

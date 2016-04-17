@@ -7,6 +7,7 @@
 #include "CollisionSystem.hpp"
 #include "IDetectionHelper.hpp"
 #include "ICollisionHelper.hpp"
+#include "Entity.hpp"
 
 CollisionSystem *CollisionSystem::collisionSystem;
 
@@ -121,4 +122,10 @@ BoxColliderComponent &TriggerCollision::getTrigger() {
 
 BoxColliderComponent &TriggerCollision::getCollider() {
     return *collider;
+}
+
+void CollisionSystem::update(sf::Time deltaTime) {
+    for(auto collider : boxColliders){
+        collider->update(deltaTime);
+    }
 }

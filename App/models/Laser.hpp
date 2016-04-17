@@ -36,8 +36,6 @@ class Laser : public Entity{
     private:
         IController* boss;
         ViewSpriteComponent * spriteRenderer;
-        BoxColliderComponent * boxColliderComponent;
-        sf::Time timeToLive;
 };
 
 

@@ -9,8 +9,9 @@
 #include <map>
 #include <typeinfo>
 #include <iostream>
-#include <App/controllers/IController.hpp>
+#include <App/Components/Component.hpp>
 
+class IController;
 class BoxColliderComponent;
 class Component;
 class Entity {
@@ -71,6 +72,7 @@ public :
 
     template <class T>
     T* getComponent(){
+        std::cout<<"Type to find : "<<typeid(T).name()<<std::endl;
         if(components.find(typeid(T).name()) != components.end())
         {
             return dynamic_cast<T*>(components[typeid(T).name()]);
@@ -78,12 +80,13 @@ public :
         return nullptr;
     }
 
-    void addComponent(std::string type, Component* component) {
-        if(components.find(type) != components.end()){
+    void addComponent(Component* component) {
+        std::string name = getComponentName(component);
+        if(components.find(name) != components.end()){
             std::cerr<<"Components already exist"<<std::endl;
         }
         else{
-            components[type] = component;
+            components[name] = component;
         }
     }
 
@@ -91,6 +94,8 @@ public :
     void removeComponent(){
         if(components.find(typeid(T).name()) != components.end())
         {
+            Component* component = components[typeid(T).name()];
+            delete component;
             components[typeid(T).name()] = nullptr;
         }
         else{
@@ -106,12 +111,17 @@ public :
         return boss;
     }
 
-
     void setDirection(sf::Vector2f dir);
 
     sf::Vector2f getDirection();
+
+    sf::Vector2u getSize();
+
+    std::string getComponentName(Component* component);
+
 protected :
-    Entity() : id(nextId++){};
+    Entity(IController* boss);
+
     IController* boss;
     sf::Vector2f position;
     sf::Vector2u size;
@@ -123,7 +133,6 @@ protected :
     const int id;
 
     static int nextId;
-
 
     std::map<std::string, Component*> components;
 };

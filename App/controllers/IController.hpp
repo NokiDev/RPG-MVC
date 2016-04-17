@@ -11,11 +11,13 @@
 #include <App/views/ViewSpriteComponent.hpp>
 #include <App/views/ViewTextComponent.hpp>
 
+
 class View;
 class GUIButton;
 /**
  * @brief Interface for all controllers
  * */
+class Entity;
 class IController {
 public:
 
@@ -52,7 +54,13 @@ public:
 
     virtual ViewSpriteComponent* newSpriteRenderer(std::string textureName);
 
+    virtual void delSpriteRenderer(IViewComponent * sprite);
+
     virtual ViewTextComponent* newTextRenderer(std::string text);
+
+    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2f direction){};
+    virtual void destroy(Entity*entity){};
+
 
     View * getView();
 

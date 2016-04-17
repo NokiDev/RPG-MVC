@@ -5,9 +5,9 @@
 #ifndef RPG_MVC_COMPONENT_HPP
 #define RPG_MVC_COMPONENT_HPP
 
+#include <SFML/System/Time.hpp>
 
-#include <App/models/Entity.hpp>
-
+class Entity;
 class Component {
 public:
     virtual ~Component() {};

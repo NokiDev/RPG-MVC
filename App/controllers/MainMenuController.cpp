@@ -10,6 +10,8 @@
 
 MainMenuController::MainMenuController() {
     view = new MainMenuView(this);
+
+
     buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2 - 50), sf::Vector2u(200, 40), "GuiMenu.png", "Play"));
     buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2), sf::Vector2u(200, 40), "GuiMenu.png", "Options"));
     buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2 + 50), sf::Vector2u(200, 40), "GuiMenu.png", "Quit"));

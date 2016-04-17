@@ -37,6 +37,8 @@ public :
 
     void checkCollisions();
 
+    void update(sf::Time);
+
 private:
 
     std::set<BoxColliderComponent*> boxColliders;

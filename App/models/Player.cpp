@@ -12,28 +12,28 @@
 #include <App/Components/EventHandlers/PlayerEventsHandler.hpp>
 
 
-Player::Player(IController* boss) : Entity(){
-    this->boss = boss;
+Player::Player(IController* boss) : Entity(boss){
     position = sf::Vector2f(0.f, 0.f);
     velocity = sf::Vector2f(0.f, 0.f);
     direction = sf::Vector2f(0.f,0.f);
     size = sf::Vector2u(64,64);
-    speed = 350;
     name = "Player";
-    eventHandler = new PlayerEventsHandler(this);
-    boxCollider = new BoxColliderComponent(this, size);
+    speed = 350;
+    addComponent(new BoxColliderComponent(this, size));
+    addComponent(new PlayerScript(this));
+    addComponent(new PlayerEventsHandler(this));
+
     spriteRenderer = boss->newSpriteRenderer("player.png");
 }
 
 Player::~Player() {
-
+    removeComponent<PlayerEventsHandler>();
+    removeComponent<BoxColliderComponent>();
+    boss->delSpriteRenderer(spriteRenderer);
 }
 
 
 void Player::update(sf::Time deltaTime) {
-    eventHandler->update(deltaTime);
-    boxCollider->update(deltaTime);
-
 }
 
 void Player::physicsUpdate() {

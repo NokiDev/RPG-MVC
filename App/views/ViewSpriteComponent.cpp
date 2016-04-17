@@ -10,6 +10,10 @@ ViewSpriteComponent::ViewSpriteComponent(std::string textureName) {
     sprite.setTexture(texture);
 }
 
+ViewSpriteComponent::~ViewSpriteComponent() {
+    View::currentView->delViewComponent(this);
+}
+
 void ViewSpriteComponent::draw(View& view) {
     view.draw(sprite);
 }
@@ -20,4 +24,8 @@ void ViewSpriteComponent::updatePosition(sf::Vector2f position) {
 
 void ViewSpriteComponent::updateRect(sf::IntRect textRect) {
     sprite.setTextureRect(textRect);
+}
+
+void ViewSpriteComponent::update(sf::Time deltaTime) {
+
 }

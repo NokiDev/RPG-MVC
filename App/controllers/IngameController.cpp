@@ -6,11 +6,13 @@
 #include <App/models/Map.hpp>
 #include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include <App/Systems/EventSystem/EventsSystem.hpp>
+#include <App/Systems/ScriptSystem/ScriptSystem.hpp>
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
     view = new IngameView(this);
     collSys = new CollisionSystem();
+    scriptSys = new ScriptSystem();
     eventSys = new EventsSystem();
     thePlayer = new Player(this);
     theMap = new Map(thePlayer);
@@ -31,14 +33,22 @@ void IngameController::handleEvents(sf::Event &event) {
 }
 
 void IngameController::update(sf::Time deltaTime) {
+    for(auto entity : entitiesToDestroy){
+        delete entity;
+    }
+    entitiesToDestroy.clear();
     if (subControllerExist())
         subController->update(deltaTime);
+    eventSys->update(deltaTime);
     thePlayer->update(deltaTime);
     thePlayer->physicsUpdate();
     for(auto entity : entities){
-        entity->update();
+        entity->update(deltaTime);
         entity->physicsUpdate();
     }
+    collSys->update(deltaTime);
+    scriptSys->update(deltaTime);
+    scriptSys->physicsUpdate();
     collSys->checkCollisions();
 }
 
@@ -73,9 +83,14 @@ IController *IngameController::getSubController() {
 
 Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf::Vector2f direction) {
 
-    entities.push_back(entity);
+    entities.insert(entity);
     entity->setPosition(position);
     entity->setDirection(direction);
 
     return entity;
+}
+
+void IngameController::destroy(Entity *entity) {
+    entities.erase(entity);
+    entitiesToDestroy.push_back(entity);
 }

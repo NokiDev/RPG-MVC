@@ -8,6 +8,7 @@
 
 #include <App/models/Entity.hpp>
 #include <App/Components/EventHandlerComponent.hpp>
+#include <App/Components/Scripts/PlayerScript.hpp>
 
 class PlayerEventsHandler : public EventHandlerComponent {
     public :
@@ -17,7 +18,9 @@ class PlayerEventsHandler : public EventHandlerComponent {
         virtual void handleEvents(sf::Event event);
         virtual void update(sf::Time time);
 
-    private:
+private:
+        PlayerScript * player;
+        float timer;
 };
 
 

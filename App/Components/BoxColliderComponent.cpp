@@ -6,6 +6,7 @@
 #include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include <App/Systems/CollisionSystem/IDetectionHelper.hpp>
 #include "BoxColliderComponent.hpp"
+#include "Entity.hpp"
 
 BoxColliderComponent::BoxColliderComponent(Entity *owner, sf::Vector2u size, bool isTrigger, sf::Vector2f offset) :
         offset(offset),

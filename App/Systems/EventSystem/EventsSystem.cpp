@@ -33,3 +33,9 @@ void EventsSystem::addEventHandler(EventHandlerComponent *eventHandler) {
 void EventsSystem::delEventHandler(EventHandlerComponent *eventHandler) {
     eventHandlers.erase(eventHandler);
 }
+
+void EventsSystem::update(sf::Time deltaTime) {
+    for(auto eventHandler : eventHandlers){
+        eventHandler->update(deltaTime);
+    }
+}

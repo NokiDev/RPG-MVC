@@ -5,9 +5,14 @@
 #include <App/models/Laser.hpp>
 #include <App/controllers/IngameController.hpp>
 #include "PlayerEventsHandler.hpp"
+#include "Entity.hpp"
 
-PlayerEventsHandler::PlayerEventsHandler(Entity *owner) : EventHandlerComponent(owner) {
 
+PlayerEventsHandler::PlayerEventsHandler(Entity *owner) : EventHandlerComponent(owner), timer(0.f) {
+    player = owner->getComponent<PlayerScript>();
+    if(player == nullptr){
+        std::cerr<<"For use this script please attach the PlayerScript Too"<<std::endl;
+    }
 }
 
 PlayerEventsHandler::~PlayerEventsHandler() {
@@ -16,22 +21,23 @@ PlayerEventsHandler::~PlayerEventsHandler() {
 
 void PlayerEventsHandler::handleEvents(sf::Event event) {
     if(event.type == sf::Event::KeyPressed){
-        if(event.key.code == sf::Keyboard::Return){
-            IngameController* ingameController = dynamic_cast<IngameController*> (owner->getBoss());
-            ingameController->instantiate(new Laser(owner->getBoss()), owner->getPosition(), owner->getDirection());
-            std::cout<<"RETURN PRESSED"<<std::endl;
-        }
+
     }
     else if(event.type == sf::Event::KeyReleased){
     }
 }
 
 void PlayerEventsHandler::update(sf::Time deltaTime) {
-
+    timer +=deltaTime.asSeconds();
     if(owner->getBoss()->isKeyPressed(sf::Keyboard::Return)){
-        IngameController* ingameController = dynamic_cast<IngameController*> (owner->getBoss());
-        ingameController->instantiate(new Laser(owner->getBoss()), owner->getPosition(), owner->getDirection());
-        std::cout<<"RETURN PRESSED"<<std::endl;
+        if(timer >= player->getAttackSpeed())
+        {
+            timer = 0.f;
+            IngameController* ingameController = dynamic_cast<IngameController*> (owner->getBoss());
+            Laser* laser = new Laser(owner->getBoss());
+            ingameController->instantiate(laser, owner->getPosition() + sf::Vector2f(owner->getSize().x, owner->getSize().y/2), owner->getDirection());
+
+        }
     }
     owner->setVelocity(sf::Vector2f(0.f,0.f));
     int speed = owner->getSpeed();
