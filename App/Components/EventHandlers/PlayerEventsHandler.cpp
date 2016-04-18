@@ -15,6 +15,7 @@ PlayerEventsHandler::PlayerEventsHandler(Entity *owner) : EventHandlerComponent(
     }
 }
 
+
 PlayerEventsHandler::~PlayerEventsHandler() {
 
 }

@@ -29,36 +29,37 @@ IngameController::~IngameController() {
 
 void IngameController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
-    if (subControllerExist())
-        subController->handleEvents(event);
     eventSys->handleEvents(event);
 }
 
 void IngameController::update(sf::Time deltaTime) {
 
     for(auto entity : entitiesToDestroy){
+        entities.erase(entity);
         delete entity;
     }
     entitiesToDestroy.clear();
-    if (subControllerExist())
-        subController->update(deltaTime);
-    eventSys->update(deltaTime);
-    thePlayer->update(deltaTime);
     thePlayer->physicsUpdate();
     for(auto entity : entities){
-        entity->update(deltaTime);
         entity->physicsUpdate();
     }
-    collSys->update(deltaTime);
-    scriptSys->update(deltaTime);
     scriptSys->physicsUpdate();
+
     collSys->checkCollisions();
+    collSys->update(deltaTime);
+
+    eventSys->update(deltaTime);
+    thePlayer->update(deltaTime);
+
+    for(auto entity : entities) {
+        entity->update(deltaTime);
+    }
+
+    scriptSys->update(deltaTime);
 }
 
 void IngameController::render() {
     if (viewExist()) {
-        if (subControllerExist())
-            subController->render();
         view->render();
     }
 }
@@ -85,7 +86,6 @@ IController *IngameController::getSubController() {
 }
 
 Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf::Vector2f direction) {
-
     entities.insert(entity);
     entity->setPosition(position);
     entity->setDirection(direction);
@@ -94,6 +94,5 @@ Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf:
 }
 
 void IngameController::destroy(Entity *entity) {
-    entities.erase(entity);
     entitiesToDestroy.push_back(entity);
 }

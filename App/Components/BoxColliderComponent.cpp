@@ -37,7 +37,22 @@ sf::FloatRect BoxColliderComponent::getNextBox()const {
     return sf::FloatRect(box.left + vel.x, box.top + vel.y, box.width, box.height);
 }
 
-void BoxColliderComponent::onCollision(BoxColliderComponent & collider) {
+void BoxColliderComponent::onCollision(BoxColliderComponent * collider) {
+    float x=owner->getPosition().x;
+    float y=owner->getPosition().y;
+
+    sf::Vector2f dist = IDetectionHelper::CalculateVectorDistanceBetweenBoxes(box, collider->getBox());
+    if(dist.x >0){
+
+    }
+    if(dist.y >0){
+
+    }
+
+    box.left = x;
+    box.top = y;
+    owner->setPosition(x,y);
+    owner->onCollision(collider);
 
 }
 

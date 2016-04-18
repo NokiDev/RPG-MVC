@@ -3,6 +3,7 @@
 //
 
 #include <App/Components/Scripts/LiveTimerScript.hpp>
+#include <App/Components/Scripts/Damageable.hpp>
 #include "Laser.hpp"
 
 Laser::Laser(IController *boss) : Entity(boss){
@@ -35,5 +36,9 @@ void Laser::physicsUpdate() {
 }
 
 void Laser::onCollision(BoxColliderComponent* collider) {
-
+    Damageable* damageScript = collider->getOwner().getComponent<Damageable>();
+    if(damageScript != nullptr){
+        damageScript->takeDamage(1);
+        boss->destroy(this);
+    }
 }

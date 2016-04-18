@@ -10,6 +10,7 @@
 #include <View.hpp>
 #include <App/controllers/IController.hpp>
 #include <App/Components/EventHandlers/PlayerEventsHandler.hpp>
+#include <App/Components/Scripts/Damageable.hpp>
 
 
 Player::Player(IController* boss) : Entity(boss){
@@ -21,6 +22,7 @@ Player::Player(IController* boss) : Entity(boss){
     speed = 350;
     addComponent(new BoxColliderComponent(this, size));
     addComponent(new PlayerScript(this));
+    addComponent(new Damageable(this, 100.f));
     addComponent(new PlayerEventsHandler(this));
 
     spriteRenderer = boss->newSpriteRenderer("player.png");
@@ -29,14 +31,14 @@ Player::Player(IController* boss) : Entity(boss){
 Player::~Player() {
     removeComponent<PlayerEventsHandler>();
     removeComponent<BoxColliderComponent>();
+    removeComponent<Damageable>();
     boss->delSpriteRenderer(spriteRenderer);
 }
 
 
 void Player::update(sf::Time deltaTime) {
     float modifier  = 1.f;
-
-    if(direction.x <0)
+    if(direction.x >0)
         modifier = 0.5;
     velocity.x= speed * deltaTime.asSeconds() *direction.x * modifier;
 
