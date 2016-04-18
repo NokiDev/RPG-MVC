@@ -66,7 +66,7 @@ void CollisionSystem::checkCollisions() {
                         }
                         else
                         {
-                            //other->onCollision(collider);
+                            other->onCollision(collider);
                             //collider->onCollision(other);
                         }
                     }

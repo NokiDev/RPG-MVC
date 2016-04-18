@@ -89,6 +89,7 @@ Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf:
     entities.insert(entity);
     entity->setPosition(position);
     entity->setDirection(direction);
+    entity->physicsUpdate();
 
     return entity;
 }

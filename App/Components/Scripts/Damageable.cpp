@@ -20,6 +20,8 @@ void Damageable::takeDamage(float amount) {
     health -= amount;
     if(health <0)
         health=0;
+
+    std::cout<<"Take Damage : "<<amount<<" healht left : "<<health<<std::endl;
     //Set Hurt State
 }
 

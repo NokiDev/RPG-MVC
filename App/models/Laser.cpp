@@ -13,6 +13,7 @@ Laser::Laser(IController *boss) : Entity(boss){
     size = sf::Vector2u(10, 5);
     speed = 550;
     name = "Laser";
+    this->boss = boss;
     spriteRenderer = boss->newSpriteRenderer("laser.png");
     addComponent(new BoxColliderComponent(this, sf::Vector2u(10, 5)));
     addComponent(new LiveTimerScript(this, 5.5f));
@@ -22,7 +23,6 @@ Laser::~Laser() {
     removeComponent<BoxColliderComponent>();
     removeComponent<LiveTimerScript>();
     delete spriteRenderer;
-    //removeComponent<ViewSpriteComponent>();
 }
 
 void Laser::update(sf::Time deltaTime){

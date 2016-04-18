@@ -29,9 +29,10 @@ Player::Player(IController* boss) : Entity(boss){
 }
 
 Player::~Player() {
-    removeComponent<PlayerEventsHandler>();
     removeComponent<BoxColliderComponent>();
+    removeComponent<PlayerScript>();
     removeComponent<Damageable>();
+    removeComponent<PlayerEventsHandler>();
     boss->delSpriteRenderer(spriteRenderer);
 }
 
