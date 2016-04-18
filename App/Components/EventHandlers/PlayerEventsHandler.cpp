@@ -30,7 +30,7 @@ void PlayerEventsHandler::handleEvents(sf::Event event) {
 
 void PlayerEventsHandler::update(sf::Time deltaTime) {
     timer +=deltaTime.asSeconds();
-    if(owner->getBoss()->isKeyPressed(sf::Keyboard::Return)){
+    if(owner->getBoss()->isKeyPressed(sf::Keyboard::Space)){
         if(timer >= player->getAttackSpeed())
         {
             timer = 0.f;
