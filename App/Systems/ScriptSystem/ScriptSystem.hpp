@@ -14,14 +14,13 @@ public :
     ScriptSystem();
     ~ScriptSystem();
 
-    void addNewBox(ScriptComponent* component);
+    void addNewScript(ScriptComponent* component);
     void delBox(ScriptComponent* component);
 
 
     void update(sf::Time deltaTime);
 
     void physicsUpdate();
-
 
 private:
     std::set<ScriptComponent*> scripts;

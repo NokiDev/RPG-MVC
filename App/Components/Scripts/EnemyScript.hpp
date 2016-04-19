@@ -17,9 +17,16 @@ public :
     ~EnemyScript();
 
     virtual void update(sf::Time deltaTime);
+    virtual void physicsUpdate();
 
+    int getSpeed();
 
 private:
+    Physics* physics;
+    int speed;
+    float attackSpeed;
+    float timer;
+
 
 };
 

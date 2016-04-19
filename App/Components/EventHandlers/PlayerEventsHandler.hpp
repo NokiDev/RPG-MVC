@@ -20,6 +20,8 @@ class PlayerEventsHandler : public EventHandlerComponent {
 
 private:
         PlayerScript * player;
+        Transform* transform;
+        Physics* physic;
         float timer;
 };
 

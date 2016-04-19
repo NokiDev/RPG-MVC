@@ -6,6 +6,7 @@
 
 PlayerScript::PlayerScript(Entity *owner) : ScriptComponent(owner){
     attackSpeed = 0.2f;
+    speed =350;
 }
 
 PlayerScript::~PlayerScript() {
@@ -14,4 +15,9 @@ PlayerScript::~PlayerScript() {
 
 float PlayerScript::getAttackSpeed(){
     return attackSpeed;
+}
+
+
+int PlayerScript::getSpeed() {
+    return speed;
 }

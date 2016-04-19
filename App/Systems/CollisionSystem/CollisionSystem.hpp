@@ -17,8 +17,8 @@ public:
     bool collExist(BoxColliderComponent* trigger, BoxColliderComponent* collider);
     bool isCollide();
 
-    BoxColliderComponent& getTrigger();
-    BoxColliderComponent& getCollider();
+    BoxColliderComponent* getTrigger();
+    BoxColliderComponent* getCollider();
 
 private:
     BoxColliderComponent* trigger;
@@ -37,7 +37,7 @@ public :
 
     void checkCollisions();
 
-    void update(sf::Time);
+    void updateComponents(sf::Time);
 
 private:
 

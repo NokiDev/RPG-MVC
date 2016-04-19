@@ -20,9 +20,9 @@ public:
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
     void onCollision(BoxColliderComponent * collider);
     void onCollision(sf::FloatRect box);
-    void onTriggerEnter(TriggerCollision & collision);
-    void onTriggerStay(TriggerCollision & collision);
-    void onTriggerExit(TriggerCollision & collision);
+    void onTriggerEnter(TriggerCollision * collision);
+    void onTriggerStay(TriggerCollision * collision);
+    void onTriggerExit(TriggerCollision * collision);
 
     sf::FloatRect getNextBox()const;
     sf::FloatRect getBox()const;

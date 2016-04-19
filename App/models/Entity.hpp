@@ -11,82 +11,53 @@
 #include <iostream>
 #include <App/Components/Component.hpp>
 
+
 class IController;
 class BoxColliderComponent;
 class Component;
+class ScriptComponent;
 class Entity {
 public :
 
-    virtual ~Entity() {};
-    /**
-     * @brief Update the entity each frame
-     * @params time between two frames
-    **/
-
-    virtual void update(sf::Time deltaTime = sf::Time::Zero) = 0;
-    /**
-     * @brief Update Physics velocity and position
-     */
-    virtual void physicsUpdate() = 0;
-    /**
-     * @brief Behaviour to adopt when entering on collision
-     */
-    virtual void onCollision(BoxColliderComponent * collider){};
-
-    void setPosition(float x, float y){
-        position.x = x;
-        position.y = y;
-    }
-
-    void setPositionX(float x){
-        setPosition(x, position.y);
-    }
-
-    void setPositionY(float y){
-        setPosition(position.x, y);
-    }
-
-    void setPosition(sf::Vector2f pos){
-        position= pos;
-    }
-
-    void setDirectionX(float x)
-    {
-        setDirection(sf::Vector2f(x, direction.y));
-    }
-
-    void setDirectionY(float y)
-    {
-        setDirection(sf::Vector2f(direction.x, y));
-    }
-
-    void setDirection(sf::Vector2f dir){
-        direction = dir;
-    }
-
-    sf::Vector2f& getPosition() {
-        return position;
-    }
-
-    sf::Vector2f& getVelocity() {
-        return velocity;
-    }
-
-    int getSpeed() const{
-        return speed;
-    }
-
-    float getZ()const{
-        return z;
-    }
+    virtual ~Entity();
 
     int getId() const{
         return id;
     }
 
     template <class T>
+    T* getScript(){
+        if(scripts.find(typeid(T).name()) != scripts.end()){
+            return dynamic_cast<T*>(scripts[typeid(T).name()]);
+        }
+        return nullptr;
+    }
+
+    void addScript(ScriptComponent* script){
+        std::string name = getComponentName(script);
+        if(scripts.find(name) != scripts.end()){
+            std::cerr<<"Components already exist"<<std::endl;
+        }
+        else{
+            scripts[name] = script;
+        }
+    }
+
+    template <class T>
+    void removeScript(){
+        if(scripts.find(typeid(T).name()) != scripts.end())
+        {
+            ScriptComponent* component = scripts[typeid(T).name()];
+            delete component;
+            scripts[typeid(T).name()] = nullptr;
+        }
+        else{
+            std::cerr<<"Components don't exist !"<<std::endl;
+        }
+    }
+
+    template <class T>
     T* getComponent(){
-        std::cout<<"Type to find : "<<typeid(T).name()<<std::endl;
         if(components.find(typeid(T).name()) != components.end())
         {
             return dynamic_cast<T*>(components[typeid(T).name()]);
@@ -117,37 +88,38 @@ public :
         }
     }
 
-    void setVelocity(sf::Vector2<float> vel) {
-        velocity = vel;
-    }
-
     IController* getBoss(){
         return boss;
     }
 
-    sf::Vector2f getDirection();
+    sf::Vector2u getSize(){
+        return size;
+    }
 
-    sf::Vector2u getSize();
+    std::string getLayer(){
+        return layer;
+    }
 
     std::string getComponentName(Component* component);
 
+    std::string getComponentName(ScriptComponent* component);
+
+    virtual void update(sf::Time){};
+
+    static void OnCollision(Entity* entity, BoxColliderComponent * collider);
+
 protected :
+    static int nextId;
     Entity(IController* boss);
 
-    IController* boss;
-    sf::Vector2f position;
-    sf::Vector2f direction;
     sf::Vector2u size;
-    float z; ///Depth for render ===NOT USED===
-
-    sf::Vector2f velocity;
-    int speed;
+    IController* boss;
     std::string name;
+    std::string layer;
     const int id;
 
-    static int nextId;
-
     std::map<std::string, Component*> components;
+    std::map<std::string, ScriptComponent*> scripts;
 };
 
 #endif //RPG_MVC_ENTITY_HPP

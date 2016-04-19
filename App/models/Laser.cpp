@@ -4,41 +4,37 @@
 
 #include <App/Components/Scripts/LiveTimerScript.hpp>
 #include <App/Components/Scripts/Damageable.hpp>
+#include <App/Components/Physics.hpp>
+#include <App/Components/Scripts/LaserScript.hpp>
+#include <App/Components/Transform.hpp>
 #include "Laser.hpp"
 
-Laser::Laser(IController *boss) : Entity(boss){
-    position = sf::Vector2f(0.f, 0.f);
-    velocity = sf::Vector2f(1.f, 0.f);
-    direction = sf::Vector2f(0.f, 0.f);
+Laser::Laser(IController *boss, std::string attackLayer) : Entity(boss){
     size = sf::Vector2u(10, 5);
-    speed = 550;
     name = "Laser";
     this->boss = boss;
     spriteRenderer = boss->newSpriteRenderer("laser.png");
+
+    ///Need To order Components
     addComponent(new BoxColliderComponent(this, sf::Vector2u(10, 5)));
-    addComponent(new LiveTimerScript(this, 5.5f));
+    addComponent(new Physics(this));
+
+    ///Need To order Scripts
+    addScript(new LaserScript(this,attackLayer));
+    addScript(new LiveTimerScript(this, 5.5f));
 }
 
 Laser::~Laser() {
+    removeComponent<Physics>();
     removeComponent<BoxColliderComponent>();
-    removeComponent<LiveTimerScript>();
+
+    removeScript<LiveTimerScript>();
+    removeScript<LaserScript>();
+
     delete spriteRenderer;
 }
 
-void Laser::update(sf::Time deltaTime){
-    velocity.x = speed * deltaTime.asSeconds()*direction.x;
-    velocity.y = speed * deltaTime.asSeconds()*direction.y;
-}
-
-void Laser::physicsUpdate() {
-    position += velocity;
-    spriteRenderer->updatePosition(position);
-}
-
-void Laser::onCollision(BoxColliderComponent* collider) {
-    Damageable* damageScript = collider->getOwner().getComponent<Damageable>();
-    if(damageScript != nullptr){
-        damageScript->takeDamage(1);
-        boss->destroy(this);
-    }
+void Laser::update(sf::Time deltaTime) {
+    Transform * t = getComponent<Transform>();
+    spriteRenderer->updatePosition(t->position);
 }

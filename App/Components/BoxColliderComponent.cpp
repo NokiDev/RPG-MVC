@@ -7,6 +7,8 @@
 #include <App/Systems/CollisionSystem/IDetectionHelper.hpp>
 #include "BoxColliderComponent.hpp"
 #include "Entity.hpp"
+#include "Transform.hpp"
+#include "Physics.hpp"
 
 BoxColliderComponent::BoxColliderComponent(Entity *owner, sf::Vector2u size, bool isTrigger, sf::Vector2f offset) :
         offset(offset),
@@ -14,7 +16,7 @@ BoxColliderComponent::BoxColliderComponent(Entity *owner, sf::Vector2u size, boo
         trigger(trigger),
         moving(false) {
     this->owner = owner;
-    sf::Vector2f pos = owner->getPosition();
+    sf::Vector2f pos = owner->getComponent<Transform>()->position;
     box = sf::FloatRect(pos.x + offset.x, pos.y + offset.y, size.x, size.y);
     CollisionSystem::collisionSystem->addBoxCollider(this);
 }
@@ -24,42 +26,28 @@ BoxColliderComponent::~BoxColliderComponent() {
 }
 
 void BoxColliderComponent::update(sf::Time deltaTime) {
-    sf::Vector2f pos = owner->getPosition();
-    if(owner->getVelocity().x != 0 || owner->getVelocity().y != 0);
-        CollisionSystem::collisionSystem->addMovingBoxCollider(this);
-    box.left = pos.x + owner->getVelocity().x + offset.x;
-    box.top = pos.y + owner->getVelocity().y + offset.y;
+    Transform * t = owner->getComponent<Transform>();
+    box.left = t->position.x;
+    box.top = t->position.y;
 
 }
 
 sf::FloatRect BoxColliderComponent::getNextBox()const {
-    sf::Vector2f & vel = owner->getVelocity();
-    return sf::FloatRect(box.left + vel.x, box.top + vel.y, box.width, box.height);
+    Physics* p = owner->getComponent<Physics>();
+    return sf::FloatRect(box.left + p->getVelocity().x, box.top + p->getVelocity().y, box.width, box.height);
 }
 
 void BoxColliderComponent::onCollision(BoxColliderComponent * collider) {
-    float x=owner->getPosition().x;
-    float y=owner->getPosition().y;
-
-    sf::Vector2f dist = IDetectionHelper::CalculateVectorDistanceBetweenBoxes(box, collider->getBox());
-    if(dist.x >0){
-
-    }
-    if(dist.y >0){
-
-    }
-
-    box.left = x;
-    box.top = y;
-    owner->setPosition(x,y);
-    owner->onCollision(collider);
+    Entity::OnCollision(owner, collider);
 
 }
 
 void BoxColliderComponent::onCollision(sf::FloatRect box) {
     ///OnCollision with Window for example
-    float x=owner->getPosition().x;
-    float y=owner->getPosition().y;
+    Transform* t = owner->getComponent<Transform>();
+
+    float x= t->position.x;
+    float y = t->position.y;
 
     if(x < 0){
         x =0;
@@ -74,18 +62,18 @@ void BoxColliderComponent::onCollision(sf::FloatRect box) {
         y = box.height - size.y;
     }
 
-    owner->setPosition(x,y);
+    t->position = sf::Vector2f(x,y);
 }
 
-void BoxColliderComponent::onTriggerEnter(TriggerCollision& collision) {
-
-}
-
-void BoxColliderComponent::onTriggerStay(TriggerCollision & collision) {
+void BoxColliderComponent::onTriggerEnter(TriggerCollision* collision) {
 
 }
 
-void BoxColliderComponent::onTriggerExit(TriggerCollision & collision) {
+void BoxColliderComponent::onTriggerStay(TriggerCollision * collision) {
+
+}
+
+void BoxColliderComponent::onTriggerExit(TriggerCollision * collision) {
 
 }
 

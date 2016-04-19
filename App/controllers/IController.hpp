@@ -58,7 +58,7 @@ public:
 
     virtual ViewTextComponent* newTextRenderer(std::string text);
 
-    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2f direction){};
+    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2i direction){};
     virtual void destroy(Entity*entity){};
 
 

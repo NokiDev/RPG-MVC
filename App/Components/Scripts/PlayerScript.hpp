@@ -8,6 +8,8 @@
 
 #include <App/models/Entity.hpp>
 #include <App/Components/ScriptComponent.hpp>
+#include <App/Components/Transform.hpp>
+#include <App/Components/Physics.hpp>
 
 class PlayerScript : public ScriptComponent{
 public :
@@ -15,10 +17,11 @@ public :
     ~PlayerScript();
 
     float getAttackSpeed();
+    int getSpeed();
 
 private:
 
-
+    int speed;
     float attackSpeed; //Amount attack by seconds
 };
 

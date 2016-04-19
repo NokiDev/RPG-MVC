@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <App/views/WindowManager.hpp>
+#include <App/Components/Transform.hpp>
 #include "CollisionSystem.hpp"
 #include "IDetectionHelper.hpp"
 #include "ICollisionHelper.hpp"
@@ -33,6 +34,14 @@ void CollisionSystem::addBoxCollider(BoxColliderComponent *boxCollider) {
 
 void CollisionSystem::delBoxCollider(BoxColliderComponent *boxCollider) {
     boxColliders.erase(boxCollider);
+    if(boxCollider->isTrigger()){
+        for(auto trigger : triggerCollisions){
+            if(trigger->getTrigger() == boxCollider){
+                trigger->getTrigger()->onTriggerExit(trigger);
+                triggerCollisions.erase(trigger);
+            }
+        }
+    }
 }
 
 void CollisionSystem::addMovingBoxCollider(BoxColliderComponent *boxCollider) {
@@ -78,18 +87,19 @@ void CollisionSystem::checkCollisions() {
     {
         if(collision->isCollide())
         {
-            if(!ICollisionHelper::NotAABBCollision(collision->getCollider().getOwner().getPosition(), collision->getTrigger().getBox(), collision->getCollider().getBox()))
+            Transform* t = collision->getCollider()->getOwner().getComponent<Transform>();
+            if(!ICollisionHelper::NotAABBCollision(t->position, collision->getTrigger()->getBox(), collision->getCollider()->getBox()))
             {
-                //collision->trigger->onTriggerStay(collision->collider);
+                collision->getTrigger()->onTriggerStay(collision);
             }
             else
             {
-                //collision->trigger->onTriggerExiting(collision->collider);
+                //collision->getTrigger()->onTriggerExiting(collision);
             }
         }
         else
         {
-            //collision->trigger->onTriggerExit(collision->collider);
+            collision->getTrigger()->onTriggerExit(collision);
             triggerCollisions.erase(collision);
         }
     }
@@ -97,12 +107,12 @@ void CollisionSystem::checkCollisions() {
     {
         sf::Vector2u winSize = WindowManager::get()->Window().getSize();
         sf::FloatRect winBox = sf::FloatRect(0,0,winSize.x, winSize.y);
-        if(!ICollisionHelper::NotAABBCollision(collider->getOwner().getPosition(),winBox, collider->getBox()));
+        Transform * t = collider->getOwner().getComponent<Transform>();
+        if(!ICollisionHelper::NotAABBCollision(t->position,winBox, collider->getBox()));
         {
             collider->onCollision(winBox);
         }
     }
-    movingColliders.clear();
 }
 
 TriggerCollision::TriggerCollision(BoxColliderComponent *trigger, BoxColliderComponent *collider) {
@@ -117,16 +127,17 @@ bool TriggerCollision::isCollide() {
     return false;
 }
 
-BoxColliderComponent &TriggerCollision::getTrigger() {
-    return *trigger;
+BoxColliderComponent *TriggerCollision::getTrigger() {
+    return trigger;
 }
 
-BoxColliderComponent &TriggerCollision::getCollider() {
-    return *collider;
+BoxColliderComponent *TriggerCollision::getCollider() {
+    return collider;
 }
 
-void CollisionSystem::update(sf::Time deltaTime) {
+void CollisionSystem::updateComponents(sf::Time deltaTime) {
     for(auto collider : boxColliders){
         collider->update(deltaTime);
     }
+    movingColliders.clear();
 }

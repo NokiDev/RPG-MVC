@@ -11,49 +11,46 @@
 #include <App/controllers/IController.hpp>
 #include <App/Components/EventHandlers/PlayerEventsHandler.hpp>
 #include <App/Components/Scripts/Damageable.hpp>
+#include <App/Components/Transform.hpp>
+#include <App/Components/Physics.hpp>
 
 
 Player::Player(IController* boss) : Entity(boss){
-    position = sf::Vector2f(0.f, 0.f);
-    velocity = sf::Vector2f(0.f, 0.f);
-    direction = sf::Vector2f(1.f,0.f);//Facing est
-    size = sf::Vector2u(64,64);
+
+    Transform * t = getComponent<Transform>();
+    t->direction = sf::Vector2i(1,0);
     name = "Player";
-    speed = 350;
-    addComponent(new BoxColliderComponent(this, size));
-    addComponent(new PlayerScript(this));
-    addComponent(new Damageable(this, 100.f));
+    size = sf::Vector2u(64,64);
+    //speed = 350;
+    addComponent(new BoxColliderComponent(this, size));///
+    addComponent(new Physics(this));///Allow to move
+
+
+    //NeedToChangeThis to script
+    addScript(new PlayerScript(this));
+
     addComponent(new PlayerEventsHandler(this));
+
+    addScript(new Damageable(this, 100.f));
+
+    layer = "Player";
 
     spriteRenderer = boss->newSpriteRenderer("player.png");
 }
 
 Player::~Player() {
-    removeComponent<BoxColliderComponent>();
-    removeComponent<PlayerScript>();
     removeComponent<Damageable>();
+    removeComponent<PlayerScript>();
+
     removeComponent<PlayerEventsHandler>();
+
+    removeComponent<Physics>();
+    removeComponent<BoxColliderComponent>();
+
     boss->delSpriteRenderer(spriteRenderer);
 }
 
-
 void Player::update(sf::Time deltaTime) {
-    float modifier  = 1.f;
-    if(direction.x >0)
-        modifier = 0.5;
-    velocity.x= speed * deltaTime.asSeconds() *direction.x * modifier;
-
-    if (direction.y != 0)
-        modifier = 0.7;
-    velocity.y= speed * deltaTime.asSeconds()  * direction.y * modifier;
-}
-
-void Player::physicsUpdate() {
-    position += velocity;
-    spriteRenderer->updatePosition(position);
-}
-
-
-void Player::onCollision(BoxColliderComponent* collider) {
-
+    Transform * t = getComponent<Transform>();
+    spriteRenderer->updatePosition(t->position);
 }

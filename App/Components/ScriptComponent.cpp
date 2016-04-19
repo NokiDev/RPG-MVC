@@ -2,15 +2,15 @@
 // Created by bluedragonfly on 4/16/16.
 //
 
-#include <App/Systems/ScriptSystem/ScriptSystem.hpp>
 #include "ScriptComponent.hpp"
+#include <App/Systems/ScriptSystem/ScriptSystem.hpp>
 #include "Entity.hpp"
 
 
 ScriptComponent::ScriptComponent(Entity *owner) {
     this->owner = owner;
     controller = owner->getBoss();
-    ScriptSystem::scriptSystem->addNewBox(this);
+    ScriptSystem::scriptSystem->addNewScript(this);
 }
 
 ScriptComponent::~ScriptComponent() {

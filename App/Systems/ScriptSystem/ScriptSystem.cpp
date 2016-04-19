@@ -28,11 +28,12 @@ void ScriptSystem::update(sf::Time deltaTime) {
 
 void ScriptSystem::physicsUpdate() {
     for(auto script : scripts){
+
         script->physicsUpdate();
     }
 }
 
-void ScriptSystem::addNewBox(ScriptComponent *component) {
+void ScriptSystem::addNewScript(ScriptComponent *component) {
     scripts.insert(component);
 }
 
@@ -40,3 +41,5 @@ void ScriptSystem::delBox(ScriptComponent *component) {
     scripts.erase(component);
 
 }
+
+

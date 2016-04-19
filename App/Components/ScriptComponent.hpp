@@ -9,7 +9,7 @@
 #include <App/controllers/IngameController.hpp>
 #include "Component.hpp"
 
-class ScriptComponent : public Component{
+class ScriptComponent{
 public :
     ScriptComponent(Entity* owner);
 
@@ -21,9 +21,14 @@ public :
 
     virtual void onCollision(BoxColliderComponent* collider);
 
+    Entity& getOwner() const {
+        return *owner;
+    }
+
 
 protected:
     IController * controller;
+    Entity* owner;
 };
 
 

@@ -12,27 +12,9 @@
 
 class Laser : public Entity{
     public :
-        Laser(IController*boss);
+        Laser(IController*boss, std::string attackLayer);
         ~Laser();
-        /**
-         * @brief Update the entity each frame
-         * @params time between two frames
-        **/
-        virtual void update(sf::Time deltaTime = sf::Time::Zero);
-
-        /**
-         * @brief Update Physics velocity and position
-         */
-        virtual void physicsUpdate();
-
-        /**
-         * @brief Behaviour to adopt when entering on collision
-         */
-        virtual void onCollision(BoxColliderComponent * collider);
-        /**
-         * @brief Update the entity each frame
-         * @params time between two frames
-        **/
+        virtual void update(sf::Time deltaTime);
     private:
         IController* boss;
         ViewSpriteComponent * spriteRenderer;

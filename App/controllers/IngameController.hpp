@@ -9,6 +9,7 @@
 #include <App/models/Player.hpp>
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include <App/models/Enemy.hpp>
+#include <App/Systems/PhysicsSystem/PhysicsSystem.hpp>
 #include "IController.hpp"
 
 class ScriptSystem;
@@ -23,7 +24,7 @@ public:
 
     virtual void handleEvents(sf::Event &event);
 
-    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2f direction);
+    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2i direction);
     virtual void destroy(Entity*entity);
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
@@ -39,13 +40,14 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
-    Enemy* theEnemy;
+    //Enemy* theEnemy;
     std::set<Entity*> entities;
     std::vector<Entity*> entitiesToDestroy;
     Map * theMap;
     CollisionSystem* collSys;
     EventsSystem* eventSys;
     ScriptSystem* scriptSys;
+    PhysicsSystem* physicsSys;
 
     bool subControllerExist() const;
 
