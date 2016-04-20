@@ -10,6 +10,7 @@
 
 ControllersManager::ControllersManager(App* app) {
     this->app = app;
+    nextController = nullptr;
     windowManager = new WindowManager(this);
     windowManager->createWindow(sf::VideoMode(720,480), "MYGAME");
     currentMainController = new MainMenuController();
@@ -23,14 +24,24 @@ IController *ControllersManager::getCurrentMainController() {
     return currentMainController;
 }
 
-void ControllersManager::setCurrentMainController(IController *newMainController) {
-    currentMainController = newMainController;
+void ControllersManager::setCurrentMainController(IController *newController) {
+    nextController = newController;
 }
 
 void ControllersManager::run() {
+
+    if(nextController != nullptr)
+    {
+        currentMainController->onClose();
+        delete currentMainController;
+        currentMainController = nextController;
+        nextController = nullptr;
+    }
+
     windowManager->clear();
     /*idéalement à lancer dans un thread à part*/
     currentMainController->askForEvents();
+
     currentMainController->update(app->DeltaTime());
     currentMainController->render();
 

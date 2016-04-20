@@ -7,6 +7,7 @@
 #include "Entity.hpp"
 #include "Component.hpp"
 #include "Transform.hpp"
+#include "CollisionSystem.hpp"
 
 int Entity::nextId = 0;
 
@@ -36,5 +37,26 @@ void Entity::OnCollision(Entity *entity, BoxColliderComponent *collider) {
     for(auto script : entity->scripts){
         ScriptComponent * scriptComponent = script.second;
         scriptComponent->onCollision(collider);
+    }
+}
+
+void Entity::OnTriggerEnter(Entity *entity, TriggerCollision *collider) {
+    for(auto script : entity->scripts){
+        ScriptComponent * scriptComponent = script.second;
+        scriptComponent->onTriggerEnter(collider);
+    }
+}
+
+void Entity::OnTriggerStay(Entity *entity, TriggerCollision *collider) {
+    for(auto script : entity->scripts){
+        ScriptComponent * scriptComponent = script.second;
+        scriptComponent->onTriggerStay(collider);
+    }
+}
+
+void Entity::OnTriggerExit(Entity *entity, TriggerCollision *collider) {
+    for(auto script : entity->scripts){
+        ScriptComponent * scriptComponent = script.second;
+        scriptComponent->onTriggerExit(collider);
     }
 }

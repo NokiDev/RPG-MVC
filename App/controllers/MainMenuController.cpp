@@ -22,7 +22,11 @@ MainMenuController::MainMenuController() {
 
 
 MainMenuController::~MainMenuController() {
-
+    for(auto button : buttons){
+        delete button;
+    }
+    buttons.clear();
+    delete view;
 }
 
 

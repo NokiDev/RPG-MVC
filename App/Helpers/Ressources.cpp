@@ -15,7 +15,7 @@ sf::Texture &Ressources::Load(std::string textureName) {
 }
 
 Ressources::~Ressources() {
-
+    textures.clear();
 }
 
 

@@ -40,10 +40,8 @@ public:
 private:
     IController *subController;
     Player* thePlayer;
-    //Enemy* theEnemy;
     std::set<Entity*> entities;
-    std::vector<Entity*> entitiesToDestroy;
-    Map * theMap;
+    std::set<Entity*> entitiesToDestroy;
     CollisionSystem* collSys;
     EventsSystem* eventSys;
     ScriptSystem* scriptSys;

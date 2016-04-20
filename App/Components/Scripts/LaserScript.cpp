@@ -7,7 +7,7 @@
 #include <App/Components/Physics.hpp>
 #include "LaserScript.hpp"
 #include "Damageable.hpp"
-#include "CollisionSystem.hpp"
+#include "TriggerCollision.hpp"
 
 LaserScript::LaserScript(Entity *owner, std::string attackLayer) : ScriptComponent(owner){
     physics = owner->getComponent<Physics>();
@@ -31,9 +31,9 @@ void LaserScript::physicsUpdate() {
     physics->setVelocity(sf::Vector2f(x,y));
 }
 
-void LaserScript::onCollision(BoxColliderComponent *collision) {
-    Damageable* damageScript = collision->getOwner().getScript<Damageable>();
-    if(collision->getOwner().getLayer() == attackLayer){
+void LaserScript::onTriggerEnter(TriggerCollision *collision) {
+    Damageable* damageScript = collision->getCollider()->getOwner().getScript<Damageable>();
+    if(collision->getCollider()->getOwner().getLayer() == attackLayer){
         if(damageScript != nullptr){
             damageScript->takeDamage(1);
             controller->destroy(owner);

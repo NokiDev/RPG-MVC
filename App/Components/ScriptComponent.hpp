@@ -20,6 +20,9 @@ public :
     virtual void physicsUpdate();
 
     virtual void onCollision(BoxColliderComponent* collider);
+    virtual void onTriggerEnter(TriggerCollision* collider);
+    virtual void onTriggerStay(TriggerCollision* collider);
+    virtual void onTriggerExit(TriggerCollision* collider);
 
     Entity& getOwner() const {
         return *owner;

@@ -10,13 +10,13 @@
 #include "Laser.hpp"
 
 Laser::Laser(IController *boss, std::string attackLayer) : Entity(boss){
-    size = sf::Vector2u(10, 5);
+    size = sf::Vector2u(32, 5);
     name = "Laser";
     this->boss = boss;
     spriteRenderer = boss->newSpriteRenderer("laser.png");
 
     ///Need To order Components
-    addComponent(new BoxColliderComponent(this, sf::Vector2u(10, 5)));
+    addComponent(new BoxColliderComponent(this, size, true));
     addComponent(new Physics(this));
 
     ///Need To order Scripts

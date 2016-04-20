@@ -7,24 +7,10 @@
 
 
 #include <set>
-#include <App/Components/BoxColliderComponent.hpp>
+#include <SFML/System/Time.hpp>
 
-class TriggerCollision
-{
-public:
-    TriggerCollision(BoxColliderComponent* trigger, BoxColliderComponent* collider);
-
-    bool collExist(BoxColliderComponent* trigger, BoxColliderComponent* collider);
-    bool isCollide();
-
-    BoxColliderComponent* getTrigger();
-    BoxColliderComponent* getCollider();
-
-private:
-    BoxColliderComponent* trigger;
-    BoxColliderComponent* collider;
-};
-
+class BoxColliderComponent;
+class TriggerCollision;
 class CollisionSystem {
 public :
     static CollisionSystem *collisionSystem;

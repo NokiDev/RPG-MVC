@@ -15,7 +15,7 @@ MainMenuView::MainMenuView(IController * controller) : View(controller){
 }
 
 MainMenuView::~MainMenuView() {
-
+    components.clear();
 }
 
 void MainMenuView::render(){

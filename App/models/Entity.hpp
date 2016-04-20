@@ -14,6 +14,7 @@
 
 class IController;
 class BoxColliderComponent;
+class TriggerCollision;
 class Component;
 class ScriptComponent;
 class Entity {
@@ -68,7 +69,7 @@ public :
     void addComponent(Component* component) {
         std::string name = getComponentName(component);
         if(components.find(name) != components.end()){
-            std::cerr<<"Components already exist"<<std::endl;
+            std::cerr<<"Component "<<name<<" already exist"<<std::endl;
         }
         else{
             components[name] = component;
@@ -84,7 +85,7 @@ public :
             components[typeid(T).name()] = nullptr;
         }
         else{
-            std::cerr<<"Components don't exist !"<<std::endl;
+            std::cerr<<"Component "<<typeid(T).name()<<" don't exist !"<<std::endl;
         }
     }
 
@@ -100,6 +101,10 @@ public :
         return layer;
     }
 
+    std::string getName(){
+        return name;
+    }
+
     std::string getComponentName(Component* component);
 
     std::string getComponentName(ScriptComponent* component);
@@ -107,6 +112,9 @@ public :
     virtual void update(sf::Time){};
 
     static void OnCollision(Entity* entity, BoxColliderComponent * collider);
+    static void OnTriggerEnter(Entity* entity, TriggerCollision * collider);
+    static void OnTriggerStay(Entity* entity, TriggerCollision * collider);
+    static void OnTriggerExit(Entity* entity, TriggerCollision * collider);
 
 protected :
     static int nextId;

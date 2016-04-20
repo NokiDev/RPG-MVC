@@ -18,6 +18,7 @@ IngameView::~IngameView() {
 
 
 void IngameView::render() {
+    background.setPosition(background.getPosition().x-0.1f, background.getPosition().y);
     manager->Window().setView(sf::View(sf::Vector2f(360,240), sf::Vector2f(720,480)));
     draw(background);
     manager->Window().setView(manager->Window().getDefaultView());

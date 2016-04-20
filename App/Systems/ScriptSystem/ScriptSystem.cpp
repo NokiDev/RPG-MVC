@@ -17,7 +17,7 @@ ScriptSystem::ScriptSystem() {
 }
 
 ScriptSystem::~ScriptSystem() {
-
+    ScriptSystem::scriptSystem = nullptr;
 }
 
 void ScriptSystem::update(sf::Time deltaTime) {

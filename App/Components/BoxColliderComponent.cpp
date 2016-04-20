@@ -13,7 +13,7 @@
 BoxColliderComponent::BoxColliderComponent(Entity *owner, sf::Vector2u size, bool isTrigger, sf::Vector2f offset) :
         offset(offset),
         size(size),
-        trigger(trigger),
+        trigger(isTrigger),
         moving(false) {
     this->owner = owner;
     sf::Vector2f pos = owner->getComponent<Transform>()->position;
@@ -66,15 +66,15 @@ void BoxColliderComponent::onCollision(sf::FloatRect box) {
 }
 
 void BoxColliderComponent::onTriggerEnter(TriggerCollision* collision) {
-
+    Entity::OnTriggerEnter(owner, collision);
 }
 
 void BoxColliderComponent::onTriggerStay(TriggerCollision * collision) {
-
+    Entity::OnTriggerStay(owner, collision);
 }
 
 void BoxColliderComponent::onTriggerExit(TriggerCollision * collision) {
-
+    Entity::OnTriggerExit(owner, collision);
 }
 
 sf::FloatRect BoxColliderComponent::getBox()const {
@@ -90,9 +90,9 @@ sf::Vector2f BoxColliderComponent::getOffset()const {
 }
 
 bool BoxColliderComponent::isMoving()const {
-    return trigger;
+    return moving;
 }
 
 bool BoxColliderComponent::isTrigger()const {
-    return moving;
+    return trigger;
 }

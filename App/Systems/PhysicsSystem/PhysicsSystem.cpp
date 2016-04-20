@@ -21,7 +21,7 @@ PhysicsSystem::PhysicsSystem()
 
 PhysicsSystem::~PhysicsSystem()
 {
-
+    PhysicsSystem::physicsSystem = nullptr;
 }
 
 void PhysicsSystem::addPhysics(Physics* physic)

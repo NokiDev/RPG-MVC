@@ -31,7 +31,7 @@ Player::Player(IController* boss) : Entity(boss){
 
     addComponent(new PlayerEventsHandler(this));
 
-    addScript(new Damageable(this, 100.f));
+    addScript(new Damageable(this, 50.f));
 
     layer = "Player";
 
@@ -40,9 +40,11 @@ Player::Player(IController* boss) : Entity(boss){
 
 Player::~Player() {
     removeComponent<Damageable>();
-    removeComponent<PlayerScript>();
 
     removeComponent<PlayerEventsHandler>();
+
+    removeComponent<PlayerScript>();
+
 
     removeComponent<Physics>();
     removeComponent<BoxColliderComponent>();

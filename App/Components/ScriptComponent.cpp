@@ -22,3 +22,9 @@ void ScriptComponent::update(sf::Time deltaTime) {}
 void ScriptComponent::physicsUpdate() {}
 
 void ScriptComponent::onCollision(BoxColliderComponent *collider) {}
+
+void ScriptComponent::onTriggerEnter(TriggerCollision *collider) {}
+
+void ScriptComponent::onTriggerStay(TriggerCollision *collider) {}
+
+void ScriptComponent::onTriggerExit(TriggerCollision *collider) {}

@@ -38,8 +38,10 @@ void PlayerEventsHandler::update(sf::Time deltaTime) {
             timer = 0.f;
             IngameController* ingameController = dynamic_cast<IngameController*> (owner->getBoss());
             Laser* laser = new Laser(owner->getBoss(), "Enemy");
-            ingameController->instantiate(laser, transform->position + sf::Vector2f(owner->getSize().x, owner->getSize().y/2), sf::Vector2i(1,0 ));
+            Laser* laser2 = new Laser(owner->getBoss(), "Enemy");
+            ingameController->instantiate(laser, transform->position + sf::Vector2f(owner->getSize().x, owner->getSize().y/4), sf::Vector2i(1,0 ));
 
+            ingameController->instantiate(laser2, transform->position + sf::Vector2f(owner->getSize().x, owner->getSize().y/4 + owner->getSize().y/2), sf::Vector2i(1,0 ));
         }
     }
     float x=0,y=0;

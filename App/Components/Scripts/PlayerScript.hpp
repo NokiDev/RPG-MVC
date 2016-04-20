@@ -11,10 +11,13 @@
 #include <App/Components/Transform.hpp>
 #include <App/Components/Physics.hpp>
 
+class Damageable;
 class PlayerScript : public ScriptComponent{
 public :
     PlayerScript(Entity* owner);
     ~PlayerScript();
+
+    virtual void update(sf::Time deltaTime);
 
     float getAttackSpeed();
     int getSpeed();
@@ -22,6 +25,7 @@ public :
 private:
 
     int speed;
+    Damageable* damageableScript;
     float attackSpeed; //Amount attack by seconds
 };
 

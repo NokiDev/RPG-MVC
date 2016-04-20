@@ -9,6 +9,8 @@
 #include "IDetectionHelper.hpp"
 #include "ICollisionHelper.hpp"
 #include "Entity.hpp"
+#include "BoxColliderComponent.hpp"
+#include "TriggerCollision.hpp"
 
 CollisionSystem *CollisionSystem::collisionSystem;
 
@@ -25,7 +27,7 @@ CollisionSystem::CollisionSystem() {
 }
 
 CollisionSystem::~CollisionSystem() {
-
+    CollisionSystem::collisionSystem = nullptr;
 }
 
 void CollisionSystem::addBoxCollider(BoxColliderComponent *boxCollider) {
@@ -34,14 +36,14 @@ void CollisionSystem::addBoxCollider(BoxColliderComponent *boxCollider) {
 
 void CollisionSystem::delBoxCollider(BoxColliderComponent *boxCollider) {
     boxColliders.erase(boxCollider);
-    if(boxCollider->isTrigger()){
+   /* if(boxCollider->isTrigger()){
         for(auto trigger : triggerCollisions){
             if(trigger->getTrigger() == boxCollider){
                 trigger->getTrigger()->onTriggerExit(trigger);
                 triggerCollisions.erase(trigger);
             }
         }
-    }
+    }*/
 }
 
 void CollisionSystem::addMovingBoxCollider(BoxColliderComponent *boxCollider) {
@@ -49,9 +51,9 @@ void CollisionSystem::addMovingBoxCollider(BoxColliderComponent *boxCollider) {
 }
 
 void CollisionSystem::checkCollisions() {
-    for(BoxColliderComponent* collider : movingColliders)
+    for(auto collider : movingColliders)
     {
-        for(BoxColliderComponent* other : boxColliders)
+        for(auto other : boxColliders)
         {
             if((collider != other) && (!collider->isTrigger() || !other->isTrigger()))
             {
@@ -61,17 +63,17 @@ void CollisionSystem::checkCollisions() {
                     {
                         if(collider->isTrigger())
                         {
-                            TriggerCollision* collision = new TriggerCollision(collider, other);
-                            triggerCollisions.insert(collision);
-                            //collider->onTriggerEnter(collision);
-                            //other->onTriggerEnter(collision);
+                            TriggerCollision collision = TriggerCollision(collider, other);
+                            //triggerCollisions.insert(collision);
+                            collider->onTriggerEnter(&collision);
+                            other->onTriggerEnter(&collision);
                         }
                         else if (other->isTrigger())
                         {
-                            TriggerCollision* collision = new TriggerCollision(other, collider);
-                            triggerCollisions.insert(collision);
-                            //collider->onTriggerEnter(collision);
-                            //other->onTriggerEnter(collision);
+                            TriggerCollision collision = TriggerCollision(other, collider);
+                            //triggerCollisions.insert(collision);
+                            collider->onTriggerEnter(&collision);
+                            other->onTriggerEnter(&collision);
                         }
                         else
                         {
@@ -83,7 +85,8 @@ void CollisionSystem::checkCollisions() {
             }
         }
     }
-    for(TriggerCollision* collision : triggerCollisions)
+    //@FixMe, Unknown error when iterating triggerCollisions
+   /*for(auto collision : triggerCollisions)
     {
         if(collision->isCollide())
         {
@@ -102,37 +105,19 @@ void CollisionSystem::checkCollisions() {
             collision->getTrigger()->onTriggerExit(collision);
             triggerCollisions.erase(collision);
         }
-    }
-    for(BoxColliderComponent* collider : movingColliders)
+    }*/
+    for(auto collider : movingColliders)
     {
-        sf::Vector2u winSize = WindowManager::get()->Window().getSize();
-        sf::FloatRect winBox = sf::FloatRect(0,0,winSize.x, winSize.y);
-        Transform * t = collider->getOwner().getComponent<Transform>();
-        if(!ICollisionHelper::NotAABBCollision(t->position,winBox, collider->getBox()));
-        {
-            collider->onCollision(winBox);
+        if(!collider->isTrigger()){//Si ce n'est pas un trigger
+            sf::Vector2u winSize = WindowManager::get()->Window().getSize();
+            sf::FloatRect winBox = sf::FloatRect(0,0,winSize.x, winSize.y);
+            Transform * t = collider->getOwner().getComponent<Transform>();
+            if(!ICollisionHelper::NotAABBCollision(t->position,winBox, collider->getBox()));
+            {
+                collider->onCollision(winBox);
+            }
         }
     }
-}
-
-TriggerCollision::TriggerCollision(BoxColliderComponent *trigger, BoxColliderComponent *collider) {
-
-}
-
-bool TriggerCollision::collExist(BoxColliderComponent *trigger, BoxColliderComponent *collider) {
-    return false;
-}
-
-bool TriggerCollision::isCollide() {
-    return false;
-}
-
-BoxColliderComponent *TriggerCollision::getTrigger() {
-    return trigger;
-}
-
-BoxColliderComponent *TriggerCollision::getCollider() {
-    return collider;
 }
 
 void CollisionSystem::updateComponents(sf::Time deltaTime) {

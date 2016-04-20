@@ -11,15 +11,14 @@
 
 EnemyScript::EnemyScript(Entity* owner) : ScriptComponent(owner) {
     physics = owner->getComponent<Physics>();
-    speed = 100;
-    attackSpeed= 1.f;
+    speed = 25;
+    attackSpeed= 0.5f;
     timer =0.f;
 }
 
 EnemyScript::~EnemyScript() {
 
 }
-
 
 
 void EnemyScript::update(sf::Time deltaTime) {
@@ -37,13 +36,10 @@ void EnemyScript::update(sf::Time deltaTime) {
         sf::Vector2f pos = sf::Vector2f(t->position.x, t->position.y + owner->getSize().y / 2);
         controller->instantiate(new Laser(controller, "Player"),pos, sf::Vector2i(-1,0));
     }
-
-
 }
 
 void EnemyScript::physicsUpdate() {
     float x = - speed * App::get()->DeltaTime().asSeconds();
-
 
     physics->setVelocityX(x);
 }

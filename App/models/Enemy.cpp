@@ -19,7 +19,7 @@ Enemy::Enemy(IController *boss) : Entity(boss) {
     addComponent(new BoxColliderComponent(this, size));
     addComponent(new Physics(this));
     addScript(new EnemyScript(this));
-    addScript(new Damageable(this, 10.f));
+    addScript(new Damageable(this, 20.f));
 
     layer = "Enemy";
 
@@ -35,20 +35,7 @@ Enemy::~Enemy() {
     delete spriteRenderer;
 }
 
-/*
-void Enemy::onCollision(BoxColliderComponent *collider) {
-
-}
-
 void Enemy::update(sf::Time deltaTime) {
-
-}
-
-void Enemy::physicsUpdate() {
-    position += velocity;
-    spriteRenderer->updatePosition(position);
-}
-*/void Enemy::update(sf::Time deltaTime) {
     Transform* t = getComponent<Transform>();
     spriteRenderer->updatePosition(t->position);
 }

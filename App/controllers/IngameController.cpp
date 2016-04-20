@@ -3,11 +3,11 @@
 //
 
 #include <App/views/IngameView.hpp>
-#include <App/models/Map.hpp>
 #include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include <App/Systems/ScriptSystem/ScriptSystem.hpp>
 #include <App/Components/Transform.hpp>
+#include <App/models/EnemyFactory.hpp>
 
 #include "IngameController.hpp"
 
@@ -20,15 +20,30 @@ IngameController::IngameController() {
     scriptSys = new ScriptSystem();
     //Init Entities
     thePlayer = new Player(this);
-    entities.insert(new Enemy(this));
-    //Init Map
-    theMap = new Map(thePlayer);
+
+    //La manière la plus dégeulasse de faire un spawner, mais pas le time !
+    instantiate(new EnemyFactory(this, 5.f, 7.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 30.f, 4.f), sf::Vector2f(660.f, 140.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 15.f, 9.f), sf::Vector2f(660.f, 280.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 3.f, 6.f), sf::Vector2f(660.f, 360.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 20.f, 7.f), sf::Vector2f(660.f, 430.f), sf::Vector2i(-1,0));
+
+
+    //entities.insert(new Enemy(this));
+
     subController = nullptr;
 }
 
 IngameController::~IngameController() {
-    delete theMap;
+    for(auto entity : entities){
+        delete entity;
+    }
+    entities.clear();
     delete thePlayer;
+    delete eventSys;
+    delete collSys;
+    delete physicsSys;
+    delete scriptSys;
     delete view;
 }
 
@@ -43,13 +58,13 @@ void IngameController::update(sf::Time deltaTime) {
         entities.erase(entity);
         delete entity;
     }
+    collSys->updateComponents(deltaTime);///Update the coliders components (update position)
+
     entitiesToDestroy.clear();
     eventSys->update(deltaTime);
-    //physicsSys->updatePhysicsScripts(); /// Update Physics Stuff like movement rotation, collision test etc.. .....
     scriptSys->physicsUpdate();
 
     collSys->checkCollisions();///Verify the movement is safe, not colliding else it will determine the final movement
-    collSys->updateComponents(deltaTime);///Update the coliders components (update position)
     physicsSys->updateComponents(deltaTime);//Finalize the movement by adding position and reset velocity to zero
     scriptSys->update(deltaTime);//
 
@@ -60,7 +75,7 @@ void IngameController::update(sf::Time deltaTime) {
 }
 
 void IngameController::render() {
-    if (viewExist()) {
+    if(viewExist()){
         view->render();
     }
 }
@@ -78,10 +93,6 @@ void IngameController::setSubController(IController *newSubController) {
     this->subController = newSubController;
 }
 
-void IngameController::onClose() {
-    //Save The Game;
-}
-
 IController *IngameController::getSubController() {
     return subController;
 }
@@ -96,5 +107,11 @@ Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf:
 }
 
 void IngameController::destroy(Entity *entity) {
-    entitiesToDestroy.push_back(entity);
+    if(entitiesToDestroy.find(entity) == entitiesToDestroy.end())///Test if the Entity is deleted Twice
+        entitiesToDestroy.insert(entity);
 }
+
+void IngameController::onClose() {
+    //Save The Game;
+}
+

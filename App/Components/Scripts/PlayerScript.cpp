@@ -2,15 +2,28 @@
 // Created by bluedragonfly on 4/17/16.
 //
 
+#include <App/App.hpp>
+#include <App/controllers/MainMenuController.hpp>
 #include "PlayerScript.hpp"
+#include "Damageable.hpp"
 
 PlayerScript::PlayerScript(Entity *owner) : ScriptComponent(owner){
-    attackSpeed = 0.2f;
+    attackSpeed = 0.1f;
     speed =350;
 }
 
 PlayerScript::~PlayerScript() {
 
+}
+
+void PlayerScript::update(sf::Time deltaTime) {
+    damageableScript = owner->getScript<Damageable>();
+    if(damageableScript!= nullptr){
+        if(damageableScript->isDead()){
+            //Display GameOver Menu
+            App::get()->getManager()->setCurrentMainController(new MainMenuController());
+        }
+    }
 }
 
 float PlayerScript::getAttackSpeed(){

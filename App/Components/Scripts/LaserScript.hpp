@@ -5,6 +5,7 @@
 #ifndef RPG_MVC_LASERSCRIPT_HPP
 #define RPG_MVC_LASERSCRIPT_HPP
 
+#include <App/Systems/CollisionSystem/CollisionSystem.hpp>
 #include "ScriptComponent.hpp"
 
 class Entity;
@@ -17,7 +18,7 @@ public :
 
     virtual void physicsUpdate();
 
-    virtual void onCollision(BoxColliderComponent*  collision);
+    virtual void onTriggerEnter(TriggerCollision*  collision);
 
 private:
 

@@ -5,8 +5,19 @@
 #ifndef RPG_MVC_ENEMY_HPP
 #define RPG_MVC_ENEMY_HPP
 
+#include "Entity.hpp"
 
-class EnemyFactory {
+//template<class T>
+class EnemyFactory : public Entity{
+public :
+    EnemyFactory(IController * boss, float delayForFirstLaunch, float spawnTime);
+    ~EnemyFactory();
+
+
+
+
+
+private:
 
 };
 

@@ -6,6 +6,7 @@
 #define RPG_MVC_INGAMEVIEW_HPP
 
 
+#include <App/Components/Scripts/Damageable.hpp>
 #include "View.hpp"
 #include "WindowManager.hpp"
 
@@ -17,7 +18,7 @@ public:
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 private:
     IController * controller;
-
+    Damageable * playerHealth;
     sf::Sprite background;
 
 };

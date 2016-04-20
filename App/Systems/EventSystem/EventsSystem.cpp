@@ -17,7 +17,7 @@ EventsSystem::EventsSystem() {
 }
 
 EventsSystem::~EventsSystem() {
-
+    EventsSystem::eventsSystem = nullptr;
 }
 
 void EventsSystem::handleEvents(sf::Event event) {

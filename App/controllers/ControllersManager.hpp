@@ -28,6 +28,7 @@ private:
     App* app;
     WindowManager * windowManager;
     IController *currentMainController;
+    IController * nextController;
 };
 
 
