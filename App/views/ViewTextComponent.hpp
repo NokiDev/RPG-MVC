@@ -15,6 +15,7 @@ public:
 
     virtual void draw(View & view);
     void updatePosition(sf::Vector2f position);
+    void updateText(std::string text);
 
 
 protected:

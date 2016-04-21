@@ -10,6 +10,7 @@
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include <App/models/Enemy.hpp>
 #include <App/Systems/PhysicsSystem/PhysicsSystem.hpp>
+#include <c++/sstream>
 #include "IController.hpp"
 
 class ScriptSystem;
@@ -36,6 +37,8 @@ public:
     virtual void onClose();
 
     IController* getSubController();
+
+    Player* getPlayer();
 
 private:
     IController *subController;

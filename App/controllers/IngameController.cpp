@@ -9,7 +9,6 @@
 #include <App/Components/Transform.hpp>
 #include <App/models/EnemyFactory.hpp>
 
-#include <App/App.hpp>
 #include "IngameController.hpp"
 
 IngameController::IngameController() {
@@ -120,3 +119,6 @@ void IngameController::onClose() {
     //Save The Game;
 }
 
+Player *IngameController::getPlayer() {
+    return thePlayer;
+}

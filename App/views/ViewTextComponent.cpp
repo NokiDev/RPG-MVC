@@ -16,3 +16,7 @@ void ViewTextComponent::updatePosition(sf::Vector2f position) {
 void ViewTextComponent::draw(View &view) {
     view.draw(text);
 }
+
+void ViewTextComponent::updateText(std::string text) {
+    this->text = sf::Text(text, font);
+}

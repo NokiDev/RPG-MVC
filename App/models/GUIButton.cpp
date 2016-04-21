@@ -53,6 +53,7 @@ void GUIButton::setSize(sf::Vector2u size) {
 
 void GUIButton::setText(std::string text) {
     this->textStr = text;
+    textRenderer->updateText(text);
 }
 
 void GUIButton::setState(GUIButton::StateButton state) {

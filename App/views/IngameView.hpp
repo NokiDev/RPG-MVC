@@ -16,11 +16,19 @@ public:
     ~IngameView();
     virtual void render();
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
+
+    template <typename T> std::string toString(const T& t) {
+        std::ostringstream os;
+        os<<t;
+        return os.str();
+    }
+
+
 private:
     IController * controller;
     Damageable * playerHealth;
     sf::Sprite background;
-
+    ViewTextComponent * hp;
 };
 
 
