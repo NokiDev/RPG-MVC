@@ -1,0 +1,5 @@
+<map id="IController::onClose" name="IController::onClose">
+<area shape="rect" id="node2" href="$class_app.html#a8e57d685fbc426a21d123fcab4418d76" title="App::setMainController" alt="" coords="195,5,349,32"/>
+<area shape="rect" id="node3" href="$class_i_controller.html#a30b618142be776fd779255998a540e08" title="IController::~IController" alt="" coords="195,56,349,83"/>
+<area shape="rect" id="node4" href="$class_ingame_controller.html#a777a913d5e737e3f1cb9726604c4c703" title="IngameController::setSub\lController" alt="" coords="188,107,356,149"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="View" name="View">
+<area shape="rect" id="node2" href="$class_game_over_view.html" title="{GameOverView\n||+ GameOverView()\l+ ~GameOverView()\l+ render()\l+ draw()\l}" alt="" coords="5,314,144,435"/>
+<area shape="rect" id="node3" href="$class_ingame_view.html" title="{IngameView\n||+ IngameView()\l+ ~IngameView()\l+ render()\l+ draw()\l+ toString()\l}" alt="" coords="168,307,288,443"/>
+<area shape="rect" id="node4" href="$class_main_menu_view.html" title="{MainMenuView\n||+ MainMenuView()\l+ ~MainMenuView()\l+ render()\l+ draw()\l}" alt="" coords="312,314,451,435"/>
+</map>

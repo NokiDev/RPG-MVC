@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>RPG-MVC: Référence du fichier RPG-MVC/App/models/Entity.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG-MVC
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_entity_8hpp.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier Entity.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;SFML/System.hpp&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;typeinfo&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;<a class="el" href="_component_8hpp_source.html">App/Components/Component.hpp</a>&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de Entity.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="_entity_8hpp__incl.png" border="0" usemap="#_r_p_g-_m_v_c_2_app_2models_2_entity_8hpp" alt=""/></div>
+<map name="_r_p_g-_m_v_c_2_app_2models_2_entity_8hpp" id="_r_p_g-_m_v_c_2_app_2models_2_entity_8hpp">
+<area shape="rect" id="node6" href="_component_8hpp.html" title="App/Components/Component.hpp" alt="" coords="419,95,637,121"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="_entity_8hpp__dep__incl.png" border="0" usemap="#_r_p_g-_m_v_c_2_app_2models_2_entity_8hppdep" alt=""/></div>
+<map name="_r_p_g-_m_v_c_2_app_2models_2_entity_8hppdep" id="_r_p_g-_m_v_c_2_app_2models_2_entity_8hppdep">
+<area shape="rect" id="node2" href="_box_collider_component_8cpp.html" title="RPG&#45;MVC/App/Components\l/BoxColliderComponent.cpp" alt="" coords="5,102,192,143"/>
+<area shape="rect" id="node3" href="_player_events_handler_8hpp.html" title="RPG&#45;MVC/App/Components\l/EventHandlers/PlayerEventsHandler.hpp" alt="" coords="317,467,576,508"/>
+<area shape="rect" id="node4" href="_player_events_handler_8cpp.html" title="RPG&#45;MVC/App/Components\l/EventHandlers/PlayerEventsHandler.cpp" alt="" coords="201,556,460,597"/>
+<area shape="rect" id="node6" href="_physics_8cpp.html" title="RPG&#45;MVC/App/Components\l/Physics.cpp" alt="" coords="2852,102,3039,143"/>
+<area shape="rect" id="node7" href="_script_component_8cpp.html" title="RPG&#45;MVC/App/Components\l/ScriptComponent.cpp" alt="" coords="651,467,837,508"/>
+<area shape="rect" id="node8" href="_live_timer_script_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/LiveTimerScript.cpp" alt="" coords="2671,467,2857,508"/>
+<area shape="rect" id="node9" href="_player_script_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/PlayerScript.hpp" alt="" coords="784,377,971,419"/>
+<area shape="rect" id="node11" href="_transform_8cpp.html" title="RPG&#45;MVC/App/Components\l/Transform.cpp" alt="" coords="3063,102,3249,143"/>
+<area shape="rect" id="node12" href="_enemy_8hpp.html" title="RPG&#45;MVC/App/models\l/Enemy.hpp" alt="" coords="2439,102,2595,143"/>
+<area shape="rect" id="node31" href="_entity_8cpp.html" title="RPG&#45;MVC/App/models\l/Entity.cpp" alt="" coords="2469,377,2625,419"/>
+<area shape="rect" id="node36" href="_enemy_factory_8hpp.html" title="RPG&#45;MVC/App/models\l/EnemyFactory.hpp" alt="" coords="3118,377,3274,419"/>
+<area shape="rect" id="node37" href="_laser_8hpp.html" title="RPG&#45;MVC/App/models\l/Laser.hpp" alt="" coords="1370,377,1526,419"/>
+<area shape="rect" id="node38" href="_player_8hpp.html" title="RPG&#45;MVC/App/models\l/Player.hpp" alt="" coords="1758,102,1914,143"/>
+<area shape="rect" id="node39" href="_collision_system_8cpp.html" title="RPG&#45;MVC/App/Systems\l/CollisionSystem/Collision\lSystem.cpp" alt="" coords="3273,95,3447,151"/>
+<area shape="rect" id="node40" href="_physics_system_8cpp.html" title="RPG&#45;MVC/App/Systems\l/PhysicsSystem/PhysicsSystem.cpp" alt="" coords="3471,102,3710,143"/>
+<area shape="rect" id="node5" href="_player_8cpp.html" title="RPG&#45;MVC/App/models\l/Player.cpp" alt="" coords="535,556,691,597"/>
+<area shape="rect" id="node10" href="_player_script_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/PlayerScript.cpp" alt="" coords="1200,467,1387,508"/>
+<area shape="rect" id="node13" href="_ingame_controller_8hpp.html" title="RPG&#45;MVC/App/controllers\l/IngameController.hpp" alt="" coords="1749,199,1923,240"/>
+<area shape="rect" id="node20" href="_enemy_8cpp.html" title="RPG&#45;MVC/App/models\l/Enemy.cpp" alt="" coords="2490,467,2646,508"/>
+<area shape="rect" id="node14" href="_app_8cpp.html" title="RPG&#45;MVC/App/App.cpp" alt="" coords="1755,295,1917,322"/>
+<area shape="rect" id="node15" href="_script_component_8hpp.html" title="RPG&#45;MVC/App/Components\l/ScriptComponent.hpp" alt="" coords="1941,288,2128,329"/>
+<area shape="rect" id="node23" href="_ingame_controller_8cpp.html" title="RPG&#45;MVC/App/controllers\l/IngameController.cpp" alt="" coords="2543,556,2718,597"/>
+<area shape="rect" id="node34" href="_controllers_manager_8cpp.html" title="RPG&#45;MVC/App/controllers\l/ControllersManager.cpp" alt="" coords="1357,288,1531,329"/>
+<area shape="rect" id="node35" href="_main_menu_controller_8cpp.html" title="RPG&#45;MVC/App/controllers\l/MainMenuController.cpp" alt="" coords="1555,288,1730,329"/>
+<area shape="rect" id="node16" href="_damageable_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/Damageable.hpp" alt="" coords="1625,377,1812,419"/>
+<area shape="rect" id="node25" href="_enemy_script_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/EnemyScript.hpp" alt="" coords="2047,377,2233,419"/>
+<area shape="rect" id="node26" href="_factory_script_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/FactoryScript.hpp" alt="" coords="2856,377,3043,419"/>
+<area shape="rect" id="node29" href="_laser_script_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/LaserScript.hpp" alt="" coords="1836,377,2023,419"/>
+<area shape="rect" id="node30" href="_live_timer_script_8hpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/LiveTimerScript.hpp" alt="" coords="2257,377,2444,419"/>
+<area shape="rect" id="node32" href="_script_system_8hpp.html" title="RPG&#45;MVC/App/Systems\l/ScriptSystem/ScriptSystem.hpp" alt="" coords="1055,377,1268,419"/>
+<area shape="rect" id="node17" href="_damageable_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/Damageable.cpp" alt="" coords="1888,467,2075,508"/>
+<area shape="rect" id="node18" href="_enemy_script_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/EnemyScript.cpp" alt="" coords="1461,467,1648,508"/>
+<area shape="rect" id="node19" href="_laser_script_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/LaserScript.cpp" alt="" coords="2099,467,2285,508"/>
+<area shape="rect" id="node21" href="_laser_8cpp.html" title="RPG&#45;MVC/App/models\l/Laser.cpp" alt="" coords="2310,467,2466,508"/>
+<area shape="rect" id="node22" href="_ingame_view_8hpp.html" title="RPG&#45;MVC/App/views/Ingame\lView.hpp" alt="" coords="1673,467,1863,508"/>
+<area shape="rect" id="node24" href="_ingame_view_8cpp.html" title="RPG&#45;MVC/App/views/Ingame\lView.cpp" alt="" coords="1673,556,1863,597"/>
+<area shape="rect" id="node27" href="_factory_script_8cpp.html" title="RPG&#45;MVC/App/Components\l/Scripts/FactoryScript.cpp" alt="" coords="2881,467,3068,508"/>
+<area shape="rect" id="node28" href="_enemy_factory_8cpp.html" title="RPG&#45;MVC/App/models\l/EnemyFactory.cpp" alt="" coords="3093,467,3249,508"/>
+<area shape="rect" id="node33" href="_script_system_8cpp.html" title="RPG&#45;MVC/App/Systems\l/ScriptSystem/ScriptSystem.cpp" alt="" coords="861,467,1075,508"/>
+</map>
+</div>
+</div>
+<p><a href="_entity_8hpp_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html">Entity</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_adbd6b0e2bc35b5eded7de27919d214b.html">RPG-MVC</a></li><li class="navelem"><a class="el" href="dir_da25bb9b4579b39489852ad1472a8b73.html">App</a></li><li class="navelem"><a class="el" href="dir_bcffe999a15b7393a97b91d40e055bd4.html">models</a></li><li class="navelem"><a class="el" href="_entity_8hpp.html">Entity.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

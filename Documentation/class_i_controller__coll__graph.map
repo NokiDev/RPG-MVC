@@ -1,0 +1,4 @@
+<map id="IController" name="IController">
+<area shape="rect" id="node2" href="$class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="98,336,255,545"/>
+<area shape="rect" id="node3" href="$class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="181,27,327,251"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="IngameView::render" name="IngameView::render">
+<area shape="rect" id="node2" href="$class_render_system.html#ae9f2015df4e4e92f82e487326264bdfe" title="RenderSystem::update" alt="" coords="189,5,344,32"/>
+<area shape="rect" id="node3" href="$class_render_system.html#a6f7bb20d56d885e02fad65432e09f92b" title="RenderSystem::draw" alt="" coords="195,56,338,83"/>
+</map>

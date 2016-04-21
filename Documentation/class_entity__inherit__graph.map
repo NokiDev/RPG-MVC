@@ -1,0 +1,6 @@
+<map id="Entity" name="Entity">
+<area shape="rect" id="node2" href="$class_enemy.html" title="{Enemy\n||+ Enemy()\l+ ~Enemy()\l+ update()\l}" alt="" coords="5,519,96,626"/>
+<area shape="rect" id="node3" href="$class_enemy_factory.html" title="{EnemyFactory\n||+ EnemyFactory()\l+ ~EnemyFactory()\l}" alt="" coords="121,527,255,619"/>
+<area shape="rect" id="node4" href="$class_laser.html" title="{Laser\n||+ Laser()\l+ ~Laser()\l+ update()\l}" alt="" coords="280,519,363,626"/>
+<area shape="rect" id="node5" href="$class_player.html" title="{Player\n|# spriteRenderer\l# eventHandler\l|+ Player()\l+ ~Player()\l+ update()\l}" alt="" coords="387,512,504,633"/>
+</map>

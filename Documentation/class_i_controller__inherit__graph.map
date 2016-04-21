@@ -1,0 +1,5 @@
+<map id="IController" name="IController">
+<area shape="rect" id="node2" href="$class_game_over_controller.html" title="{GameOverController\n||+ GameOverController()\l+ ~GameOverController()\l+ handleEvents()\l+ update()\l+ render()\l+ onClose()\l}" alt="" coords="5,365,172,516"/>
+<area shape="rect" id="node3" href="$class_ingame_controller.html" title="{IngameController\n||+ IngameController()\l+ ~IngameController()\l+ handleEvents()\l+ instantiate()\l+ destroy()\l+ update()\l+ render()\l+ setSubController()\l+ onClose()\l+ getSubController()\l+ getPlayer()\l+ getTime()\l}" alt="" coords="197,321,343,560"/>
+<area shape="rect" id="node4" href="$class_main_menu_controller.html" title="{MainMenuController\n||+ MainMenuController()\l+ ~MainMenuController()\l+ handleEvents()\l+ update()\l+ render()\l+ setSubController()\l+ onClose()\l+ fireButton()\l+ goDown()\l+ goUp()\l}" alt="" coords="367,336,533,545"/>
+</map>

@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>RPG-MVC:  Fichier source de RPG-MVC/App/App.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG-MVC
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_app_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">App.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_app_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by Noki, Timothé Van Deputte on 12/02/2016.</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef RPG_MVC_APP_HPP</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RPG_MVC_APP_HPP</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_controllers_manager_8hpp.html">App/controllers/ControllersManager.hpp</a>&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_i_controller_8hpp.html">IController.hpp</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_app.html">   12</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_app.html">App</a> {</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App</a>();</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">~App</a>();</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">/*</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">     * @brief Main loop of the application</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">     */</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_app.html#ae09dc71078b64c56c673b1ad1d25b5d1">run</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_app.html#a60b21660728319701d03b963eab80589">isRunning</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_app.html#a897b1691cef6d42ec39c75f19be27a9a">isPaused</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_app.html#a28e939e80ae46e74520498d89b658cf4">close</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    sf::Time &amp;<a class="code" href="class_app.html#ae5660c40f0b501f75f1b8cd0339498cd">DeltaTime</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_app.html">App</a>* <span class="keyword">get</span>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_controllers_manager.html">ControllersManager</a>* <a class="code" href="class_app.html#a9dce22d903294663940acd12ce830ae4">getManager</a>();</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_app.html">App</a>* app;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_controllers_manager.html">ControllersManager</a> * manager;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">bool</span> running;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">bool</span> paused;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sf::Clock time;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    sf::Time deltaTime;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;};</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#endif //RPG_MVC_APP_HPP</span></div><div class="ttc" id="class_app_html_a28e939e80ae46e74520498d89b658cf4"><div class="ttname"><a href="class_app.html#a28e939e80ae46e74520498d89b658cf4">App::close</a></div><div class="ttdeci">void close()</div><div class="ttdef"><b>Definition:</b> App.cpp:47</div></div>
+<div class="ttc" id="class_app_html_ae5660c40f0b501f75f1b8cd0339498cd"><div class="ttname"><a href="class_app.html#ae5660c40f0b501f75f1b8cd0339498cd">App::DeltaTime</a></div><div class="ttdeci">sf::Time &amp; DeltaTime()</div><div class="ttdef"><b>Definition:</b> App.cpp:43</div></div>
+<div class="ttc" id="_controllers_manager_8hpp_html"><div class="ttname"><a href="_controllers_manager_8hpp.html">ControllersManager.hpp</a></div></div>
+<div class="ttc" id="class_app_html_a897b1691cef6d42ec39c75f19be27a9a"><div class="ttname"><a href="class_app.html#a897b1691cef6d42ec39c75f19be27a9a">App::isPaused</a></div><div class="ttdeci">bool isPaused() const </div><div class="ttdef"><b>Definition:</b> App.cpp:39</div></div>
+<div class="ttc" id="class_controllers_manager_html"><div class="ttname"><a href="class_controllers_manager.html">ControllersManager</a></div><div class="ttdef"><b>Definition:</b> ControllersManager.hpp:14</div></div>
+<div class="ttc" id="class_app_html"><div class="ttname"><a href="class_app.html">App</a></div><div class="ttdef"><b>Definition:</b> App.hpp:12</div></div>
+<div class="ttc" id="class_app_html_a9dce22d903294663940acd12ce830ae4"><div class="ttname"><a href="class_app.html#a9dce22d903294663940acd12ce830ae4">App::getManager</a></div><div class="ttdeci">static ControllersManager * getManager()</div><div class="ttdef"><b>Definition:</b> App.cpp:55</div></div>
+<div class="ttc" id="class_app_html_ae09dc71078b64c56c673b1ad1d25b5d1"><div class="ttname"><a href="class_app.html#ae09dc71078b64c56c673b1ad1d25b5d1">App::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> App.cpp:27</div></div>
+<div class="ttc" id="_i_controller_8hpp_html"><div class="ttname"><a href="_i_controller_8hpp.html">IController.hpp</a></div></div>
+<div class="ttc" id="class_app_html_a34f1f253b1cef5f4ecbac66eaf6964ec"><div class="ttname"><a href="class_app.html#a34f1f253b1cef5f4ecbac66eaf6964ec">App::~App</a></div><div class="ttdeci">~App()</div><div class="ttdef"><b>Definition:</b> App.cpp:23</div></div>
+<div class="ttc" id="class_app_html_acb8cbf3e285b91d0170ffe87df5989c5"><div class="ttname"><a href="class_app.html#acb8cbf3e285b91d0170ffe87df5989c5">App::App</a></div><div class="ttdeci">App()</div><div class="ttdef"><b>Definition:</b> App.cpp:10</div></div>
+<div class="ttc" id="class_app_html_a60b21660728319701d03b963eab80589"><div class="ttname"><a href="class_app.html#a60b21660728319701d03b963eab80589">App::isRunning</a></div><div class="ttdeci">bool isRunning() const </div><div class="ttdef"><b>Definition:</b> App.cpp:35</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_adbd6b0e2bc35b5eded7de27919d214b.html">RPG-MVC</a></li><li class="navelem"><a class="el" href="dir_da25bb9b4579b39489852ad1472a8b73.html">App</a></li><li class="navelem"><a class="el" href="_app_8hpp.html">App.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

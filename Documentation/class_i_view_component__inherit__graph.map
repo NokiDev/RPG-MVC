@@ -1,0 +1,4 @@
+<map id="IViewComponent" name="IViewComponent">
+<area shape="rect" id="node2" href="$class_view_sprite_component.html" title="{ViewSpriteComponent\n|# texture\l# sprite\l|+ ViewSpriteComponent()\l+ ~ViewSpriteComponent()\l+ update()\l+ draw()\l+ updatePosition()\l+ updateRect()\l+ updateColor()\l}" alt="" coords="5,160,184,340"/>
+<area shape="rect" id="node3" href="$class_view_text_component.html" title="{ViewTextComponent\n|# text\l# font\l|+ ViewTextComponent()\l+ ~ViewTextComponent()\l+ draw()\l+ updatePosition()\l+ updateText()\l}" alt="" coords="209,175,378,325"/>
+</map>

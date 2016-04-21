@@ -1,0 +1,6 @@
+<map id="IController::render" name="IController::render">
+<area shape="rect" id="node2" href="$class_app.html#ae09dc71078b64c56c673b1ad1d25b5d1" title="App::run" alt="" coords="223,5,294,32"/>
+<area shape="rect" id="node4" href="$class_i_controller.html#a30b618142be776fd779255998a540e08" title="IController::~IController" alt="" coords="181,56,336,83"/>
+<area shape="rect" id="node5" href="$class_ingame_controller.html#a1b9654e996779c67cc399aff22f48da2" title="IngameController::render" alt="" coords="177,107,340,133"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="388,5,439,32"/>
+</map>

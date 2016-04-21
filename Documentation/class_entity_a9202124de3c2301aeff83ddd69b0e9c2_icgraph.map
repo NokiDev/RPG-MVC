@@ -1,0 +1,7 @@
+<map id="Entity::getPosition" name="Entity::getPosition">
+<area shape="rect" id="node2" href="$class_box_collider_component.html#ab91d1ddf3e6bae0a81bbd809134ee8c6" title="BoxColliderComponent\l::BoxColliderComponent" alt="" coords="223,5,386,47"/>
+<area shape="rect" id="node3" href="$class_box_collider_component.html#ab8679d58e3888db43fd614cdbfc08e0c" title="BoxColliderComponent\l::update" alt="" coords="227,71,382,112"/>
+<area shape="rect" id="node4" href="$class_render_component.html#afb84ab4838dc515917e1b691ffedb87f" title="RenderComponent::RenderComponent" alt="" coords="183,137,427,163"/>
+<area shape="rect" id="node6" href="$class_render_component.html#ab1f2f5dccd046200443d8c23fdf3dac7" title="RenderComponent::update" alt="" coords="217,187,393,214"/>
+<area shape="rect" id="node5" href="$struct_render_component_1_1depth_compare.html#af059114788db6a5fb89c89f836d9097c" title="Overload () operator for comparing SpriteRenderers. " alt="" coords="475,155,696,196"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="CollisionSystem::checkCollisions" name="CollisionSystem::checkCollisions">
+<area shape="rect" id="node2" href="$class_i_detection_helper.html#ae442ce267f8d84c3ff2fe6f01fee185d" title="Detect if the box is near to the other. " alt="" coords="299,5,461,47"/>
+<area shape="rect" id="node4" href="$class_i_collision_helper.html#a8d6324e21dc60d462abecf3987335b34" title="Test Collision between two AABB. " alt="" coords="278,71,482,98"/>
+<area shape="rect" id="node5" href="$class_i_collision_helper.html#a67db657231a00e7cc8063774c5be5571" title="Test if a AABB go out another AABB. " alt="" coords="268,122,492,149"/>
+<area shape="rect" id="node3" href="$class_i_detection_helper.html#ab36e79c2539aaa0b01f4d6b582fa45b0" title="Calculate distance between two boxes as Int. " alt="" coords="540,5,719,47"/>
+</map>

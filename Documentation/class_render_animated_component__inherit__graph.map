@@ -1,0 +1,4 @@
+<map id="RenderAnimatedComponent" name="RenderAnimatedComponent">
+<area shape="rect" id="node2" href="$class_render_component.html" title="{RenderComponent\n|# sprite\l|+ RenderComponent()\l+ ~RenderComponent()\l+ update()\l+ draw()\l+ rotate()\l}" alt="" coords="33,160,190,296"/>
+<area shape="rect" id="node3" href="$class_component.html" title="{Component\n|# owner\l|+ ~Component()\l+ update()\l+ getOwner()\l}" alt="" coords="53,5,169,112"/>
+</map>

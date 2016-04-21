@@ -1,0 +1,5 @@
+<map id="IngameController::update" name="IngameController::update">
+<area shape="rect" id="node2" href="$class_i_controller.html#acec84b38a68cfa0b4535c09f203bc809" title="IController::update" alt="" coords="233,5,360,32"/>
+<area shape="rect" id="node3" href="$class_player.html#a9111d291e2a6ea83bd5552372ff9e388" title="Update the entity each frame &#160;time between two frames. " alt="" coords="243,56,350,83"/>
+<area shape="rect" id="node4" href="$class_player.html#a5a5a0825ceffb6e756480026cbdb919e" title="Update Physics velocity and position. " alt="" coords="220,107,373,133"/>
+</map>

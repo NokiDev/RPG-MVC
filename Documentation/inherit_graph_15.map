@@ -1,0 +1,9 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_script_component.html" title="ScriptComponent" alt="" coords="5,132,128,159"/>
+<area shape="rect" id="node2" href="$class_damageable.html" title="Damageable" alt="" coords="184,5,279,32"/>
+<area shape="rect" id="node3" href="$class_enemy_script.html" title="EnemyScript" alt="" coords="183,56,280,83"/>
+<area shape="rect" id="node4" href="$class_factory_script.html" title="FactoryScript" alt="" coords="181,107,281,133"/>
+<area shape="rect" id="node5" href="$class_laser_script.html" title="LaserScript" alt="" coords="187,157,275,184"/>
+<area shape="rect" id="node6" href="$class_live_timer_script.html" title="LiveTimerScript" alt="" coords="176,208,287,235"/>
+<area shape="rect" id="node7" href="$class_player_script.html" title="PlayerScript" alt="" coords="185,259,278,285"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="Entity::~Entity" name="Entity::~Entity">
+<area shape="rect" id="node2" href="$class_entity.html#ab017ca0cb228fc9984ff5f1252e70a5c" title="Update the entity each frame &#160;time between two frames. " alt="" coords="184,5,287,32"/>
+<area shape="rect" id="node3" href="$class_entity.html#aa41eeae2e9a47eaa4d434109289a2b0d" title="Update Physics velocity and position. " alt="" coords="160,56,311,83"/>
+<area shape="rect" id="node4" href="$class_entity.html#af66a1f2c1783bc52ff03d035e61fff78" title="Behaviour to adopt when entering on collision. " alt="" coords="172,107,299,133"/>
+</map>

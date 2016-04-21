@@ -1,0 +1,8 @@
+<map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
+<area shape="rect" id="node1" href="$class_component.html" title="basic class for all components " alt="" coords="5,81,93,108"/>
+<area shape="rect" id="node2" href="$class_box_collider_component.html" title="Component, which handle collisions stuff. " alt="" coords="146,5,301,32"/>
+<area shape="rect" id="node3" href="$class_event_handler_component.html" title="EventHandlerComponent" alt="" coords="141,56,305,83"/>
+<area shape="rect" id="node5" href="$class_physics.html" title="Physics Component , allow entity to do physics stuff (actually only velocity is handled) ..." alt="" coords="189,107,258,133"/>
+<area shape="rect" id="node6" href="$class_transform.html" title="Transform" alt="" coords="184,157,263,184"/>
+<area shape="rect" id="node4" href="$class_player_events_handler.html" title="Handles Event for the Player, events are Keyboard, mouse, window event etc... " alt="" coords="353,56,496,83"/>
+</map>

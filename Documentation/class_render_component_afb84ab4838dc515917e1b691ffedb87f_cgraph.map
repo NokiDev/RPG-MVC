@@ -1,0 +1,5 @@
+<map id="RenderComponent::RenderComponent" name="RenderComponent::RenderComponent">
+<area shape="rect" id="node2" href="$class_ressources.html#ac94a6ec5e623b0d992a158f26b659d67" title="Ressources::Load" alt="" coords="319,5,446,32"/>
+<area shape="rect" id="node3" href="$class_entity.html#a9202124de3c2301aeff83ddd69b0e9c2" title="Entity::getPosition" alt="" coords="318,56,447,83"/>
+<area shape="rect" id="node4" href="$class_render_system.html#a21f3ea686abb09717c4358161f7e78c7" title="RenderSystem::addSprite" alt="" coords="297,107,468,133"/>
+</map>

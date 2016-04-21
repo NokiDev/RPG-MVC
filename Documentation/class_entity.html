@@ -1,0 +1,902 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>RPG-MVC: Référence de la classe Entity</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG-MVC
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="inherits.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('class_entity.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Fonctions membres publiques</a> &#124;
+<a href="#pub-static-methods">Fonctions membres publiques statiques</a> &#124;
+<a href="#pro-methods">Fonctions membres protégées</a> &#124;
+<a href="#pro-attribs">Attributs protégés</a> &#124;
+<a href="#pro-static-attribs">Attributs protégés statiques</a> &#124;
+<a href="class_entity-members.html">Liste de tous les membres</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence de la classe Entity</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_entity_8hpp_source.html">Entity.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Graphe d'héritage de Entity:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity__inherit__graph.png" border="0" usemap="#_entity_inherit__map" alt="Inheritance graph"/></div>
+<map name="_entity_inherit__map" id="_entity_inherit__map">
+<area shape="rect" id="node2" href="class_enemy.html" title="{Enemy\n||+ Enemy()\l+ ~Enemy()\l+ update()\l}" alt="" coords="5,519,96,626"/>
+<area shape="rect" id="node3" href="class_enemy_factory.html" title="{EnemyFactory\n||+ EnemyFactory()\l+ ~EnemyFactory()\l}" alt="" coords="121,527,255,619"/>
+<area shape="rect" id="node4" href="class_laser.html" title="{Laser\n||+ Laser()\l+ ~Laser()\l+ update()\l}" alt="" coords="280,519,363,626"/>
+<area shape="rect" id="node5" href="class_player.html" title="{Player\n|# spriteRenderer\l# eventHandler\l|+ Player()\l+ ~Player()\l+ update()\l}" alt="" coords="387,512,504,633"/>
+</map>
+</div>
+<div class="dynheader">
+Graphe de collaboration de Entity:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_entity__coll__graph.png" border="0" usemap="#_entity_coll__map" alt="Collaboration graph"/></div>
+<map name="_entity_coll__map" id="_entity_coll__map">
+<area shape="rect" id="node2" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="85,5,235,273"/>
+<area shape="rect" id="node3" href="class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="189,453,347,663"/>
+<area shape="rect" id="node4" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="260,27,407,251"/>
+</map>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Fonctions membres publiques</h2></td></tr>
+<tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
+<tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02896f1cc4fba0504418751cf8814395"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a02896f1cc4fba0504418751cf8814395">getId</a> () const </td></tr>
+<tr class="separator:a02896f1cc4fba0504418751cf8814395"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c2b233ac062fa2ce74a10ba61e463e1"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5c2b233ac062fa2ce74a10ba61e463e1"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a5c2b233ac062fa2ce74a10ba61e463e1">getScript</a> ()</td></tr>
+<tr class="separator:a5c2b233ac062fa2ce74a10ba61e463e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13d5fd6c100fc9c4a6387a8f773877f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a13d5fd6c100fc9c4a6387a8f773877f8">addScript</a> (<a class="el" href="class_script_component.html">ScriptComponent</a> *script)</td></tr>
+<tr class="separator:a13d5fd6c100fc9c4a6387a8f773877f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b00caa7e7b8a2c4b890104cbf65208d"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a5b00caa7e7b8a2c4b890104cbf65208d"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a5b00caa7e7b8a2c4b890104cbf65208d">removeScript</a> ()</td></tr>
+<tr class="separator:a5b00caa7e7b8a2c4b890104cbf65208d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a369c207eab2aed48053346a58b4cdbe2"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a369c207eab2aed48053346a58b4cdbe2"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a369c207eab2aed48053346a58b4cdbe2">getComponent</a> ()</td></tr>
+<tr class="separator:a369c207eab2aed48053346a58b4cdbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70a722ddce08d51de0605965597bc69e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a70a722ddce08d51de0605965597bc69e">addComponent</a> (<a class="el" href="class_component.html">Component</a> *component)</td></tr>
+<tr class="separator:a70a722ddce08d51de0605965597bc69e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a590ddbda675cf9b188977d553e396a0f"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a590ddbda675cf9b188977d553e396a0f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a590ddbda675cf9b188977d553e396a0f">removeComponent</a> ()</td></tr>
+<tr class="separator:a590ddbda675cf9b188977d553e396a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e863eee3255fd209a13add62f39c394"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_controller.html">IController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3e863eee3255fd209a13add62f39c394">getBoss</a> ()</td></tr>
+<tr class="separator:a3e863eee3255fd209a13add62f39c394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9545486e33e4e8563db6dca9161b6bd"><td class="memItemLeft" align="right" valign="top">sf::Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab9545486e33e4e8563db6dca9161b6bd">getSize</a> ()</td></tr>
+<tr class="separator:ab9545486e33e4e8563db6dca9161b6bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af34fa5d95313003cbc08d43b52484854"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af34fa5d95313003cbc08d43b52484854">getLayer</a> ()</td></tr>
+<tr class="separator:af34fa5d95313003cbc08d43b52484854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab824e4f163924eb4f136d3e2ff759897"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ab824e4f163924eb4f136d3e2ff759897">getName</a> ()</td></tr>
+<tr class="separator:ab824e4f163924eb4f136d3e2ff759897"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af387e87bf2568819f8d3ad1ed4ace6d5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af387e87bf2568819f8d3ad1ed4ace6d5">getComponentName</a> (<a class="el" href="class_component.html">Component</a> *component)</td></tr>
+<tr class="separator:af387e87bf2568819f8d3ad1ed4ace6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af580b8930ccf9bf7c828ee63bb8f115f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#af580b8930ccf9bf7c828ee63bb8f115f">getComponentName</a> (<a class="el" href="class_script_component.html">ScriptComponent</a> *component)</td></tr>
+<tr class="separator:af580b8930ccf9bf7c828ee63bb8f115f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ab5d04fbdd9a7896a98cb2b1a8d5352"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3ab5d04fbdd9a7896a98cb2b1a8d5352">update</a> (sf::Time)</td></tr>
+<tr class="separator:a3ab5d04fbdd9a7896a98cb2b1a8d5352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Fonctions membres publiques statiques</h2></td></tr>
+<tr class="memitem:ac03cb76b4be00f4f921fd81009d7859e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac03cb76b4be00f4f921fd81009d7859e">OnCollision</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *collider)</td></tr>
+<tr class="separator:ac03cb76b4be00f4f921fd81009d7859e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3294d2b98a2debd96da4bf383b447182"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3294d2b98a2debd96da4bf383b447182">OnTriggerEnter</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="separator:a3294d2b98a2debd96da4bf383b447182"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea5ce651b7c4383573de2b0f840186f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adea5ce651b7c4383573de2b0f840186f">OnTriggerStay</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="separator:adea5ce651b7c4383573de2b0f840186f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f37f0095077dce346d1170eff8a23c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a60f37f0095077dce346d1170eff8a23c">OnTriggerExit</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="separator:a60f37f0095077dce346d1170eff8a23c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Fonctions membres protégées</h2></td></tr>
+<tr class="memitem:a9744b38b15c0d9fd230b5a7ba05662b6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a9744b38b15c0d9fd230b5a7ba05662b6">Entity</a> (<a class="el" href="class_i_controller.html">IController</a> *<a class="el" href="class_entity.html#a7c0132a057b738fa7462bf0405648625">boss</a>)</td></tr>
+<tr class="separator:a9744b38b15c0d9fd230b5a7ba05662b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Attributs protégés</h2></td></tr>
+<tr class="memitem:aa9aed563f069c5d28992fc91c282a063"><td class="memItemLeft" align="right" valign="top">sf::Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#aa9aed563f069c5d28992fc91c282a063">size</a></td></tr>
+<tr class="separator:aa9aed563f069c5d28992fc91c282a063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c0132a057b738fa7462bf0405648625"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_controller.html">IController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a7c0132a057b738fa7462bf0405648625">boss</a></td></tr>
+<tr class="separator:a7c0132a057b738fa7462bf0405648625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a931b21fbdebb1a5963b4bcab5df128f5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5">name</a></td></tr>
+<tr class="separator:a931b21fbdebb1a5963b4bcab5df128f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0016bd0e2acdc4dcde4267e2908aba8"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac0016bd0e2acdc4dcde4267e2908aba8">layer</a></td></tr>
+<tr class="separator:ac0016bd0e2acdc4dcde4267e2908aba8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14d838e5fd854a14d3ae443c5108282c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a14d838e5fd854a14d3ae443c5108282c">id</a></td></tr>
+<tr class="separator:a14d838e5fd854a14d3ae443c5108282c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7661868b3679cc4c71e1507125df379"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ae7661868b3679cc4c71e1507125df379">components</a></td></tr>
+<tr class="separator:ae7661868b3679cc4c71e1507125df379"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33d86e74a2c18f6716f37afc3905a92c"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_script_component.html">ScriptComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a33d86e74a2c18f6716f37afc3905a92c">scripts</a></td></tr>
+<tr class="separator:a33d86e74a2c18f6716f37afc3905a92c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Attributs protégés statiques</h2></td></tr>
+<tr class="memitem:afccd44536b8ce8d45a86fd97b0cd0b8c"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#afccd44536b8ce8d45a86fd97b0cd0b8c">nextId</a> = 0</td></tr>
+<tr class="separator:afccd44536b8ce8d45a86fd97b0cd0b8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a class="anchor" id="adf6d3f7cb1b2ba029b6b048a395cc8ae"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity::~Entity </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9744b38b15c0d9fd230b5a7ba05662b6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Entity::Entity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_i_controller.html">IController</a> *&#160;</td>
+          <td class="paramname"><em>boss</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a70a722ddce08d51de0605965597bc69e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::addComponent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_component.html">Component</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a13d5fd6c100fc9c4a6387a8f773877f8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::addScript </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_script_component.html">ScriptComponent</a> *&#160;</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3e863eee3255fd209a13add62f39c394"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_controller.html">IController</a>* Entity::getBoss </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a369c207eab2aed48053346a58b4cdbe2"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* Entity::getComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af387e87bf2568819f8d3ad1ed4ace6d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::getComponentName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_component.html">Component</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af580b8930ccf9bf7c828ee63bb8f115f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::getComponentName </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_script_component.html">ScriptComponent</a> *&#160;</td>
+          <td class="paramname"><em>component</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a02896f1cc4fba0504418751cf8814395"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Entity::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af34fa5d95313003cbc08d43b52484854"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::getLayer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab824e4f163924eb4f136d3e2ff759897"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::getName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5c2b233ac062fa2ce74a10ba61e463e1"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T* Entity::getScript </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ab9545486e33e4e8563db6dca9161b6bd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2u Entity::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac03cb76b4be00f4f921fd81009d7859e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::OnCollision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *&#160;</td>
+          <td class="paramname"><em>collider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3294d2b98a2debd96da4bf383b447182"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::OnTriggerEnter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_trigger_collision.html">TriggerCollision</a> *&#160;</td>
+          <td class="paramname"><em>collider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a60f37f0095077dce346d1170eff8a23c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::OnTriggerExit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_trigger_collision.html">TriggerCollision</a> *&#160;</td>
+          <td class="paramname"><em>collider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adea5ce651b7c4383573de2b0f840186f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::OnTriggerStay </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_entity.html">Entity</a> *&#160;</td>
+          <td class="paramname"><em>entity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_trigger_collision.html">TriggerCollision</a> *&#160;</td>
+          <td class="paramname"><em>collider</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a590ddbda675cf9b188977d553e396a0f"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::removeComponent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a5b00caa7e7b8a2c4b890104cbf65208d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entity::removeScript </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3ab5d04fbdd9a7896a98cb2b1a8d5352"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Entity::update </td>
+          <td>(</td>
+          <td class="paramtype">sf::Time&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Réimplémentée dans <a class="el" href="class_player.html#aeb1ca63f5401afa5d6aef2f308481672">Player</a>, <a class="el" href="class_enemy.html#a198751eda226bf64761429a488b8273c">Enemy</a>, et <a class="el" href="class_laser.html#a278758030082ba7a3e803bfb2a77f67b">Laser</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="a7c0132a057b738fa7462bf0405648625"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_i_controller.html">IController</a>* Entity::boss</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ae7661868b3679cc4c71e1507125df379"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="class_component.html">Component</a>*&gt; Entity::components</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a14d838e5fd854a14d3ae443c5108282c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int Entity::id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="ac0016bd0e2acdc4dcde4267e2908aba8"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::layer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a931b21fbdebb1a5963b4bcab5df128f5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Entity::name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="afccd44536b8ce8d45a86fd97b0cd0b8c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Entity::nextId = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a33d86e74a2c18f6716f37afc3905a92c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, <a class="el" href="class_script_component.html">ScriptComponent</a>*&gt; Entity::scripts</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="aa9aed563f069c5d28992fc91c282a063"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Vector2u Entity::size</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
+<li>RPG-MVC/App/models/<a class="el" href="_entity_8hpp_source.html">Entity.hpp</a></li>
+<li>RPG-MVC/App/models/<a class="el" href="_entity_8cpp.html">Entity.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_entity.html">Entity</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

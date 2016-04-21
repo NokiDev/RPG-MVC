@@ -1,0 +1,5 @@
+<map id="RenderAnimatedComponent" name="RenderAnimatedComponent">
+<area shape="rect" id="node2" href="$class_render_component.html" title="{RenderComponent\n|# sprite\l|+ RenderComponent()\l+ ~RenderComponent()\l+ update()\l+ draw()\l+ rotate()\l}" alt="" coords="33,580,190,716"/>
+<area shape="rect" id="node3" href="$class_component.html" title="{Component\n||+ ~Component()\l+ update()\l+ getOwner()\l}" alt="" coords="53,424,169,531"/>
+<area shape="rect" id="node4" href="$class_entity.html" title="{Entity\n|# position\l# z\l# velocity\l# speed\l# name\l# id\l# components\l# nextId\l|+ ~Entity()\l+ update()\l+ physicsUpdate()\l+ onCollision()\l+ getPosition()\l+ getVelocity()\l+ getSpeed()\l+ getZ()\l+ getId()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l# Entity()\l}" alt="" coords="37,5,186,361"/>
+</map>

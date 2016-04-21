@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>RPG-MVC:  Fichier source de RPG-MVC/App/Systems/CollisionSystem/CollisionSystem.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG-MVC
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_collision_system_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">CollisionSystem.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_collision_system_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by Noki, Timothé Van Deputte on 15/02/2016.</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef RPG_MVC_COLLISIONSYSTEM_HPP</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RPG_MVC_COLLISIONSYSTEM_HPP</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;SFML/System/Time.hpp&gt;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_box_collider_component.html">BoxColliderComponent</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="class_trigger_collision.html">TriggerCollision</a>;</div><div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_collision_system.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_collision_system.html">CollisionSystem</a> {</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span> :</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_collision_system.html#ae29c2088e555a89f4f089d9b9bb9d918">   16</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_collision_system.html">CollisionSystem</a> *<a class="code" href="class_collision_system.html#ae29c2088e555a89f4f089d9b9bb9d918">collisionSystem</a>;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_collision_system.html#ac8b1ff32bb9c9ff3e765c2b334713454">CollisionSystem</a>();</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_collision_system.html#a128d2a8b457f119368f0c9fc95ed61f6">~CollisionSystem</a>();</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_system.html#adb0037b7fa28facfde443e015a54462c">addBoxCollider</a>(<a class="code" href="class_box_collider_component.html">BoxColliderComponent</a>* boxCollider);</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_system.html#a4315bf27ae2d477f76808a810bdc1d86">addMovingBoxCollider</a>(<a class="code" href="class_box_collider_component.html">BoxColliderComponent</a>* boxCollider);</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_system.html#af05edabaa7a04afd2c830648571a14a5">delBoxCollider</a>(<a class="code" href="class_box_collider_component.html">BoxColliderComponent</a>* boxCollider);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_system.html#a968165214f5eec853c2aadea39acc998">checkCollisions</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_collision_system.html#ab60bb656e4b00cddd951994d95d0a291">updateComponents</a>(sf::Time);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::set&lt;BoxColliderComponent*&gt; boxColliders;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::set&lt;BoxColliderComponent*&gt; movingColliders;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::set&lt;TriggerCollision*&gt; triggerCollisions;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif //RPG_MVC_COLLISIONSYSTEM_HPP</span></div><div class="ttc" id="class_collision_system_html_ae29c2088e555a89f4f089d9b9bb9d918"><div class="ttname"><a href="class_collision_system.html#ae29c2088e555a89f4f089d9b9bb9d918">CollisionSystem::collisionSystem</a></div><div class="ttdeci">static CollisionSystem * collisionSystem</div><div class="ttdef"><b>Definition:</b> CollisionSystem.hpp:16</div></div>
+<div class="ttc" id="class_collision_system_html_a128d2a8b457f119368f0c9fc95ed61f6"><div class="ttname"><a href="class_collision_system.html#a128d2a8b457f119368f0c9fc95ed61f6">CollisionSystem::~CollisionSystem</a></div><div class="ttdeci">~CollisionSystem()</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:29</div></div>
+<div class="ttc" id="class_collision_system_html_a968165214f5eec853c2aadea39acc998"><div class="ttname"><a href="class_collision_system.html#a968165214f5eec853c2aadea39acc998">CollisionSystem::checkCollisions</a></div><div class="ttdeci">void checkCollisions()</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:53</div></div>
+<div class="ttc" id="class_collision_system_html_ac8b1ff32bb9c9ff3e765c2b334713454"><div class="ttname"><a href="class_collision_system.html#ac8b1ff32bb9c9ff3e765c2b334713454">CollisionSystem::CollisionSystem</a></div><div class="ttdeci">CollisionSystem()</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:19</div></div>
+<div class="ttc" id="class_collision_system_html"><div class="ttname"><a href="class_collision_system.html">CollisionSystem</a></div><div class="ttdef"><b>Definition:</b> CollisionSystem.hpp:14</div></div>
+<div class="ttc" id="class_collision_system_html_ab60bb656e4b00cddd951994d95d0a291"><div class="ttname"><a href="class_collision_system.html#ab60bb656e4b00cddd951994d95d0a291">CollisionSystem::updateComponents</a></div><div class="ttdeci">void updateComponents(sf::Time)</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:123</div></div>
+<div class="ttc" id="class_collision_system_html_adb0037b7fa28facfde443e015a54462c"><div class="ttname"><a href="class_collision_system.html#adb0037b7fa28facfde443e015a54462c">CollisionSystem::addBoxCollider</a></div><div class="ttdeci">void addBoxCollider(BoxColliderComponent *boxCollider)</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:33</div></div>
+<div class="ttc" id="class_box_collider_component_html"><div class="ttname"><a href="class_box_collider_component.html">BoxColliderComponent</a></div><div class="ttdoc">Component, which handle collisions stuff. </div><div class="ttdef"><b>Definition:</b> BoxColliderComponent.hpp:18</div></div>
+<div class="ttc" id="class_collision_system_html_a4315bf27ae2d477f76808a810bdc1d86"><div class="ttname"><a href="class_collision_system.html#a4315bf27ae2d477f76808a810bdc1d86">CollisionSystem::addMovingBoxCollider</a></div><div class="ttdeci">void addMovingBoxCollider(BoxColliderComponent *boxCollider)</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:49</div></div>
+<div class="ttc" id="class_trigger_collision_html"><div class="ttname"><a href="class_trigger_collision.html">TriggerCollision</a></div><div class="ttdef"><b>Definition:</b> TriggerCollision.hpp:9</div></div>
+<div class="ttc" id="class_collision_system_html_af05edabaa7a04afd2c830648571a14a5"><div class="ttname"><a href="class_collision_system.html#af05edabaa7a04afd2c830648571a14a5">CollisionSystem::delBoxCollider</a></div><div class="ttdeci">void delBoxCollider(BoxColliderComponent *boxCollider)</div><div class="ttdef"><b>Definition:</b> CollisionSystem.cpp:37</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_adbd6b0e2bc35b5eded7de27919d214b.html">RPG-MVC</a></li><li class="navelem"><a class="el" href="dir_da25bb9b4579b39489852ad1472a8b73.html">App</a></li><li class="navelem"><a class="el" href="dir_c9a8f4804927d735930baff46529f6fe.html">Systems</a></li><li class="navelem"><a class="el" href="dir_224fd7109704645237cd1b6ceb3fb2d1.html">CollisionSystem</a></li><li class="navelem"><a class="el" href="_collision_system_8hpp.html">CollisionSystem.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

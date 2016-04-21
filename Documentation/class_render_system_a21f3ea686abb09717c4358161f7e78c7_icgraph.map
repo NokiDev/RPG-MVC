@@ -1,0 +1,4 @@
+<map id="RenderSystem::addSprite" name="RenderSystem::addSprite">
+<area shape="rect" id="node2" href="$class_render_component.html#afb84ab4838dc515917e1b691ffedb87f" title="RenderComponent::RenderComponent" alt="" coords="224,13,468,39"/>
+<area shape="rect" id="node3" href="$struct_render_component_1_1depth_compare.html#af059114788db6a5fb89c89f836d9097c" title="Overload () operator for comparing SpriteRenderers. " alt="" coords="516,5,737,47"/>
+</map>

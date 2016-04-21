@@ -1,0 +1,6 @@
+<map id="IController::~IController" name="IController::~IController">
+<area shape="rect" id="node2" href="$class_i_controller.html#a2a97a258b18f73ea7d490708abee48f3" title="IController::handleInputs" alt="" coords="208,5,369,32"/>
+<area shape="rect" id="node3" href="$class_i_controller.html#acec84b38a68cfa0b4535c09f203bc809" title="IController::update" alt="" coords="225,56,352,83"/>
+<area shape="rect" id="node4" href="$class_i_controller.html#af32104e6d72c1dd40e2c2479389a2b3b" title="IController::render" alt="" coords="227,107,351,133"/>
+<area shape="rect" id="node5" href="$class_i_controller.html#a479c11a677af034d95ba8f31c1edaa8c" title="IController::onClose" alt="" coords="221,157,356,184"/>
+</map>

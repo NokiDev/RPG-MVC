@@ -1,0 +1,4 @@
+<map id="RenderComponent" name="RenderComponent">
+<area shape="rect" id="node2" href="$class_component.html" title="{Component\n||+ ~Component()\l+ update()\l+ getOwner()\l}" alt="" coords="26,424,142,531"/>
+<area shape="rect" id="node3" href="$class_entity.html" title="{Entity\n|# position\l# z\l# velocity\l# speed\l# name\l# id\l# components\l# nextId\l|+ ~Entity()\l+ update()\l+ physicsUpdate()\l+ onCollision()\l+ getPosition()\l+ getVelocity()\l+ getSpeed()\l+ getZ()\l+ getId()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l# Entity()\l}" alt="" coords="9,5,159,361"/>
+</map>

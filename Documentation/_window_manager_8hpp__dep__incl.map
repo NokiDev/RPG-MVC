@@ -1,0 +1,11 @@
+<map id="RPG&#45;MVC/App/views/WindowManager.hpp" name="RPG&#45;MVC/App/views/WindowManager.hpp">
+<area shape="rect" id="node2" href="$_controllers_manager_8cpp.html" title="RPG&#45;MVC/App/controllers\l/ControllersManager.cpp" alt="" coords="5,102,180,143"/>
+<area shape="rect" id="node3" href="$_collision_system_8cpp.html" title="RPG&#45;MVC/App/Systems\l/CollisionSystem/Collision\lSystem.cpp" alt="" coords="205,95,378,151"/>
+<area shape="rect" id="node4" href="$_game_over_view_8cpp.html" title="RPG&#45;MVC/App/views/GameOver\lView.cpp" alt="" coords="402,102,613,143"/>
+<area shape="rect" id="node5" href="$_ingame_view_8hpp.html" title="RPG&#45;MVC/App/views/Ingame\lView.hpp" alt="" coords="637,102,828,143"/>
+<area shape="rect" id="node8" href="$_main_menu_view_8cpp.html" title="RPG&#45;MVC/App/views/MainMenu\lView.cpp" alt="" coords="852,102,1061,143"/>
+<area shape="rect" id="node9" href="$_view_8cpp.html" title="RPG&#45;MVC/App/views/View.cpp" alt="" coords="1086,109,1289,136"/>
+<area shape="rect" id="node10" href="$_window_manager_8cpp.html" title="RPG&#45;MVC/App/views/Window\lManager.cpp" alt="" coords="1313,102,1507,143"/>
+<area shape="rect" id="node6" href="$_ingame_controller_8cpp.html" title="RPG&#45;MVC/App/controllers\l/IngameController.cpp" alt="" coords="541,199,716,240"/>
+<area shape="rect" id="node7" href="$_ingame_view_8cpp.html" title="RPG&#45;MVC/App/views/Ingame\lView.cpp" alt="" coords="740,199,931,240"/>
+</map>

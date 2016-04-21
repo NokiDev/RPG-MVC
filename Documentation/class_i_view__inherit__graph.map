@@ -1,0 +1,4 @@
+<map id="IView" name="IView">
+<area shape="rect" id="node2" href="$class_ingame_view.html" title="{IngameView\n||+ IngameView()\l+ ~IngameView()\l+ initView()\l+ render()\l+ draw()\l}" alt="" coords="5,189,125,325"/>
+<area shape="rect" id="node3" href="$class_main_menu_view.html" title="{MainMenuView\n||+ MainMenuView()\l+ ~MainMenuView()\l+ initView()\l+ render()\l+ draw()\l}" alt="" coords="149,189,288,325"/>
+</map>

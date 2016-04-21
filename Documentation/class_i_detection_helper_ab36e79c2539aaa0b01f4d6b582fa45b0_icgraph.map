@@ -1,0 +1,4 @@
+<map id="IDetectionHelper::CalculateDistanceBetweenBoxes" name="IDetectionHelper::CalculateDistanceBetweenBoxes">
+<area shape="rect" id="node2" href="$class_i_detection_helper.html#ae442ce267f8d84c3ff2fe6f01fee185d" title="Detect if the box is near to the other. " alt="" coords="232,5,395,47"/>
+<area shape="rect" id="node3" href="$class_collision_system.html#a968165214f5eec853c2aadea39acc998" title="CollisionSystem::checkCollisions" alt="" coords="443,13,657,39"/>
+</map>

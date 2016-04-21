@@ -1,0 +1,8 @@
+<map id="ScriptComponent" name="ScriptComponent">
+<area shape="rect" id="node2" href="$class_damageable.html" title="{Damageable\n||+ Damageable()\l+ ~Damageable()\l+ update()\l+ takeDamage()\l+ heal()\l+ isDead()\l+ isHurt()\l+ getHealth()\l+ getHealthMax()\l}" alt="" coords="5,263,128,457"/>
+<area shape="rect" id="node3" href="$class_enemy_script.html" title="{EnemyScript\n||+ EnemyScript()\l+ ~EnemyScript()\l+ update()\l+ physicsUpdate()\l+ getSpeed()\l}" alt="" coords="152,292,280,428"/>
+<area shape="rect" id="node4" href="$class_factory_script.html" title="{FactoryScript\n||+ FactoryScript()\l+ ~FactoryScript()\l+ update()\l+ physicsUpdate()\l}" alt="" coords="304,299,432,421"/>
+<area shape="rect" id="node5" href="$class_laser_script.html" title="{LaserScript\n||+ LaserScript()\l+ ~LaserScript()\l+ update()\l+ physicsUpdate()\l+ onTriggerEnter()\l}" alt="" coords="456,292,584,428"/>
+<area shape="rect" id="node6" href="$class_live_timer_script.html" title="{LiveTimerScript\n||+ LiveTimerScript()\l+ ~LiveTimerScript()\l+ update()\l}" alt="" coords="608,307,747,413"/>
+<area shape="rect" id="node7" href="$class_player_script.html" title="{PlayerScript\n||+ PlayerScript()\l+ ~PlayerScript()\l+ update()\l+ getAttackSpeed()\l+ getSpeed()\l}" alt="" coords="771,292,906,428"/>
+</map>

@@ -1,0 +1,3 @@
+<map id="MainMenuView" name="MainMenuView">
+<area shape="rect" id="node2" href="$class_view.html" title="{View\n|+ currentView\l# manager\l# controller\l# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="5,5,163,259"/>
+</map>

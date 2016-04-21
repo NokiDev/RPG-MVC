@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>RPG-MVC2:  Fichier source de RPG-MVC/App/models/Map.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+  $(window).load(resizeHeight);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">RPG-MVC2
+   &#160;<span id="projectnumber">0.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_map_8hpp_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Map.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_map_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Created by bluedragonfly on 3/22/16.</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef RPG_MVC_MAP_HPP</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define RPG_MVC_MAP_HPP</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_view_8hpp.html">View.hpp</a>&quot;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_entity_8hpp.html">Entity.hpp</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_tile_8hpp.html">Tile.hpp</a>&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_player_8hpp.html">Player.hpp</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">/*</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * @brief Represent the current map,</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div><div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_map.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_map.html">Map</a> {</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span> :</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_map.html#ad4728122f1060f0fa451020e510065d7">Map</a>(<a class="code" href="class_player.html">Player</a>* player);</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#ab12643cc3a8d5e48f566c1abb571e9bf">update</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#a364af1876ad9c2b8befc3c3b3f5222b4">updatePhysics</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#a9ef0147798adf039315b04a3b6381560">checkCollisions</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#a96ba04a603931df48b70e7df41168559">load</a>(std::string mapName);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#a20977e211260355e04828d1ecf8c919e">instantiate</a>(<a class="code" href="class_entity.html">Entity</a>*entity);</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_map.html#a1cd9bb1915adc86357bf3d2211cc6412">render</a>(<a class="code" href="class_view.html">View</a> &amp; view);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_player.html">Player</a>* thePlayer;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::vector&lt;Entity*&gt; entities; <span class="comment">//Represent all entities in the Map</span></div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::vector&lt;Tile*&gt; tiles; <span class="comment">//Represent all tiles of the Map</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif //RPG_MVC_MAP_HPP</span></div><div class="ttc" id="_player_8hpp_html"><div class="ttname"><a href="_player_8hpp.html">Player.hpp</a></div></div>
+<div class="ttc" id="class_map_html_ad4728122f1060f0fa451020e510065d7"><div class="ttname"><a href="class_map.html#ad4728122f1060f0fa451020e510065d7">Map::Map</a></div><div class="ttdeci">Map(Player *player)</div><div class="ttdef"><b>Definition:</b> Map.cpp:8</div></div>
+<div class="ttc" id="class_map_html_ab12643cc3a8d5e48f566c1abb571e9bf"><div class="ttname"><a href="class_map.html#ab12643cc3a8d5e48f566c1abb571e9bf">Map::update</a></div><div class="ttdeci">void update()</div><div class="ttdef"><b>Definition:</b> Map.cpp:35</div></div>
+<div class="ttc" id="class_map_html_a9ef0147798adf039315b04a3b6381560"><div class="ttname"><a href="class_map.html#a9ef0147798adf039315b04a3b6381560">Map::checkCollisions</a></div><div class="ttdeci">void checkCollisions()</div><div class="ttdef"><b>Definition:</b> Map.cpp:43</div></div>
+<div class="ttc" id="_view_8hpp_html"><div class="ttname"><a href="_view_8hpp.html">View.hpp</a></div></div>
+<div class="ttc" id="class_map_html_a364af1876ad9c2b8befc3c3b3f5222b4"><div class="ttname"><a href="class_map.html#a364af1876ad9c2b8befc3c3b3f5222b4">Map::updatePhysics</a></div><div class="ttdeci">void updatePhysics()</div><div class="ttdef"><b>Definition:</b> Map.cpp:39</div></div>
+<div class="ttc" id="_entity_8hpp_html"><div class="ttname"><a href="_entity_8hpp.html">Entity.hpp</a></div></div>
+<div class="ttc" id="_tile_8hpp_html"><div class="ttname"><a href="_tile_8hpp.html">Tile.hpp</a></div></div>
+<div class="ttc" id="class_map_html_aa403fbe09394ccf39747588f5168e3b2"><div class="ttname"><a href="class_map.html#aa403fbe09394ccf39747588f5168e3b2">Map::~Map</a></div><div class="ttdeci">~Map()</div><div class="ttdef"><b>Definition:</b> Map.cpp:12</div></div>
+<div class="ttc" id="class_map_html_a20977e211260355e04828d1ecf8c919e"><div class="ttname"><a href="class_map.html#a20977e211260355e04828d1ecf8c919e">Map::instantiate</a></div><div class="ttdeci">void instantiate(Entity *entity)</div><div class="ttdef"><b>Definition:</b> Map.cpp:21</div></div>
+<div class="ttc" id="class_entity_html"><div class="ttname"><a href="class_entity.html">Entity</a></div><div class="ttdef"><b>Definition:</b> Entity.hpp:14</div></div>
+<div class="ttc" id="class_map_html_a1cd9bb1915adc86357bf3d2211cc6412"><div class="ttname"><a href="class_map.html#a1cd9bb1915adc86357bf3d2211cc6412">Map::render</a></div><div class="ttdeci">void render(View &amp;view)</div><div class="ttdef"><b>Definition:</b> Map.cpp:25</div></div>
+<div class="ttc" id="class_map_html"><div class="ttname"><a href="class_map.html">Map</a></div><div class="ttdef"><b>Definition:</b> Map.hpp:20</div></div>
+<div class="ttc" id="class_map_html_a96ba04a603931df48b70e7df41168559"><div class="ttname"><a href="class_map.html#a96ba04a603931df48b70e7df41168559">Map::load</a></div><div class="ttdeci">void load(std::string mapName)</div><div class="ttdef"><b>Definition:</b> Map.cpp:17</div></div>
+<div class="ttc" id="class_view_html"><div class="ttname"><a href="class_view.html">View</a></div><div class="ttdef"><b>Definition:</b> View.hpp:15</div></div>
+<div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.hpp:12</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_adbd6b0e2bc35b5eded7de27919d214b.html">RPG-MVC</a></li><li class="navelem"><a class="el" href="dir_da25bb9b4579b39489852ad1472a8b73.html">App</a></li><li class="navelem"><a class="el" href="dir_bcffe999a15b7393a97b91d40e055bd4.html">models</a></li><li class="navelem"><a class="el" href="_map_8hpp.html">Map.hpp</a></li>
+    <li class="footer">Généré par
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.11 </li>
+  </ul>
+</div>
+</body>
+</html>

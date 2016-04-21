@@ -1,0 +1,11 @@
+<map id="RenderComponent::depthCompare::operator()" name="RenderComponent::depthCompare::operator()">
+<area shape="rect" id="node2" href="$class_render_component.html#afb84ab4838dc515917e1b691ffedb87f" title="RenderComponent::RenderComponent" alt="" coords="275,56,519,83"/>
+<area shape="rect" id="node6" href="$class_render_component.html#a16bab40295123b9ea802d7e85b14a884" title="RenderComponent::~Render\lComponent" alt="" coords="303,158,490,199"/>
+<area shape="rect" id="node8" href="$class_render_component.html#ab1f2f5dccd046200443d8c23fdf3dac7" title="RenderComponent::update" alt="" coords="309,107,485,133"/>
+<area shape="rect" id="node9" href="$class_render_component.html#a151e2a3669265bcbb7c617bdc577453e" title="RenderComponent::draw" alt="" coords="315,224,479,251"/>
+<area shape="rect" id="node10" href="$class_render_component.html#ad79fe5e8a727a3ded4fb12ba7c244833" title="RenderComponent::rotate" alt="" coords="311,275,482,301"/>
+<area shape="rect" id="node3" href="$class_ressources.html#ac94a6ec5e623b0d992a158f26b659d67" title="Ressources::Load" alt="" coords="589,5,715,32"/>
+<area shape="rect" id="node4" href="$class_entity.html#a9202124de3c2301aeff83ddd69b0e9c2" title="Entity::getPosition" alt="" coords="587,107,717,133"/>
+<area shape="rect" id="node5" href="$class_render_system.html#a21f3ea686abb09717c4358161f7e78c7" title="RenderSystem::addSprite" alt="" coords="567,56,737,83"/>
+<area shape="rect" id="node7" href="$class_render_system.html#a2231f35198e6fa5c742bec01d93ff185" title="RenderSystem::delSprite" alt="" coords="569,165,735,192"/>
+</map>
