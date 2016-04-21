@@ -21,11 +21,8 @@ Player::Player(IController* boss) : Entity(boss){
     t->direction = sf::Vector2i(1,0);
     name = "Player";
     size = sf::Vector2u(64,64);
-    //speed = 350;
-    addComponent(new BoxColliderComponent(this, size));///
+    addComponent(new BoxColliderComponent(this, size));///Allow to collide with things !
     addComponent(new Physics(this));///Allow to move
-
-
     //NeedToChangeThis to script
     addScript(new PlayerScript(this));
 

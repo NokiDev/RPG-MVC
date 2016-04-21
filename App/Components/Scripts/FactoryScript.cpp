@@ -7,7 +7,7 @@
 
 #include "FactoryScript.hpp"
 
-FactoryScript::FactoryScript(Entity *owner,float delayForFirstLaunch, float spawnTimer) : ScriptComponent(owner){
+FactoryScript::FactoryScript(Entity *owner, float delayForFirstLaunch, float spawnTimer) : ScriptComponent(owner) {
     this->delayForFirstLaunch = delayForFirstLaunch;
     isFirstLaunch = true;
     this->spawnTimer = spawnTimer;
@@ -20,9 +20,9 @@ FactoryScript::~FactoryScript() {
 }
 
 void FactoryScript::update(sf::Time deltaTime) {
-    Transform * t =  owner->getComponent<Transform>();
+    Transform *t = owner->getComponent<Transform>();
     timer += deltaTime.asSeconds();
-    if(isFirstLaunch && timer >= delayForFirstLaunch || !isFirstLaunch && timer >= spawnTimer){
+    if (isFirstLaunch && timer >= delayForFirstLaunch || !isFirstLaunch && timer >= spawnTimer) {
         isFirstLaunch = false;
         timer = 0.f;
         float posY = (float) (rand() % 460 + 10);

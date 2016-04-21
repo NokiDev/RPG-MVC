@@ -26,73 +26,73 @@ BoxColliderComponent::~BoxColliderComponent() {
 }
 
 void BoxColliderComponent::update(sf::Time deltaTime) {
-    Transform * t = owner->getComponent<Transform>();
+    Transform *t = owner->getComponent<Transform>();
     box.left = t->position.x;
     box.top = t->position.y;
 
 }
 
-sf::FloatRect BoxColliderComponent::getNextBox()const {
-    Physics* p = owner->getComponent<Physics>();
+sf::FloatRect BoxColliderComponent::getNextBox() const {
+    Physics *p = owner->getComponent<Physics>();
     return sf::FloatRect(box.left + p->getVelocity().x, box.top + p->getVelocity().y, box.width, box.height);
 }
 
-void BoxColliderComponent::onCollision(BoxColliderComponent * collider) {
+void BoxColliderComponent::onCollision(BoxColliderComponent *collider) {
     Entity::OnCollision(owner, collider);
 
 }
 
 void BoxColliderComponent::onCollision(sf::FloatRect box) {
     ///OnCollision with Window for example
-    Transform* t = owner->getComponent<Transform>();
+    Transform *t = owner->getComponent<Transform>();
 
-    float x= t->position.x;
+    float x = t->position.x;
     float y = t->position.y;
 
-    if(x < 0){
-        x =0;
+    if (x < 0) {
+        x = 0;
     }
-    else if (x + size.x> box.width){
-        x = box.width- size.x;
+    else if (x + size.x > box.width) {
+        x = box.width - size.x;
     }
-    if(y < 0){
-        y =0;
+    if (y < 0) {
+        y = 0;
     }
-    else if(y +size.y> box.height){
+    else if (y + size.y > box.height) {
         y = box.height - size.y;
     }
 
-    t->position = sf::Vector2f(x,y);
+    t->position = sf::Vector2f(x, y);
 }
 
-void BoxColliderComponent::onTriggerEnter(TriggerCollision* collision) {
+void BoxColliderComponent::onTriggerEnter(TriggerCollision *collision) {
     Entity::OnTriggerEnter(owner, collision);
 }
 
-void BoxColliderComponent::onTriggerStay(TriggerCollision * collision) {
+void BoxColliderComponent::onTriggerStay(TriggerCollision *collision) {
     Entity::OnTriggerStay(owner, collision);
 }
 
-void BoxColliderComponent::onTriggerExit(TriggerCollision * collision) {
+void BoxColliderComponent::onTriggerExit(TriggerCollision *collision) {
     Entity::OnTriggerExit(owner, collision);
 }
 
-sf::FloatRect BoxColliderComponent::getBox()const {
+sf::FloatRect BoxColliderComponent::getBox() const {
     return box;
 }
 
-sf::Vector2u BoxColliderComponent::getSize()const {
+sf::Vector2u BoxColliderComponent::getSize() const {
     return size;
 }
 
-sf::Vector2f BoxColliderComponent::getOffset()const {
+sf::Vector2f BoxColliderComponent::getOffset() const {
     return offset;
 }
 
-bool BoxColliderComponent::isMoving()const {
+bool BoxColliderComponent::isMoving() const {
     return moving;
 }
 
-bool BoxColliderComponent::isTrigger()const {
+bool BoxColliderComponent::isTrigger() const {
     return trigger;
 }

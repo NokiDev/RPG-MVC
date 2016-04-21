@@ -10,7 +10,7 @@
 #include <App/Systems/EventSystem/EventsSystem.hpp>
 #include <App/models/Enemy.hpp>
 #include <App/Systems/PhysicsSystem/PhysicsSystem.hpp>
-#include <c++/sstream>
+#include <sstream>
 #include "IController.hpp"
 
 class ScriptSystem;
@@ -43,6 +43,7 @@ public:
 
 private:
     IController *subController;
+
     Player* thePlayer;
     std::set<Entity*> entities;
     std::set<Entity*> entitiesToDestroy;

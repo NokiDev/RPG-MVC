@@ -9,17 +9,23 @@
 #include <SFML/System/Vector2.hpp>
 #include "Component.hpp"
 
-class Physics : public Component{
+/**
+ * @brief Physics Component , allow entity to do physics stuff (actually only velocity is handled)
+ */
+class Physics : public Component {
 public:
     /**
      * @brief Constructor
-     * @param owner Owner of this Component
+     * @param Entity* owner of this Component
+     * @param bool freezeDirection of the entity Not Used for the Moment
     **/
-    Physics(Entity* owner, bool freezeDirection = false);
+    Physics(Entity *owner, bool freezeDirection = false);
+
     /**
      * @brief Destructor
     **/
     ~Physics();
+
     /**
      * @brief update Position
      * @param deltaTime Time between two frames
@@ -31,16 +37,19 @@ public:
      * @param x value for the velocity on the X axis
     **/
     void setVelocityX(float x);
+
     /**
      * @brief Set velocity on the Y axis
      * @param y value for the velocity on the Y axis
     **/
     void setVelocityY(float y);
+
     /**
      * @brief Set velocity
      * @param vel value for the velocity
     **/
     void setVelocity(sf::Vector2f vel);
+
     /**
      * @brief Get the velocity vector
      * @return sf::Vector2f
@@ -48,7 +57,13 @@ public:
     sf::Vector2f getVelocity();
 
 private:
-    sf::Vector2f m_Velocity;///Velocity (distance for 1 frame)
+    /*
+     * @var velocity, distance for 1 frame
+     */
+    sf::Vector2f m_Velocity;
+    /**
+     * @var freezeDirection
+     */
     bool m_FreezeDirection;
 };
 

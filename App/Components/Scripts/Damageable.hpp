@@ -9,17 +9,22 @@
 
 class Damageable : public ScriptComponent {
 public:
-    Damageable(Entity* owner, float healthMax);
+    Damageable(Entity *owner, float healthMax);
+
     ~Damageable();
 
     virtual void update(sf::Time deltaTime);
 
     void takeDamage(float amount);
+
     void heal(float amount);
 
     bool isDead();
+
     bool isHurt();
+
     float getHealth();
+
     float getHealthMax();
 
 private:

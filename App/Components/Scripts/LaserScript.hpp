@@ -9,20 +9,22 @@
 #include "ScriptComponent.hpp"
 
 class Entity;
-class LaserScript : public ScriptComponent{
+
+class LaserScript : public ScriptComponent {
 public :
-    LaserScript(Entity* owner, std::string attackLayer);
+    LaserScript(Entity *owner, std::string attackLayer);
+
     ~LaserScript();
 
     virtual void update(sf::Time deltaTime);
 
     virtual void physicsUpdate();
 
-    virtual void onTriggerEnter(TriggerCollision*  collision);
+    virtual void onTriggerEnter(TriggerCollision *collision);
 
 private:
 
-    Physics* physics;
+    Physics *physics;
     std::string attackLayer;
     int speed;
 
