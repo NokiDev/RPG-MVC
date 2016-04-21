@@ -20,6 +20,7 @@ IngameController::IngameController() {
     scriptSys = new ScriptSystem();
     //Init Entities
     thePlayer = new Player(this);
+    time.Zero;
 
     //La manière la plus dégeulasse de faire un spawner, mais pas le time !
     instantiate(new EnemyFactory(this, 1.f, 2.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1,0));
@@ -76,6 +77,8 @@ void IngameController::update(sf::Time deltaTime) {
     for(auto entity : entities){
         entity->update(deltaTime);
     }
+
+    time += deltaTime;
 }
 
 void IngameController::render() {
@@ -121,4 +124,8 @@ void IngameController::onClose() {
 
 Player *IngameController::getPlayer() {
     return thePlayer;
+}
+
+float IngameController::getTime() {
+    return time.asSeconds();
 }

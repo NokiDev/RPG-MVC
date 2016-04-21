@@ -39,6 +39,7 @@ public:
     IController* getSubController();
 
     Player* getPlayer();
+    float getTime();
 
 private:
     IController *subController;
@@ -49,7 +50,7 @@ private:
     EventsSystem* eventSys;
     ScriptSystem* scriptSys;
     PhysicsSystem* physicsSys;
-
+    sf::Time time;
     bool subControllerExist() const;
 
     bool viewExist() const;

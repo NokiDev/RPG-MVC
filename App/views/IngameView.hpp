@@ -29,6 +29,7 @@ private:
     Damageable * playerHealth;
     sf::Sprite background;
     ViewTextComponent * hp;
+    ViewTextComponent * time;
 };
 
 
