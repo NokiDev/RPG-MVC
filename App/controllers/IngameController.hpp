@@ -37,8 +37,6 @@ public:
 
     IController* getSubController();
 
-    static int i;
-
 private:
     IController *subController;
     Player* thePlayer;

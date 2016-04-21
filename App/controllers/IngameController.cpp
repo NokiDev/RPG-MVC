@@ -11,9 +11,6 @@
 
 #include <App/App.hpp>
 #include "IngameController.hpp"
-#include "PauseMenuController.hpp"
-
-int IngameController::i = 0;
 
 IngameController::IngameController() {
     view = new IngameView(this);
@@ -53,7 +50,6 @@ void IngameController::handleEvents(sf::Event &event) {
         ///EVENT FOR BUTTONS :
         if (event.key.code == sf::Keyboard::Escape) {
             std::cout << "PAUSE" << std::endl;
-            App::getManager()->setCurrentMainController(new PauseMenuController(this));
         }
     }
     if (subControllerExist())
@@ -78,11 +74,6 @@ void IngameController::update(sf::Time deltaTime) {
     scriptSys->update(deltaTime);//
 
     thePlayer->update(deltaTime);
-//    IngameController::i++;
-//    if (IngameController::i >= 200) {
-//        IngameController::i = 0;
-//        entities.insert(new Enemy(this));
-//    }
     for(auto entity : entities){
         entity->update(deltaTime);
     }
