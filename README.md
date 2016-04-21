@@ -10,6 +10,13 @@
 - Timothé
 - Léo
 
+## But du jeu :
+Tuer tous les ennemis en leur tirant dessus et en esquivant leurs tirs pour ne pas mourir.
+
+## Commandes :
+- Se déplacer : 4 touches fléchés
+- Tirer : Barre espace
+
 # Tâches accomplies :
 - Créer un menu
 - Déplacer le player sur la map
