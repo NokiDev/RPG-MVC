@@ -6,7 +6,8 @@
 #include "Entity.hpp"
 
 
-LiveTimerScript::LiveTimerScript(Entity *owner, float timeToLive) : ScriptComponent(owner), timeToLive(timeToLive), timer(0.f) {
+LiveTimerScript::LiveTimerScript(Entity *owner, float timeToLive) : ScriptComponent(owner), timeToLive(timeToLive),
+                                                                    timer(0.f) {
 
 }
 
@@ -15,10 +16,10 @@ LiveTimerScript::~LiveTimerScript() {
 }
 
 void LiveTimerScript::update(sf::Time deltaTime) {
-    timer+=deltaTime.asSeconds();
-    if(timer >timeToLive){
+    timer += deltaTime.asSeconds();
+    if (timer > timeToLive) {
         timer = 0.f;
-        std::cout<<"DESTROY LASER"<<std::endl;
+        std::cout << "DESTROY LASER" << std::endl;
 
         controller->destroy(owner);
     }

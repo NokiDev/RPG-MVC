@@ -12,7 +12,7 @@ ControllersManager::ControllersManager(App* app) {
     this->app = app;
     nextController = nullptr;
     windowManager = new WindowManager(this);
-    windowManager->createWindow(sf::VideoMode(720,480), "MYGAME");
+    windowManager->createWindow(sf::VideoMode(720,480), "MYGAME", sf::Style::Titlebar| sf::Style::Close);
     currentMainController = new MainMenuController();
 }
 

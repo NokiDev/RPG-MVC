@@ -8,18 +8,33 @@
 #include <SFML/System/Time.hpp>
 
 class Entity;
+
+/**
+ * @brief basic class for all components
+ */
 class Component {
 public:
-    virtual ~Component() {};
+    virtual ~Component() { };
 
-    virtual void update(sf::Time deltaTime = sf::Time::Zero)=0;
-    Entity& getOwner() const {
+    /*
+     * @brief update component
+     * @param sf::Time deltaTime timeBetween two frames
+     */
+    virtual void update(sf::Time deltaTime = sf::Time::Zero) = 0;
+
+    /*
+     * @brief getOwner
+     * @return Entity & owner
+     */
+    Entity &getOwner() const {
         return *owner;
     }
 
 protected:
-
-    Entity* owner;
+    /*
+     * @var owner of the component
+     */
+    Entity *owner;
 
 };
 

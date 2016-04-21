@@ -46,36 +46,43 @@ IngameController::~IngameController() {
 
 void IngameController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
-    if (event.type == sf::Event::KeyPressed) {
-        ///EVENT FOR BUTTONS :
-        if (event.key.code == sf::Keyboard::Escape) {
-            std::cout << "PAUSE" << std::endl;
-        }
-    }
     if (subControllerExist())
         subController->handleEvents(event);
-    eventSys->handleEvents(event);
+    else{
+        if (event.type == sf::Event::KeyPressed) {
+            ///EVENT FOR BUTTONS :
+            if (event.key.code == sf::Keyboard::Escape) {
+                std::cout << "PAUSE" << std::endl;
+            }
+        }
+        eventSys->handleEvents(event);
+    }
 }
 
 void IngameController::update(sf::Time deltaTime) {
-
-    for(auto entity : entitiesToDestroy){
-        entities.erase(entity);
-        delete entity;
+    if(subControllerExist()){
+        subController->update(deltaTime);
     }
-    collSys->updateComponents(deltaTime);///Update the coliders components (update position)
+    else { //Paused
+        for (auto entity : entitiesToDestroy) {
+            entities.erase(entity);
+            delete entity;
+        }
 
-    entitiesToDestroy.clear();
-    eventSys->update(deltaTime);
-    scriptSys->physicsUpdate();
+        collSys->updateComponents(deltaTime);///Update the coliders components (update position)
 
-    collSys->checkCollisions();///Verify the movement is safe, not colliding else it will determine the final movement
-    physicsSys->updateComponents(deltaTime);//Finalize the movement by adding position and reset velocity to zero
-    scriptSys->update(deltaTime);//
+        entitiesToDestroy.clear();
+        eventSys->update(deltaTime);
+        scriptSys->physicsUpdate();
 
-    thePlayer->update(deltaTime);
-    for(auto entity : entities){
-        entity->update(deltaTime);
+        collSys->checkCollisions();///Verify the movement is safe, not colliding else it will determine the final movement
+        physicsSys->updateComponents(deltaTime);//Finalize the movement by adding position and reset velocity to zero
+        scriptSys->update(deltaTime);//
+
+        thePlayer->update(deltaTime);
+        for (auto entity : entities) {
+            entity->update(deltaTime);
+        }
     }
 
     time += deltaTime;
@@ -84,6 +91,9 @@ void IngameController::update(sf::Time deltaTime) {
 void IngameController::render() {
     if(viewExist()){
         view->render();
+        if(subControllerExist()) {
+            subController->render();
+        }
     }
 }
 
@@ -97,7 +107,7 @@ void IngameController::setSubController(IController *newSubController) {
         subController->onClose();
         delete subController;
     }
-    this->subController = newSubController;
+    subController = newSubController;
 }
 
 IController *IngameController::getSubController() {

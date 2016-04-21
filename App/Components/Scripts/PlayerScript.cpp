@@ -4,6 +4,7 @@
 
 #include <App/App.hpp>
 #include <App/controllers/MainMenuController.hpp>
+#include <App/controllers/GameOverController.hpp>
 #include "PlayerScript.hpp"
 #include "Damageable.hpp"
 
@@ -21,7 +22,8 @@ void PlayerScript::update(sf::Time deltaTime) {
     if(damageableScript!= nullptr){
         if(damageableScript->isDead()){
             //Display GameOver Menu
-            App::get()->getManager()->setCurrentMainController(new MainMenuController());
+            IngameController*  c = dynamic_cast<IngameController*>(controller);
+            c->setSubController(new GameOverController());
         }
     }
 }

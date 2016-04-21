@@ -11,10 +11,12 @@
 class FactoryScript : public ScriptComponent {
 public :
 
-    FactoryScript(Entity * owner,float delayForFirstLaunch, float spawnTime);
+    FactoryScript(Entity *owner, float delayForFirstLaunch, float spawnTime);
+
     ~FactoryScript();
 
     virtual void update(sf::Time deltaTime);
+
     virtual void physicsUpdate();
 
 private:

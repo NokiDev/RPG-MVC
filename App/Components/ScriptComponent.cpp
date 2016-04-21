@@ -17,14 +17,14 @@ ScriptComponent::~ScriptComponent() {
     ScriptSystem::scriptSystem->delBox(this);
 }
 
-void ScriptComponent::update(sf::Time deltaTime) {}
+void ScriptComponent::update(sf::Time deltaTime) { }
 
-void ScriptComponent::physicsUpdate() {}
+void ScriptComponent::physicsUpdate() { }
 
-void ScriptComponent::onCollision(BoxColliderComponent *collider) {}
+void ScriptComponent::onCollision(BoxColliderComponent *collider) { }
 
-void ScriptComponent::onTriggerEnter(TriggerCollision *collider) {}
+void ScriptComponent::onTriggerEnter(TriggerCollision *collider) { }
 
-void ScriptComponent::onTriggerStay(TriggerCollision *collider) {}
+void ScriptComponent::onTriggerStay(TriggerCollision *collider) { }
 
-void ScriptComponent::onTriggerExit(TriggerCollision *collider) {}
+void ScriptComponent::onTriggerExit(TriggerCollision *collider) { }

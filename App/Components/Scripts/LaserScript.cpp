@@ -9,7 +9,7 @@
 #include "Damageable.hpp"
 #include "TriggerCollision.hpp"
 
-LaserScript::LaserScript(Entity *owner, std::string attackLayer) : ScriptComponent(owner){
+LaserScript::LaserScript(Entity *owner, std::string attackLayer) : ScriptComponent(owner) {
     physics = owner->getComponent<Physics>();
     speed = 550;
     this->attackLayer = attackLayer;
@@ -25,16 +25,16 @@ void LaserScript::update(sf::Time deltaTime) {
 }
 
 void LaserScript::physicsUpdate() {
-    Transform * t = owner->getComponent<Transform>();
-    float x = speed * App::get()->DeltaTime().asSeconds()*t->direction.x;
-    float y = speed * App::get()->DeltaTime().asSeconds()*t->direction.y;
-    physics->setVelocity(sf::Vector2f(x,y));
+    Transform *t = owner->getComponent<Transform>();
+    float x = speed * App::get()->DeltaTime().asSeconds() * t->direction.x;
+    float y = speed * App::get()->DeltaTime().asSeconds() * t->direction.y;
+    physics->setVelocity(sf::Vector2f(x, y));
 }
 
 void LaserScript::onTriggerEnter(TriggerCollision *collision) {
-    Damageable* damageScript = collision->getCollider()->getOwner().getScript<Damageable>();
-    if(collision->getCollider()->getOwner().getLayer() == attackLayer){
-        if(damageScript != nullptr){
+    Damageable *damageScript = collision->getCollider()->getOwner().getScript<Damageable>();
+    if (collision->getCollider()->getOwner().getLayer() == attackLayer) {
+        if (damageScript != nullptr) {
             damageScript->takeDamage(1);
             controller->destroy(owner);
         }

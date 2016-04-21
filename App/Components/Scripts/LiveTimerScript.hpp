@@ -11,10 +11,13 @@
 #include <SFML/Graphics/Color.hpp>
 
 class Entity;
+
 class BoxColliderComponent;
-class LiveTimerScript : public ScriptComponent{
+
+class LiveTimerScript : public ScriptComponent {
 public :
-    LiveTimerScript(Entity* owner, float timeToLive);
+    LiveTimerScript(Entity *owner, float timeToLive);
+
     ~LiveTimerScript();
 
     virtual void update(sf::Time deltaTime);
