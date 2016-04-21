@@ -12,7 +12,7 @@
 EnemyScript::EnemyScript(Entity* owner) : ScriptComponent(owner) {
     physics = owner->getComponent<Physics>();
     speed = 25;
-    attackSpeed= 0.5f;
+    attackSpeed= 1.5f;
     timer =0.f;
 }
 

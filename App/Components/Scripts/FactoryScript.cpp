@@ -3,6 +3,8 @@
 //
 
 #include <App/Components/Transform.hpp>
+#include <time.h>
+
 #include "FactoryScript.hpp"
 
 FactoryScript::FactoryScript(Entity *owner,float delayForFirstLaunch, float spawnTimer) : ScriptComponent(owner){
@@ -10,6 +12,7 @@ FactoryScript::FactoryScript(Entity *owner,float delayForFirstLaunch, float spaw
     isFirstLaunch = true;
     this->spawnTimer = spawnTimer;
     timer = 0.f;
+    srand(time(NULL));
 }
 
 FactoryScript::~FactoryScript() {
@@ -22,7 +25,8 @@ void FactoryScript::update(sf::Time deltaTime) {
     if(isFirstLaunch && timer >= delayForFirstLaunch || !isFirstLaunch && timer >= spawnTimer){
         isFirstLaunch = false;
         timer = 0.f;
-        controller->instantiate(new Enemy(controller), t->position, t->direction);
+        float posY = (float) (rand() % 460 + 10);
+        controller->instantiate(new Enemy(controller), sf::Vector2f(650.f, posY), t->direction);
     }
 }
 

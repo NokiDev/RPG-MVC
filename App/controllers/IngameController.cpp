@@ -9,7 +9,11 @@
 #include <App/Components/Transform.hpp>
 #include <App/models/EnemyFactory.hpp>
 
+#include <App/App.hpp>
 #include "IngameController.hpp"
+#include "PauseMenuController.hpp"
+
+int IngameController::i = 0;
 
 IngameController::IngameController() {
     view = new IngameView(this);
@@ -22,11 +26,7 @@ IngameController::IngameController() {
     thePlayer = new Player(this);
 
     //La manière la plus dégeulasse de faire un spawner, mais pas le time !
-    instantiate(new EnemyFactory(this, 5.f, 7.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1,0));
-    instantiate(new EnemyFactory(this, 30.f, 4.f), sf::Vector2f(660.f, 140.f), sf::Vector2i(-1,0));
-    instantiate(new EnemyFactory(this, 15.f, 9.f), sf::Vector2f(660.f, 280.f), sf::Vector2i(-1,0));
-    instantiate(new EnemyFactory(this, 3.f, 6.f), sf::Vector2f(660.f, 360.f), sf::Vector2i(-1,0));
-    instantiate(new EnemyFactory(this, 20.f, 7.f), sf::Vector2f(660.f, 430.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 1.f, 2.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1,0));
 
 
     //entities.insert(new Enemy(this));
@@ -49,6 +49,15 @@ IngameController::~IngameController() {
 
 void IngameController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
+    if (event.type == sf::Event::KeyPressed) {
+        ///EVENT FOR BUTTONS :
+        if (event.key.code == sf::Keyboard::Escape) {
+            std::cout << "PAUSE" << std::endl;
+            App::getManager()->setCurrentMainController(new PauseMenuController(this));
+        }
+    }
+    if (subControllerExist())
+        subController->handleEvents(event);
     eventSys->handleEvents(event);
 }
 
@@ -69,6 +78,11 @@ void IngameController::update(sf::Time deltaTime) {
     scriptSys->update(deltaTime);//
 
     thePlayer->update(deltaTime);
+//    IngameController::i++;
+//    if (IngameController::i >= 200) {
+//        IngameController::i = 0;
+//        entities.insert(new Enemy(this));
+//    }
     for(auto entity : entities){
         entity->update(deltaTime);
     }
