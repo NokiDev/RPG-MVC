@@ -10,10 +10,18 @@
 #include "IController.hpp"
 #include "BoxColliderComponent.hpp"
 
+#include <time.h>
+
+bool Enemy::start = true;
 
 Enemy::Enemy(IController *boss) : Entity(boss) {
     Transform* t = getComponent<Transform>();
-    t->position = sf::Vector2f(650.f,150.f);
+    if (Enemy::start) {
+        Enemy::start = false;
+        srand(time(NULL));
+    }
+    float posY = (float) (rand() % 460 + 10);
+    t->position = sf::Vector2f(650.f, posY);
     t->direction = sf::Vector2i(-1, 0);//facing OUEST
     size = sf::Vector2u(64,64);
     addComponent(new BoxColliderComponent(this, size));

@@ -17,6 +17,8 @@ public :
 
     virtual void update(sf::Time deltaTime);
 
+    static bool start;
+
 private :
     ViewSpriteComponent * spriteRenderer;
 
