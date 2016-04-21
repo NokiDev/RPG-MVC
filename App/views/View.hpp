@@ -11,53 +11,77 @@
 
 
 class IController;
+
 class WindowManager;
+
 class IController;
+
 class IViewComponent;
+
 class View {
 public:
+    /**
+     * @brief static reference to the current view, the view displayed by the main controller
+     **/
+    static View *currentView;
 
-    static View* currentView;
+    /**
+     * @brief default ctor
+     * @param controller which manage this view
+     **/
+    View(IController *controller);
 
-    View(IController * controller);
-
+    /**
+     * @brief dtor
+     **/
     virtual ~View() { };
-    /*
-     * @brief init default components for the view and default behaviours
-     *
-     */
+
+    /**
+     * @brief ask to the windowManager if there is events
+     **/
     virtual void askForEvent();
 
+    /**
+     * @brief ask to the windowManager if the key (param) is Pressed or not
+     * @param key to test
+     **/
     virtual bool isKeyPressed(sf::Keyboard::Key key);
-    /*
-     *
-     *
-     */
-    virtual void sendEvent(sf::Event&event);
-    /*
-     *
-     *
-     */
-    void addViewComponent(IViewComponent * component);
 
+    /**
+     * @brief sendEvent to the controller link to this view
+     * @param sf::Event event to send
+     **/
+    virtual void sendEvent(sf::Event &event);
 
-    void delViewComponent(IViewComponent * component);
-    /*
+    /**
+     * @brief add a new component to render
+     * @param component to add
+     **/
+    void addViewComponent(IViewComponent *component);
+
+    /**
+     * @brief remove a view component from components array
+     * @param component to Remove
+     **/
+    void delViewComponent(IViewComponent *component);
+
+    /**
      * @brief draw the wiew on window
      * @params sf::RenderWindow, window to draw on
-     */
-    virtual void render()  = 0;
-    /*
-     *
-     *
-     */
+     **/
+    virtual void render() = 0;
+
+    /**
+     * @brief draw on the view
+     * @see sf::Window::draw
+     **/
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default) = 0;
 
     sf::Vector2u getSize();
 
 protected:
-    WindowManager * manager;
-    IController * controller;
+    WindowManager *manager;
+    IController *controller;
     std::set<IViewComponent *> components;
 };
 

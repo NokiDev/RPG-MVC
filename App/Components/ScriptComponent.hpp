@@ -9,26 +9,26 @@
 #include <App/controllers/IngameController.hpp>
 #include "Component.hpp"
 
-/*
+/**
  * @brief basic class for Scripts, allow an entity to have different behaviours
- */
+ **/
 class ScriptComponent {
 public :
-    /*
+    /**
      * @brief default ctor
      * @param Entity * owner of the component
-     */
+     **/
     ScriptComponent(Entity *owner);
 
-    /*
+    /**
      * @brief dtor
-     */
+     **/
     virtual ~ScriptComponent();
 
-    /*
+    /**
      * @brief update each frames the component (scripts)
      * @param sf::Time time between two frames
-     */
+     **/
     virtual void update(sf::Time deltaTime);
 
     virtual void physicsUpdate();

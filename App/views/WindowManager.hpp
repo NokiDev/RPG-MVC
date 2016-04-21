@@ -10,18 +10,36 @@
 #include <SFML/Window.hpp>
 
 class View;
+
 class ControllersManager;
+
+/*
+ * @brief WindowManager, handles event, draw on the screen views and views components
+ */
 class WindowManager {
 
 public:
-    WindowManager(ControllersManager * manager);
+    /**
+     * @brief default ctor
+     * @param ControllersManager* reference to the controllersManager
+     **/
+    WindowManager(ControllersManager *manager);
+
+    /**
+     * @brief dtor
+     **/
     ~WindowManager();
 
-    void createWindow(sf::VideoMode mode, std::string title,sf::Uint32 style = sf::Style::Default , sf::ContextSettings context = sf::ContextSettings());
+    /**
+     * @brief create Window with options in parameters
+     *
+     **/
+    void createWindow(sf::VideoMode mode, std::string title, sf::Uint32 style = sf::Style::Default,
+                      sf::ContextSettings context = sf::ContextSettings());
 
     bool isKeyPressed(sf::Keyboard::Key key);
 
-    void handleEvent(View & view);
+    void handleEvent(View &view);
 
     void display();
 
@@ -29,17 +47,17 @@ public:
 
     void close();
 
-    sf::RenderWindow & Window();
+    sf::RenderWindow &Window();
 
     sf::Vector2u getWindowSize();
 
-    static WindowManager * get();
+    static WindowManager *get();
 
 private:
-    static WindowManager * windowManager;
+    static WindowManager *windowManager;
     sf::RenderWindow window;
 
-    ControllersManager* manager;
+    ControllersManager *manager;
 
     sf::Event event;
 

@@ -10,13 +10,12 @@
 
 WindowManager *WindowManager::windowManager;
 
-WindowManager::WindowManager(ControllersManager* manager) : manager(manager){
-    if(windowManager == nullptr)
-    {
+WindowManager::WindowManager(ControllersManager *manager) : manager(manager) {
+    if (windowManager == nullptr) {
         windowManager = this;
     }
-    else{
-        std::cerr<<"Warning : Instantiate viewsManager for the 2nd Time, but it's singleton, Fix This !"<<std::endl;
+    else {
+        std::cerr << "Warning : Instantiate viewsManager for the 2nd Time, but it's singleton, Fix This !" << std::endl;
         delete this;
     }
 }
@@ -30,9 +29,8 @@ void WindowManager::createWindow(sf::VideoMode mode, std::string title, sf::Uint
     window.setVerticalSyncEnabled(true);
 }
 
-void WindowManager::handleEvent(View & view) {
-    while(window.pollEvent(event))
-    {
+void WindowManager::handleEvent(View &view) {
+    while (window.pollEvent(event)) {
         view.sendEvent(event);
     }
 }

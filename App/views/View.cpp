@@ -8,9 +8,9 @@
 #include "IViewComponent.hpp"
 
 
-View* View::currentView;
+View *View::currentView;
 
-View::View(IController *controller) : controller(controller){
+View::View(IController *controller) : controller(controller) {
     currentView = this;
 }
 
@@ -18,7 +18,7 @@ void View::askForEvent() {
     manager->handleEvent(*this);
 }
 
-void View::sendEvent(sf::Event&event) {
+void View::sendEvent(sf::Event &event) {
     controller->handleEvents(event);
 }
 
@@ -26,7 +26,7 @@ void View::addViewComponent(IViewComponent *component) {
     components.insert(component);
 }
 
-void View::delViewComponent(IViewComponent* component){
+void View::delViewComponent(IViewComponent *component) {
     components.erase(component);
 }
 

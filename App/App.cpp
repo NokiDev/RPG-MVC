@@ -5,17 +5,17 @@
 #include <App/controllers/IngameController.hpp>
 #include "App.hpp"
 
-App* App::app;
+App *App::app;
 
 App::App() {
-    if(app == nullptr){
+    if (app == nullptr) {
         //Load Settings Preferences
         app = this;
         manager = new ControllersManager(this);
-        paused =false;
+        paused = false;
         time.restart();
     }
-    else{
+    else {
         delete this;
     }
 }
@@ -40,7 +40,7 @@ bool App::isPaused() const {
     return paused;
 }
 
-sf::Time & App::DeltaTime(){
+sf::Time &App::DeltaTime() {
     return deltaTime;
 }
 

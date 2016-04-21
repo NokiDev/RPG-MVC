@@ -42,7 +42,7 @@ public :
 private:
     /**
      * @brief
-    */
+    **/
     PlayerScript *player;
     Transform *transform;
     Physics *physic;

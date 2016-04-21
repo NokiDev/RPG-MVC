@@ -8,14 +8,28 @@
 #include <string>
 #include "View.hpp"
 
-class IViewComponent{
+/**
+ * @brief main class for View Components
+ **/
+class IViewComponent {
 
 public:
+    /**
+     * @brief dtor
+     **/
+    virtual ~IViewComponent() { };
 
-    virtual ~IViewComponent(){};
+    /**
+     * @brief update the component each frame
+     * @param sf::Time deltaTime, time between two frames
+     **/
+    virtual void update(sf::Time deltaTime) { };
 
-    virtual void update(sf::Time deltaTime){};
-    virtual void draw(View & view) = 0;
+    /**
+     * @brief draw the component on the view
+     * @param sf::View reference to the view to draw on
+     * */
+    virtual void draw(View &view) = 0;
 };
 
 
