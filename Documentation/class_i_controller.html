@@ -115,6 +115,9 @@ $(document).ready(function(){initNavTree('class_i_controller.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>main Class for controllers  
+ <a href="class_i_controller.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_controller_8hpp_source.html">IController.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de IController:</div>
@@ -139,30 +142,39 @@ Graphe de collaboration de IController:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a30b618142be776fd779255998a540e08"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a30b618142be776fd779255998a540e08">~IController</a> ()</td></tr>
+<tr class="memdesc:a30b618142be776fd779255998a540e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#a30b618142be776fd779255998a540e08">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a30b618142be776fd779255998a540e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75ce264f25c6e025c285780461f3e606"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a75ce264f25c6e025c285780461f3e606">askForEvents</a> ()</td></tr>
+<tr class="memdesc:a75ce264f25c6e025c285780461f3e606"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ask to the view link to the controller to ask event to the window.  <a href="#a75ce264f25c6e025c285780461f3e606">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a75ce264f25c6e025c285780461f3e606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae30b56086c5a3ea9e014f8c9f037703e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#ae30b56086c5a3ea9e014f8c9f037703e">askForRender</a> ()</td></tr>
 <tr class="separator:ae30b56086c5a3ea9e014f8c9f037703e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d61e89cb5c24f19104b7506b14213a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#ac7d61e89cb5c24f19104b7506b14213a">handleEvents</a> (sf::Event &amp;event)</td></tr>
 <tr class="separator:ac7d61e89cb5c24f19104b7506b14213a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4dc81f380ec43c4b4b37d8c44d578a56"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a4dc81f380ec43c4b4b37d8c44d578a56">isKeyPressed</a> (sf::Keyboard::Key key)</td></tr>
+<tr class="memdesc:a4dc81f380ec43c4b4b37d8c44d578a56"><td class="mdescLeft">&#160;</td><td class="mdescRight">ask <a class="el" href="class_view.html">View</a> if the key(param) is Pressed  <a href="#a4dc81f380ec43c4b4b37d8c44d578a56">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4dc81f380ec43c4b4b37d8c44d578a56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acec84b38a68cfa0b4535c09f203bc809"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#acec84b38a68cfa0b4535c09f203bc809">update</a> (sf::Time deltaTime=sf::Time::Zero)=0</td></tr>
 <tr class="separator:acec84b38a68cfa0b4535c09f203bc809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abcce9215ff15e917706af9fa00f0f2ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#abcce9215ff15e917706af9fa00f0f2ff">render</a> ()=0</td></tr>
 <tr class="separator:abcce9215ff15e917706af9fa00f0f2ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a479c11a677af034d95ba8f31c1edaa8c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a479c11a677af034d95ba8f31c1edaa8c">onClose</a> ()=0</td></tr>
+<tr class="memdesc:a479c11a677af034d95ba8f31c1edaa8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">behaviour to adopt when the controller is closed  <a href="#a479c11a677af034d95ba8f31c1edaa8c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a479c11a677af034d95ba8f31c1edaa8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ef4a823b5e4a9bbcb4833128b2eefff"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_view_sprite_component.html">ViewSpriteComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a6ef4a823b5e4a9bbcb4833128b2eefff">newSpriteRenderer</a> (std::string textureName)</td></tr>
+<tr class="memdesc:a6ef4a823b5e4a9bbcb4833128b2eefff"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new SpriteRenderer in the <a class="el" href="class_view.html">View</a>  <a href="#a6ef4a823b5e4a9bbcb4833128b2eefff">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6ef4a823b5e4a9bbcb4833128b2eefff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49dab96c15efab65886d7b8b74022555"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a49dab96c15efab65886d7b8b74022555">delSpriteRenderer</a> (<a class="el" href="class_i_view_component.html">IViewComponent</a> *sprite)</td></tr>
+<tr class="memdesc:a49dab96c15efab65886d7b8b74022555"><td class="mdescLeft">&#160;</td><td class="mdescRight">delSprite Renderer in the view  <a href="#a49dab96c15efab65886d7b8b74022555">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a49dab96c15efab65886d7b8b74022555"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb0e891a6af6dd2d2c2202182e4d7da7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_view_text_component.html">ViewTextComponent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#aeb0e891a6af6dd2d2c2202182e4d7da7">newTextRenderer</a> (std::string text)</td></tr>
+<tr class="memdesc:aeb0e891a6af6dd2d2c2202182e4d7da7"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new TextRenderer in the <a class="el" href="class_view.html">View</a>  <a href="#aeb0e891a6af6dd2d2c2202182e4d7da7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aeb0e891a6af6dd2d2c2202182e4d7da7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94181fa6d815e5c1edf921a13053b948"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_entity.html">Entity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a94181fa6d815e5c1edf921a13053b948">instantiate</a> (<a class="el" href="class_entity.html">Entity</a> *entity, sf::Vector2f position, sf::Vector2i direction)</td></tr>
+<tr class="memdesc:a94181fa6d815e5c1edf921a13053b948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiate a entity in the controller.  <a href="#a94181fa6d815e5c1edf921a13053b948">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a94181fa6d815e5c1edf921a13053b948"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6837112e6f6f49d7b878342c0feabd56"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a6837112e6f6f49d7b878342c0feabd56">destroy</a> (<a class="el" href="class_entity.html">Entity</a> *entity)</td></tr>
+<tr class="memdesc:a6837112e6f6f49d7b878342c0feabd56"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy an entity.  <a href="#a6837112e6f6f49d7b878342c0feabd56">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6837112e6f6f49d7b878342c0feabd56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c9d28aab10ab3eb65d2bf75959f7d33"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a0c9d28aab10ab3eb65d2bf75959f7d33">getView</a> ()</td></tr>
 <tr class="separator:a0c9d28aab10ab3eb65d2bf75959f7d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -172,7 +184,9 @@ Attributs protégés</h2></td></tr>
 <tr class="memitem:a252a69d9ed09384636d0c383e7eb4a66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_controller.html#a252a69d9ed09384636d0c383e7eb4a66">view</a></td></tr>
 <tr class="separator:a252a69d9ed09384636d0c383e7eb4a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>main Class for controllers </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a30b618142be776fd779255998a540e08"></a>
 <div class="memitem">
 <div class="memproto">
@@ -193,6 +207,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>dtor </p>
 
 </div>
 </div>
@@ -217,6 +233,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Ask to the view link to the controller to ask event to the window. </p>
 
 </div>
 </div>
@@ -265,6 +283,14 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>delSprite Renderer in the view </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sprite</td><td>to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6837112e6f6f49d7b878342c0feabd56"></a>
@@ -288,6 +314,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Destroy an entity. </p>
 
 <p>Réimplémentée dans <a class="el" href="class_ingame_controller.html#a6b1ab79b9a59846a2910ce60fc3979eb">IngameController</a>.</p>
 
@@ -372,6 +400,8 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Instantiate a entity in the controller. </p>
+
 <p>Réimplémentée dans <a class="el" href="class_ingame_controller.html#a7452f0be43de68cdf7d9cc28ab0ee50b">IngameController</a>.</p>
 
 </div>
@@ -398,6 +428,14 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>ask <a class="el" href="class_view.html">View</a> if the key(param) is Pressed </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Keyboard::Key</td><td>key to test </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6ef4a823b5e4a9bbcb4833128b2eefff"></a>
@@ -421,6 +459,14 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>add a new SpriteRenderer in the <a class="el" href="class_view.html">View</a> </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">texturename</td><td>of the Sprite </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -446,6 +492,14 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>add a new TextRenderer in the <a class="el" href="class_view.html">View</a> </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>of the textRenderer </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a479c11a677af034d95ba8f31c1edaa8c"></a>
@@ -468,6 +522,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>behaviour to adopt when the controller is closed </p>
 
 <p>Implémenté dans <a class="el" href="class_ingame_controller.html#a24052481a9961fc929eb37539b42f0ad">IngameController</a>, <a class="el" href="class_main_menu_controller.html#a1dba8293b2d318df5be0a477157f5cdb">MainMenuController</a>, et <a class="el" href="class_game_over_controller.html#a666fcb39a78907eee43e163453c77761">GameOverController</a>.</p>
 

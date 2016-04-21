@@ -115,7 +115,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </div><table border="0" cellspacing="10" cellpadding="0">
 <tr><td><img src="inherit_graph_0.png" border="0" alt="" usemap="#_app"/>
 <map name="_app" id="_app">
-<area shape="rect" id="node1" href="class_app.html" title="App" alt="" coords="5,5,51,32"/>
+<area shape="rect" id="node1" href="class_app.html" title="Main class of the program, start controller Manager. " alt="" coords="5,5,51,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" alt="" usemap="#_circle"/>
@@ -125,7 +125,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" alt="" usemap="#_collision_system"/>
 <map name="_collision_system" id="_collision_system">
-<area shape="rect" id="node1" href="class_collision_system.html" title="CollisionSystem" alt="" coords="5,5,121,32"/>
+<area shape="rect" id="node1" href="class_collision_system.html" title="Regroup all BoxCollider Components, in the System. " alt="" coords="5,5,121,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_3.png" border="0" alt="" usemap="#_component"/>
@@ -134,18 +134,18 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <area shape="rect" id="node2" href="class_box_collider_component.html" title="Component, which handle collisions stuff. " alt="" coords="146,5,301,32"/>
 <area shape="rect" id="node3" href="class_event_handler_component.html" title="EventHandlerComponent" alt="" coords="141,56,305,83"/>
 <area shape="rect" id="node5" href="class_physics.html" title="Physics Component , allow entity to do physics stuff (actually only velocity is handled) ..." alt="" coords="189,107,258,133"/>
-<area shape="rect" id="node6" href="class_transform.html" title="Transform" alt="" coords="184,157,263,184"/>
+<area shape="rect" id="node6" href="class_transform.html" title="Component used for positioning entity in the window. " alt="" coords="184,157,263,184"/>
 <area shape="rect" id="node4" href="class_player_events_handler.html" title="Handles Event for the Player, events are Keyboard, mouse, window event etc... " alt="" coords="353,56,496,83"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_4.png" border="0" alt="" usemap="#_controllers_manager"/>
 <map name="_controllers_manager" id="_controllers_manager">
-<area shape="rect" id="node1" href="class_controllers_manager.html" title="ControllersManager" alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node1" href="class_controllers_manager.html" title="Manager of all controllers determines which controller is active. " alt="" coords="5,5,140,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_5.png" border="0" alt="" usemap="#_entity"/>
 <map name="_entity" id="_entity">
-<area shape="rect" id="node1" href="class_entity.html" title="Entity" alt="" coords="5,81,61,108"/>
+<area shape="rect" id="node1" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="5,81,61,108"/>
 <area shape="rect" id="node2" href="class_enemy.html" title="Enemy" alt="" coords="131,5,194,32"/>
 <area shape="rect" id="node3" href="class_enemy_factory.html" title="EnemyFactory" alt="" coords="109,56,216,83"/>
 <area shape="rect" id="node4" href="class_laser.html" title="Laser" alt="" coords="135,107,190,133"/>
@@ -154,7 +154,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_6.png" border="0" alt="" usemap="#_events_system"/>
 <map name="_events_system" id="_events_system">
-<area shape="rect" id="node1" href="class_events_system.html" title="EventsSystem" alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node1" href="class_events_system.html" title="Regroup all eventsHandler components in the system, that may update them. " alt="" coords="5,5,112,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_7.png" border="0" alt="" usemap="#_g_u_i_button"/>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_9.png" border="0" alt="" usemap="#_i_controller"/>
 <map name="_i_controller" id="_i_controller">
-<area shape="rect" id="node1" href="class_i_controller.html" title="IController" alt="" coords="5,56,85,83"/>
+<area shape="rect" id="node1" href="class_i_controller.html" title="main Class for controllers " alt="" coords="5,56,85,83"/>
 <area shape="rect" id="node2" href="class_game_over_controller.html" title="GameOverController" alt="" coords="133,5,272,32"/>
 <area shape="rect" id="node3" href="class_ingame_controller.html" title="IngameController" alt="" coords="143,56,262,83"/>
 <area shape="rect" id="node4" href="class_main_menu_controller.html" title="MainMenuController" alt="" coords="134,107,271,133"/>
@@ -182,29 +182,24 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 </td></tr>
 <tr><td><img src="inherit_graph_11.png" border="0" alt="" usemap="#_i_view_component"/>
 <map name="_i_view_component" id="_i_view_component">
-<area shape="rect" id="node1" href="class_i_view_component.html" title="IViewComponent" alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node1" href="class_i_view_component.html" title="main class for View Components " alt="" coords="5,31,124,57"/>
 <area shape="rect" id="node2" href="class_view_sprite_component.html" title="ViewSpriteComponent" alt="" coords="172,5,323,32"/>
 <area shape="rect" id="node3" href="class_view_text_component.html" title="ViewTextComponent" alt="" coords="177,56,318,83"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#_pause_menu_view"/>
-<map name="_pause_menu_view" id="_pause_menu_view">
-<area shape="rect" id="node1" href="class_pause_menu_view.html" title="PauseMenuView" alt="" coords="5,5,124,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#_physics_system"/>
+<tr><td><img src="inherit_graph_12.png" border="0" alt="" usemap="#_physics_system"/>
 <map name="_physics_system" id="_physics_system">
-<area shape="rect" id="node1" href="class_physics_system.html" title="PhysicsSystem" alt="" coords="5,5,120,32"/>
+<area shape="rect" id="node1" href="class_physics_system.html" title="Regroup all physics components in the system, that may update them. " alt="" coords="5,5,120,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#_ressources"/>
+<tr><td><img src="inherit_graph_13.png" border="0" alt="" usemap="#_ressources"/>
 <map name="_ressources" id="_ressources">
-<area shape="rect" id="node1" href="class_ressources.html" title="Ressources" alt="" coords="5,5,96,32"/>
+<area shape="rect" id="node1" href="class_ressources.html" title="Ressources Helper for load Textures Once. " alt="" coords="5,5,96,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#_script_component"/>
+<tr><td><img src="inherit_graph_14.png" border="0" alt="" usemap="#_script_component"/>
 <map name="_script_component" id="_script_component">
-<area shape="rect" id="node1" href="class_script_component.html" title="ScriptComponent" alt="" coords="5,132,128,159"/>
+<area shape="rect" id="node1" href="class_script_component.html" title="basic class for Scripts, allow an entity to have different behaviours " alt="" coords="5,132,128,159"/>
 <area shape="rect" id="node2" href="class_damageable.html" title="Damageable" alt="" coords="184,5,279,32"/>
 <area shape="rect" id="node3" href="class_enemy_script.html" title="EnemyScript" alt="" coords="183,56,280,83"/>
 <area shape="rect" id="node4" href="class_factory_script.html" title="FactoryScript" alt="" coords="181,107,281,133"/>
@@ -213,22 +208,17 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <area shape="rect" id="node7" href="class_player_script.html" title="PlayerScript" alt="" coords="185,259,278,285"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#_script_system"/>
+<tr><td><img src="inherit_graph_15.png" border="0" alt="" usemap="#_script_system"/>
 <map name="_script_system" id="_script_system">
-<area shape="rect" id="node1" href="class_script_system.html" title="ScriptSystem" alt="" coords="5,5,107,32"/>
+<area shape="rect" id="node1" href="class_script_system.html" title="Ssystem, composed with, Script Components and updates them. " alt="" coords="5,5,107,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_17.png" border="0" alt="" usemap="#_settings_menu_view"/>
-<map name="_settings_menu_view" id="_settings_menu_view">
-<area shape="rect" id="node1" href="class_settings_menu_view.html" title="SettingsMenuView" alt="" coords="5,5,136,32"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_18.png" border="0" alt="" usemap="#_trigger_collision"/>
+<tr><td><img src="inherit_graph_16.png" border="0" alt="" usemap="#_trigger_collision"/>
 <map name="_trigger_collision" id="_trigger_collision">
-<area shape="rect" id="node1" href="class_trigger_collision.html" title="TriggerCollision" alt="" coords="5,5,116,32"/>
+<area shape="rect" id="node1" href="class_trigger_collision.html" title="collision object for triggerColliders " alt="" coords="5,5,116,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_19.png" border="0" alt="" usemap="#_view"/>
+<tr><td><img src="inherit_graph_17.png" border="0" alt="" usemap="#_view"/>
 <map name="_view" id="_view">
 <area shape="rect" id="node1" href="class_view.html" title="View" alt="" coords="5,56,56,83"/>
 <area shape="rect" id="node2" href="class_game_over_view.html" title="GameOverView" alt="" coords="104,5,215,32"/>
@@ -236,7 +226,7 @@ $(document).ready(function(){initNavTree('hierarchy.html','');});
 <area shape="rect" id="node4" href="class_main_menu_view.html" title="MainMenuView" alt="" coords="104,107,215,133"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_20.png" border="0" alt="" usemap="#_window_manager"/>
+<tr><td><img src="inherit_graph_18.png" border="0" alt="" usemap="#_window_manager"/>
 <map name="_window_manager" id="_window_manager">
 <area shape="rect" id="node1" href="class_window_manager.html" title="WindowManager" alt="" coords="5,5,124,32"/>
 </map>

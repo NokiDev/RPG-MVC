@@ -23,7 +23,5 @@ var dir_bcffe999a15b7393a97b91d40e055bd4 =
     [ "Player.cpp", "_player_8cpp.html", null ],
     [ "Player.hpp", "_player_8hpp.html", [
       [ "Player", "class_player.html", "class_player" ]
-    ] ],
-    [ "Swarm.cpp", "_swarm_8cpp.html", null ],
-    [ "Swarm.hpp", "_swarm_8hpp.html", null ]
+    ] ]
 ];

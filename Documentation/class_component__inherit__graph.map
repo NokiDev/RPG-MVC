@@ -2,6 +2,6 @@
 <area shape="rect" id="node2" href="$class_box_collider_component.html" title="Component, which handle collisions stuff. " alt="" coords="5,160,188,428"/>
 <area shape="rect" id="node3" href="$class_event_handler_component.html" title="{EventHandlerComponent\n||+ EventHandlerComponent()\l+ ~EventHandlerComponent()\l+ handleEvents()\l+ update()\l}" alt="" coords="213,233,405,355"/>
 <area shape="rect" id="node5" href="$class_physics.html" title="Physics Component , allow entity to do physics stuff (actually only velocity is handled) ..." alt="" coords="429,211,545,377"/>
-<area shape="rect" id="node6" href="$class_transform.html" title="{Transform\n|+ position\l+ z\l+ direction\l+ rotation\l+ scale\l|+ Transform()\l+ ~Transform()\l+ update()\l+ move()\l}" alt="" coords="570,204,677,384"/>
+<area shape="rect" id="node6" href="$class_transform.html" title="Component used for positioning entity in the window. " alt="" coords="570,204,677,384"/>
 <area shape="rect" id="node4" href="$class_player_events_handler.html" title="Handles Event for the Player, events are Keyboard, mouse, window event etc... " alt="" coords="223,476,394,597"/>
 </map>

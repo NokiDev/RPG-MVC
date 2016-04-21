@@ -114,6 +114,9 @@ $(document).ready(function(){initNavTree('class_i_view_component.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>main class for <a class="el" href="class_view.html">View</a> Components  
+ <a href="class_i_view_component.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_i_view_component_8hpp_source.html">IViewComponent.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de IViewComponent:</div>
@@ -128,20 +131,23 @@ Graphe d'héritage de IViewComponent:</div>
 Graphe de collaboration de IViewComponent:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_i_view_component__coll__graph.png" border="0" usemap="#_i_view_component_coll__map" alt="Collaboration graph"/></div>
-<map name="_i_view_component_coll__map" id="_i_view_component_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a1607a9735a3e1dbf1c7b8b4f8270bc3c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_view_component.html#a1607a9735a3e1dbf1c7b8b4f8270bc3c">~IViewComponent</a> ()</td></tr>
+<tr class="memdesc:a1607a9735a3e1dbf1c7b8b4f8270bc3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#a1607a9735a3e1dbf1c7b8b4f8270bc3c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1607a9735a3e1dbf1c7b8b4f8270bc3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3587bb9f3baa3b8581d5c1eb898383ae"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_view_component.html#a3587bb9f3baa3b8581d5c1eb898383ae">update</a> (sf::Time deltaTime)</td></tr>
+<tr class="memdesc:a3587bb9f3baa3b8581d5c1eb898383ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">update the component each frame  <a href="#a3587bb9f3baa3b8581d5c1eb898383ae">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3587bb9f3baa3b8581d5c1eb898383ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1eb018e3607a258c89223212d7c2307"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_view_component.html#af1eb018e3607a258c89223212d7c2307">draw</a> (<a class="el" href="class_view.html">View</a> &amp;view)=0</td></tr>
+<tr class="memdesc:af1eb018e3607a258c89223212d7c2307"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the component on the view  <a href="#af1eb018e3607a258c89223212d7c2307">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af1eb018e3607a258c89223212d7c2307"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>main class for <a class="el" href="class_view.html">View</a> Components </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a1607a9735a3e1dbf1c7b8b4f8270bc3c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -162,6 +168,8 @@ Fonctions membres publiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>dtor </p>
 
 </div>
 </div>
@@ -188,6 +196,14 @@ Fonctions membres publiques</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>draw the component on the view </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::View</td><td>reference to the view to draw on </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implémenté dans <a class="el" href="class_view_sprite_component.html#aa15cb27a03e4877e05a1ef94c1fdf27f">ViewSpriteComponent</a>, et <a class="el" href="class_view_text_component.html#a8beaceb0b490e4e0d7f12449032a236c">ViewTextComponent</a>.</p>
 
 </div>
@@ -213,6 +229,14 @@ Fonctions membres publiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>update the component each frame </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime, time between two frames </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée dans <a class="el" href="class_view_sprite_component.html#a839d3b50f1334f50d377602e58a791fc">ViewSpriteComponent</a>.</p>
 

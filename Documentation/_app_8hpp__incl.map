@@ -1,8 +1,3 @@
 <map id="RPG&#45;MVC/App/App.hpp" name="RPG&#45;MVC/App/App.hpp">
-<area shape="rect" id="node2" href="$_controllers_manager_8hpp.html" title="App/controllers/Controllers\lManager.hpp" alt="" coords="101,80,275,121"/>
-<area shape="rect" id="node3" href="$_i_controller_8hpp.html" title="IController.hpp" alt="" coords="198,169,303,196"/>
-<area shape="rect" id="node6" href="$_view_sprite_component_8hpp.html" title="App/views/ViewSpriteComponent.hpp" alt="" coords="211,244,448,271"/>
-<area shape="rect" id="node11" href="$_view_text_component_8hpp.html" title="App/views/ViewTextComponent.hpp" alt="" coords="473,244,701,271"/>
-<area shape="rect" id="node7" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="257,319,401,345"/>
-<area shape="rect" id="node9" href="$_view_8hpp.html" title="View.hpp" alt="" coords="292,393,367,420"/>
+<area shape="rect" id="node4" href="$_controllers_manager_8hpp.html" title="ControllersManager.hpp" alt="" coords="385,80,543,107"/>
 </map>

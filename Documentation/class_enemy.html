@@ -120,7 +120,7 @@ Graphe d'héritage de Enemy:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy__inherit__graph.png" border="0" usemap="#_enemy_inherit__map" alt="Inheritance graph"/></div>
 <map name="_enemy_inherit__map" id="_enemy_inherit__map">
-<area shape="rect" id="node2" href="class_entity.html" title="{Entity\n|# size\l# boss\l# name\l# layer\l# id\l# components\l# scripts\l# nextId\l|+ ~Entity()\l+ getId()\l+ getScript()\l+ addScript()\l+ removeScript()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l+ getBoss()\l+ getSize()\l+ getLayer()\l+ getName()\l+ getComponentName()\l+ getComponentName()\l+ update()\l+ OnCollision()\l+ OnTriggerEnter()\l+ OnTriggerStay()\l+ OnTriggerExit()\l# Entity()\l}" alt="" coords="5,5,165,464"/>
+<area shape="rect" id="node2" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="5,5,165,464"/>
 </map>
 </div>
 <div class="dynheader">
@@ -128,8 +128,8 @@ Graphe de collaboration de Enemy:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_enemy__coll__graph.png" border="0" usemap="#_enemy_coll__map" alt="Collaboration graph"/></div>
 <map name="_enemy_coll__map" id="_enemy_coll__map">
-<area shape="rect" id="node2" href="class_entity.html" title="{Entity\n|# size\l# name\l# layer\l# id\l# components\l# scripts\l# nextId\l|+ ~Entity()\l+ getId()\l+ getScript()\l+ addScript()\l+ removeScript()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l+ getBoss()\l+ getSize()\l+ getLayer()\l+ getName()\l+ getComponentName()\l+ getComponentName()\l+ update()\l+ OnCollision()\l+ OnTriggerEnter()\l+ OnTriggerStay()\l+ OnTriggerExit()\l# Entity()\l}" alt="" coords="5,336,165,780"/>
-<area shape="rect" id="node3" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="86,5,237,273"/>
+<area shape="rect" id="node2" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="5,336,165,780"/>
+<area shape="rect" id="node3" href="class_i_controller.html" title="main Class for controllers " alt="" coords="86,5,237,273"/>
 <area shape="rect" id="node4" href="class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="189,453,347,663"/>
 <area shape="rect" id="node5" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="261,27,408,251"/>
 </map>
@@ -142,27 +142,35 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ac0eec4755e28c02688065f9657150ac3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a> ()</td></tr>
 <tr class="separator:ac0eec4755e28c02688065f9657150ac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a198751eda226bf64761429a488b8273c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_enemy.html#a198751eda226bf64761429a488b8273c">update</a> (sf::Time deltaTime)</td></tr>
+<tr class="memdesc:a198751eda226bf64761429a488b8273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">update entity each frame  <a href="#a198751eda226bf64761429a488b8273c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a198751eda226bf64761429a488b8273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques hérités de <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adf6d3f7cb1b2ba029b6b048a395cc8ae">~Entity</a> ()</td></tr>
+<tr class="memdesc:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual dtor  <a href="#adf6d3f7cb1b2ba029b6b048a395cc8ae">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adf6d3f7cb1b2ba029b6b048a395cc8ae inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02896f1cc4fba0504418751cf8814395 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a02896f1cc4fba0504418751cf8814395">getId</a> () const </td></tr>
 <tr class="separator:a02896f1cc4fba0504418751cf8814395 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c2b233ac062fa2ce74a10ba61e463e1 inherit pub_methods_class_entity"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5c2b233ac062fa2ce74a10ba61e463e1 inherit pub_methods_class_entity"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a5c2b233ac062fa2ce74a10ba61e463e1">getScript</a> ()</td></tr>
+<tr class="memdesc:a5c2b233ac062fa2ce74a10ba61e463e1 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">getScript &lt;Name&gt; from the entity  <a href="#a5c2b233ac062fa2ce74a10ba61e463e1">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5c2b233ac062fa2ce74a10ba61e463e1 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13d5fd6c100fc9c4a6387a8f773877f8 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a13d5fd6c100fc9c4a6387a8f773877f8">addScript</a> (<a class="el" href="class_script_component.html">ScriptComponent</a> *script)</td></tr>
+<tr class="memdesc:a13d5fd6c100fc9c4a6387a8f773877f8 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new Script to the entity  <a href="#a13d5fd6c100fc9c4a6387a8f773877f8">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a13d5fd6c100fc9c4a6387a8f773877f8 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b00caa7e7b8a2c4b890104cbf65208d inherit pub_methods_class_entity"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a5b00caa7e7b8a2c4b890104cbf65208d inherit pub_methods_class_entity"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a5b00caa7e7b8a2c4b890104cbf65208d">removeScript</a> ()</td></tr>
+<tr class="memdesc:a5b00caa7e7b8a2c4b890104cbf65208d inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">removeScript&lt;Name&gt; from the entity if its present  <a href="#a5b00caa7e7b8a2c4b890104cbf65208d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5b00caa7e7b8a2c4b890104cbf65208d inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a369c207eab2aed48053346a58b4cdbe2 inherit pub_methods_class_entity"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a369c207eab2aed48053346a58b4cdbe2 inherit pub_methods_class_entity"><td class="memTemplItemLeft" align="right" valign="top">T *&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a369c207eab2aed48053346a58b4cdbe2">getComponent</a> ()</td></tr>
+<tr class="memdesc:a369c207eab2aed48053346a58b4cdbe2 inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">getComponent &lt;Name&gt; from the entity  <a href="#a369c207eab2aed48053346a58b4cdbe2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a369c207eab2aed48053346a58b4cdbe2 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a722ddce08d51de0605965597bc69e inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a70a722ddce08d51de0605965597bc69e">addComponent</a> (<a class="el" href="class_component.html">Component</a> *component)</td></tr>
+<tr class="memdesc:a70a722ddce08d51de0605965597bc69e inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new <a class="el" href="class_component.html" title="basic class for all components ">Component</a> to the entity  <a href="#a70a722ddce08d51de0605965597bc69e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a70a722ddce08d51de0605965597bc69e inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a590ddbda675cf9b188977d553e396a0f inherit pub_methods_class_entity"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
 <tr class="memitem:a590ddbda675cf9b188977d553e396a0f inherit pub_methods_class_entity"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_entity.html#a590ddbda675cf9b188977d553e396a0f">removeComponent</a> ()</td></tr>
+<tr class="memdesc:a590ddbda675cf9b188977d553e396a0f inherit pub_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">removeScript&lt;Name&gt; from the entity if its present  <a href="#a590ddbda675cf9b188977d553e396a0f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a590ddbda675cf9b188977d553e396a0f inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e863eee3255fd209a13add62f39c394 inherit pub_methods_class_entity"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_i_controller.html">IController</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3e863eee3255fd209a13add62f39c394">getBoss</a> ()</td></tr>
 <tr class="separator:a3e863eee3255fd209a13add62f39c394 inherit pub_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,12 +189,16 @@ Fonctions membres publiques</h2></td></tr>
 Membres hérités additionnels</h2></td></tr>
 <tr class="inherit_header pub_static_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Fonctions membres publiques statiques hérités de <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:ac03cb76b4be00f4f921fd81009d7859e inherit pub_static_methods_class_entity"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac03cb76b4be00f4f921fd81009d7859e">OnCollision</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *collider)</td></tr>
+<tr class="memdesc:ac03cb76b4be00f4f921fd81009d7859e inherit pub_static_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">call OnCollision for all script in the entity (param)  <a href="#ac03cb76b4be00f4f921fd81009d7859e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac03cb76b4be00f4f921fd81009d7859e inherit pub_static_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3294d2b98a2debd96da4bf383b447182 inherit pub_static_methods_class_entity"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a3294d2b98a2debd96da4bf383b447182">OnTriggerEnter</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="memdesc:a3294d2b98a2debd96da4bf383b447182 inherit pub_static_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">call OnTriggerEnter for all script in the entity (param)  <a href="#a3294d2b98a2debd96da4bf383b447182">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a3294d2b98a2debd96da4bf383b447182 inherit pub_static_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adea5ce651b7c4383573de2b0f840186f inherit pub_static_methods_class_entity"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#adea5ce651b7c4383573de2b0f840186f">OnTriggerStay</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="memdesc:adea5ce651b7c4383573de2b0f840186f inherit pub_static_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">call OnTriggerStay for all script in the entity (param)  <a href="#adea5ce651b7c4383573de2b0f840186f">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adea5ce651b7c4383573de2b0f840186f inherit pub_static_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f37f0095077dce346d1170eff8a23c inherit pub_static_methods_class_entity"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a60f37f0095077dce346d1170eff8a23c">OnTriggerExit</a> (<a class="el" href="class_entity.html">Entity</a> *entity, <a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collider)</td></tr>
+<tr class="memdesc:a60f37f0095077dce346d1170eff8a23c inherit pub_static_methods_class_entity"><td class="mdescLeft">&#160;</td><td class="mdescRight">call OnTriggerExit for all script in the entity (param)  <a href="#a60f37f0095077dce346d1170eff8a23c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a60f37f0095077dce346d1170eff8a23c inherit pub_static_methods_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_entity')"><img src="closed.png" alt="-"/>&#160;Fonctions membres protégées hérités de <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:a9744b38b15c0d9fd230b5a7ba05662b6 inherit pro_methods_class_entity"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a9744b38b15c0d9fd230b5a7ba05662b6">Entity</a> (<a class="el" href="class_i_controller.html">IController</a> *<a class="el" href="class_entity.html#a7c0132a057b738fa7462bf0405648625">boss</a>)</td></tr>
@@ -202,10 +214,10 @@ Membres hérités additionnels</h2></td></tr>
 <tr class="separator:ac0016bd0e2acdc4dcde4267e2908aba8 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14d838e5fd854a14d3ae443c5108282c inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a14d838e5fd854a14d3ae443c5108282c">id</a></td></tr>
 <tr class="separator:a14d838e5fd854a14d3ae443c5108282c inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7661868b3679cc4c71e1507125df379 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ae7661868b3679cc4c71e1507125df379">components</a></td></tr>
-<tr class="separator:ae7661868b3679cc4c71e1507125df379 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a33d86e74a2c18f6716f37afc3905a92c inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_script_component.html">ScriptComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a33d86e74a2c18f6716f37afc3905a92c">scripts</a></td></tr>
-<tr class="separator:a33d86e74a2c18f6716f37afc3905a92c inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29c5fe4c865b73e356d0fc551abf78b0 inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#a29c5fe4c865b73e356d0fc551abf78b0">components</a></td></tr>
+<tr class="separator:a29c5fe4c865b73e356d0fc551abf78b0 inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0f88819daaa70de6c6e977e9e0509da inherit pro_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <a class="el" href="class_script_component.html">ScriptComponent</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#ac0f88819daaa70de6c6e977e9e0509da">scripts</a></td></tr>
+<tr class="separator:ac0f88819daaa70de6c6e977e9e0509da inherit pro_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_static_attribs_class_entity"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_entity')"><img src="closed.png" alt="-"/>&#160;Attributs protégés statiques hérités de <a class="el" href="class_entity.html">Entity</a></td></tr>
 <tr class="memitem:afccd44536b8ce8d45a86fd97b0cd0b8c inherit pro_static_attribs_class_entity"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_entity.html#afccd44536b8ce8d45a86fd97b0cd0b8c">nextId</a> = 0</td></tr>
 <tr class="separator:afccd44536b8ce8d45a86fd97b0cd0b8c inherit pro_static_attribs_class_entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +267,7 @@ Membres hérités additionnels</h2></td></tr>
           <td class="memname">void Enemy::update </td>
           <td>(</td>
           <td class="paramtype">sf::Time&#160;</td>
-          <td class="paramname"><em>deltaTime</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -265,6 +277,14 @@ Membres hérités additionnels</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>update entity each frame </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime time between two frames </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Réimplémentée à partir de <a class="el" href="class_entity.html#a3ab5d04fbdd9a7896a98cb2b1a8d5352">Entity</a>.</p>
 

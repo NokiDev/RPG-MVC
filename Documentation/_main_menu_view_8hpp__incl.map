@@ -1,3 +1,5 @@
 <map id="RPG&#45;MVC/App/views/MainMenuView.hpp" name="RPG&#45;MVC/App/views/MainMenuView.hpp">
-<area shape="rect" id="node2" href="$_view_8hpp.html" title="View.hpp" alt="" coords="93,95,168,121"/>
+<area shape="rect" id="node2" href="$_view_8hpp.html" title="View.hpp" alt="" coords="93,244,168,271"/>
+<area shape="rect" id="node5" href="$_view_text_component_8hpp.html" title="ViewTextComponent.hpp" alt="" coords="158,95,325,121"/>
+<area shape="rect" id="node6" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="157,169,301,196"/>
 </map>

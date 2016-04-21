@@ -12,6 +12,7 @@ MainMenuView::MainMenuView(IController *controller) : View(controller) {
     this->controller = controller;
     manager = WindowManager::get();
     background.setTexture(Ressources::Load("mainBackground.jpg"));
+    title = new ViewTextComponent("Space MVC");
 }
 
 MainMenuView::~MainMenuView() {
@@ -25,6 +26,8 @@ void MainMenuView::render() {
     for (auto component : components) {
         component->draw(*this);
     }
+    title->updatePosition(sf::Vector2f(getSize().x/2-110, getSize().y/4-100));
+    title->draw(*this);
 }
 
 void MainMenuView::draw(const sf::Drawable &drawable, const sf::RenderStates &states) {

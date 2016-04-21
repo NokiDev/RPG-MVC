@@ -31,7 +31,6 @@ var hierarchy =
       [ "ViewSpriteComponent", "class_view_sprite_component.html", null ],
       [ "ViewTextComponent", "class_view_text_component.html", null ]
     ] ],
-    [ "PauseMenuView", "class_pause_menu_view.html", null ],
     [ "PhysicsSystem", "class_physics_system.html", null ],
     [ "Ressources", "class_ressources.html", null ],
     [ "ScriptComponent", "class_script_component.html", [
@@ -43,7 +42,6 @@ var hierarchy =
       [ "PlayerScript", "class_player_script.html", null ]
     ] ],
     [ "ScriptSystem", "class_script_system.html", null ],
-    [ "SettingsMenuView", "class_settings_menu_view.html", null ],
     [ "TriggerCollision", "class_trigger_collision.html", null ],
     [ "View", "class_view.html", [
       [ "GameOverView", "class_game_over_view.html", null ],

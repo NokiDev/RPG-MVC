@@ -1,5 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_i_view_component.html" title="IViewComponent" alt="" coords="5,31,124,57"/>
+<area shape="rect" id="node1" href="$class_i_view_component.html" title="main class for View Components " alt="" coords="5,31,124,57"/>
 <area shape="rect" id="node2" href="$class_view_sprite_component.html" title="ViewSpriteComponent" alt="" coords="172,5,323,32"/>
 <area shape="rect" id="node3" href="$class_view_text_component.html" title="ViewTextComponent" alt="" coords="177,56,318,83"/>
 </map>

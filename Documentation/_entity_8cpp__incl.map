@@ -1,19 +1,18 @@
 <map id="RPG&#45;MVC/App/models/Entity.cpp" name="RPG&#45;MVC/App/models/Entity.cpp">
-<area shape="rect" id="node2" href="$_transform_8hpp.html" title="App/Components/Transform.hpp" alt="" coords="515,95,723,121"/>
+<area shape="rect" id="node2" href="$_transform_8hpp.html" title="App/Components/Transform.hpp" alt="" coords="115,95,323,121"/>
 <area shape="rect" id="node3" href="$_component_8hpp.html" title="Component.hpp" alt="" coords="171,430,285,457"/>
-<area shape="rect" id="node6" href="$_script_component_8hpp.html" title="App/Components/ScriptComponent.hpp" alt="" coords="240,95,491,121"/>
-<area shape="rect" id="node20" href="$_entity_8hpp.html" title="Entity.hpp" alt="" coords="1651,341,1733,367"/>
-<area shape="rect" id="node32" href="$_collision_system_8hpp.html" title="CollisionSystem.hpp" alt="" coords="5,430,147,457"/>
-<area shape="rect" id="node7" href="$_ingame_controller_8hpp.html" title="App/controllers/IngameController.hpp" alt="" coords="472,169,707,196"/>
-<area shape="rect" id="node8" href="$_player_8hpp.html" title="App/models/Player.hpp" alt="" coords="805,251,963,278"/>
-<area shape="rect" id="node25" href="$_events_system_8hpp.html" title="App/Systems/EventSystem\l/EventsSystem.hpp" alt="" coords="423,244,606,285"/>
-<area shape="rect" id="node26" href="$_enemy_8hpp.html" title="App/models/Enemy.hpp" alt="" coords="1493,251,1654,278"/>
+<area shape="rect" id="node6" href="$_script_component_8hpp.html" title="App/Components/ScriptComponent.hpp" alt="" coords="397,95,648,121"/>
+<area shape="rect" id="node20" href="$_entity_8hpp.html" title="Entity.hpp" alt="" coords="1583,341,1665,367"/>
+<area shape="rect" id="node30" href="$_collision_system_8hpp.html" title="CollisionSystem.hpp" alt="" coords="5,430,147,457"/>
+<area shape="rect" id="node7" href="$_ingame_controller_8hpp.html" title="App/controllers/IngameController.hpp" alt="" coords="755,169,989,196"/>
+<area shape="rect" id="node8" href="$_player_8hpp.html" title="App/models/Player.hpp" alt="" coords="965,251,1123,278"/>
+<area shape="rect" id="node25" href="$_events_system_8hpp.html" title="App/Systems/EventSystem\l/EventsSystem.hpp" alt="" coords="559,244,742,285"/>
+<area shape="rect" id="node26" href="$_enemy_8hpp.html" title="App/models/Enemy.hpp" alt="" coords="1367,251,1529,278"/>
 <area shape="rect" id="node27" href="$_physics_system_8hpp.html" title="App/Systems/PhysicsSystem\l/PhysicsSystem.hpp" alt="" coords="309,423,507,464"/>
-<area shape="rect" id="node29" href="$_i_controller_8hpp.html" title="IController.hpp" alt="" coords="1363,251,1469,278"/>
-<area shape="rect" id="node10" href="$_view_sprite_component_8hpp.html" title="App/views/ViewSpriteComponent.hpp" alt="" coords="1085,341,1323,367"/>
-<area shape="rect" id="node16" href="$_box_collider_component_8hpp.html" title="App/Components/BoxCollider\lComponent.hpp" alt="" coords="869,333,1061,375"/>
-<area shape="rect" id="node18" href="$_event_handler_component_8hpp.html" title="App/Components/EventHandler\lComponent.hpp" alt="" coords="443,333,645,375"/>
-<area shape="rect" id="node11" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="1135,430,1279,457"/>
-<area shape="rect" id="node13" href="$_view_8hpp.html" title="View.hpp" alt="" coords="1124,512,1199,539"/>
-<area shape="rect" id="node30" href="$_view_text_component_8hpp.html" title="App/views/ViewTextComponent.hpp" alt="" coords="1347,341,1575,367"/>
+<area shape="rect" id="node29" href="$_i_controller_8hpp.html" title="IController.hpp" alt="" coords="1454,341,1559,367"/>
+<area shape="rect" id="node10" href="$_view_sprite_component_8hpp.html" title="App/views/ViewSpriteComponent.hpp" alt="" coords="1192,341,1429,367"/>
+<area shape="rect" id="node16" href="$_box_collider_component_8hpp.html" title="App/Components/BoxCollider\lComponent.hpp" alt="" coords="776,333,968,375"/>
+<area shape="rect" id="node18" href="$_event_handler_component_8hpp.html" title="App/Components/EventHandler\lComponent.hpp" alt="" coords="549,333,752,375"/>
+<area shape="rect" id="node11" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="1227,430,1371,457"/>
+<area shape="rect" id="node13" href="$_view_8hpp.html" title="View.hpp" alt="" coords="1193,512,1268,539"/>
 </map>

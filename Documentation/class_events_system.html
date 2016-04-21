@@ -115,36 +115,46 @@ $(document).ready(function(){initNavTree('class_events_system.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Regroup all eventsHandler components in the system, that may update them.  
+ <a href="class_events_system.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_events_system_8hpp_source.html">EventsSystem.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de EventsSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_events_system__coll__graph.png" border="0" usemap="#_events_system_coll__map" alt="Collaboration graph"/></div>
-<map name="_events_system_coll__map" id="_events_system_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a466b60ad0cb4d8f3f088c1825ea495cf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#a466b60ad0cb4d8f3f088c1825ea495cf">EventsSystem</a> ()</td></tr>
+<tr class="memdesc:a466b60ad0cb4d8f3f088c1825ea495cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor  <a href="#a466b60ad0cb4d8f3f088c1825ea495cf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a466b60ad0cb4d8f3f088c1825ea495cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8c984de77fc950e6c2f56bec0891f2ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#a8c984de77fc950e6c2f56bec0891f2ad">~EventsSystem</a> ()</td></tr>
+<tr class="memdesc:a8c984de77fc950e6c2f56bec0891f2ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#a8c984de77fc950e6c2f56bec0891f2ad">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8c984de77fc950e6c2f56bec0891f2ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a640f3181d7e3c96026e31eda595daf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#a7a640f3181d7e3c96026e31eda595daf">addEventHandler</a> (<a class="el" href="class_event_handler_component.html">EventHandlerComponent</a> *eventHandler)</td></tr>
+<tr class="memdesc:a7a640f3181d7e3c96026e31eda595daf"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new component in the system  <a href="#a7a640f3181d7e3c96026e31eda595daf">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a7a640f3181d7e3c96026e31eda595daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe7030cb78c5755e94738e483ec5113c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#abe7030cb78c5755e94738e483ec5113c">delEventHandler</a> (<a class="el" href="class_event_handler_component.html">EventHandlerComponent</a> *eventHandler)</td></tr>
+<tr class="memdesc:abe7030cb78c5755e94738e483ec5113c"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove component in the system  <a href="#abe7030cb78c5755e94738e483ec5113c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abe7030cb78c5755e94738e483ec5113c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af132eae7fb59bcc25de881c2c4bfa0f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#af132eae7fb59bcc25de881c2c4bfa0f6">handleEvents</a> (sf::Event event)</td></tr>
+<tr class="memdesc:af132eae7fb59bcc25de881c2c4bfa0f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">handleEvents for all components  <a href="#af132eae7fb59bcc25de881c2c4bfa0f6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af132eae7fb59bcc25de881c2c4bfa0f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefa436d82dea4fabab4faba014be5502"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#aefa436d82dea4fabab4faba014be5502">update</a> (sf::Time deltaTime)</td></tr>
+<tr class="memdesc:aefa436d82dea4fabab4faba014be5502"><td class="mdescLeft">&#160;</td><td class="mdescRight">update components each frames  <a href="#aefa436d82dea4fabab4faba014be5502">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aefa436d82dea4fabab4faba014be5502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
 <tr class="memitem:ac69c19aac27ce4a8ac285abef033075c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_events_system.html">EventsSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_events_system.html#ac69c19aac27ce4a8ac285abef033075c">eventsSystem</a></td></tr>
+<tr class="memdesc:ac69c19aac27ce4a8ac285abef033075c"><td class="mdescLeft">&#160;</td><td class="mdescRight">static reference to scriptSystem  <a href="#ac69c19aac27ce4a8ac285abef033075c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac69c19aac27ce4a8ac285abef033075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Regroup all eventsHandler components in the system, that may update them. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="a466b60ad0cb4d8f3f088c1825ea495cf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -157,6 +167,8 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>default ctor </p>
 
 </div>
 </div>
@@ -172,6 +184,8 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>dtor </p>
 
 </div>
 </div>
@@ -190,6 +204,14 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add a new component in the system </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="abe7030cb78c5755e94738e483ec5113c"></a>
@@ -205,6 +227,14 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>remove component in the system </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to remove </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -222,6 +252,14 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>handleEvents for all components </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Event</td><td>event to handle </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aefa436d82dea4fabab4faba014be5502"></a>
@@ -237,6 +275,14 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>update components each frames </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime, time between two frames </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -258,6 +304,8 @@ Attributs publics statiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>static reference to scriptSystem </p>
 
 </div>
 </div>

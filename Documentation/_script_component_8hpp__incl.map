@@ -1,16 +1,15 @@
 <map id="RPG&#45;MVC/App/Components/ScriptComponent.hpp" name="RPG&#45;MVC/App/Components/ScriptComponent.hpp">
-<area shape="rect" id="node2" href="$_ingame_controller_8hpp.html" title="App/controllers/IngameController.hpp" alt="" coords="753,95,988,121"/>
-<area shape="rect" id="node13" href="$_component_8hpp.html" title="Component.hpp" alt="" coords="983,355,1097,382"/>
-<area shape="rect" id="node3" href="$_player_8hpp.html" title="App/models/Player.hpp" alt="" coords="643,177,800,203"/>
-<area shape="rect" id="node22" href="$_events_system_8hpp.html" title="App/Systems/EventSystem\l/EventsSystem.hpp" alt="" coords="1289,169,1471,211"/>
-<area shape="rect" id="node23" href="$_enemy_8hpp.html" title="App/models/Enemy.hpp" alt="" coords="825,177,986,203"/>
-<area shape="rect" id="node24" href="$_physics_system_8hpp.html" title="App/Systems/PhysicsSystem\l/PhysicsSystem.hpp" alt="" coords="1507,348,1704,389"/>
-<area shape="rect" id="node26" href="$_i_controller_8hpp.html" title="IController.hpp" alt="" coords="481,177,586,203"/>
-<area shape="rect" id="node5" href="$_view_sprite_component_8hpp.html" title="App/views/ViewSpriteComponent.hpp" alt="" coords="5,266,243,293"/>
-<area shape="rect" id="node11" href="$_box_collider_component_8hpp.html" title="App/Components/BoxCollider\lComponent.hpp" alt="" coords="1063,259,1255,300"/>
-<area shape="rect" id="node15" href="$_event_handler_component_8hpp.html" title="App/Components/EventHandler\lComponent.hpp" alt="" coords="1279,259,1481,300"/>
-<area shape="rect" id="node17" href="$_entity_8hpp.html" title="Entity.hpp" alt="" coords="833,266,914,293"/>
-<area shape="rect" id="node6" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="159,355,303,382"/>
-<area shape="rect" id="node8" href="$_view_8hpp.html" title="View.hpp" alt="" coords="420,437,495,464"/>
-<area shape="rect" id="node27" href="$_view_text_component_8hpp.html" title="App/views/ViewTextComponent.hpp" alt="" coords="267,266,495,293"/>
+<area shape="rect" id="node2" href="$_ingame_controller_8hpp.html" title="App/controllers/IngameController.hpp" alt="" coords="647,95,882,121"/>
+<area shape="rect" id="node13" href="$_component_8hpp.html" title="Component.hpp" alt="" coords="611,355,724,382"/>
+<area shape="rect" id="node3" href="$_player_8hpp.html" title="App/models/Player.hpp" alt="" coords="549,177,706,203"/>
+<area shape="rect" id="node22" href="$_events_system_8hpp.html" title="App/Systems/EventSystem\l/EventsSystem.hpp" alt="" coords="1009,169,1192,211"/>
+<area shape="rect" id="node23" href="$_enemy_8hpp.html" title="App/models/Enemy.hpp" alt="" coords="824,177,985,203"/>
+<area shape="rect" id="node24" href="$_physics_system_8hpp.html" title="App/Systems/PhysicsSystem\l/PhysicsSystem.hpp" alt="" coords="1250,348,1447,389"/>
+<area shape="rect" id="node26" href="$_i_controller_8hpp.html" title="IController.hpp" alt="" coords="5,266,111,293"/>
+<area shape="rect" id="node5" href="$_view_sprite_component_8hpp.html" title="App/views/ViewSpriteComponent.hpp" alt="" coords="186,266,423,293"/>
+<area shape="rect" id="node11" href="$_box_collider_component_8hpp.html" title="App/Components/BoxCollider\lComponent.hpp" alt="" coords="447,259,639,300"/>
+<area shape="rect" id="node15" href="$_event_handler_component_8hpp.html" title="App/Components/EventHandler\lComponent.hpp" alt="" coords="971,259,1174,300"/>
+<area shape="rect" id="node17" href="$_entity_8hpp.html" title="Entity.hpp" alt="" coords="864,266,945,293"/>
+<area shape="rect" id="node6" href="$_i_view_component_8hpp.html" title="IViewComponent.hpp" alt="" coords="94,355,238,382"/>
+<area shape="rect" id="node8" href="$_view_8hpp.html" title="View.hpp" alt="" coords="197,437,271,464"/>
 </map>

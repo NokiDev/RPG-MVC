@@ -132,7 +132,7 @@ Graphe de collaboration de View:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_view__coll__graph.png" border="0" usemap="#_view_coll__map" alt="Collaboration graph"/></div>
 <map name="_view_coll__map" id="_view_coll__map">
-<area shape="rect" id="node3" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="9,564,159,832"/>
+<area shape="rect" id="node3" href="class_i_controller.html" title="main Class for controllers " alt="" coords="9,564,159,832"/>
 <area shape="rect" id="node2" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="11,5,157,229"/>
 </map>
 </div>
@@ -140,22 +140,31 @@ Graphe de collaboration de View:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a0f3106877ba0c894d61585f47a6d64de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a0f3106877ba0c894d61585f47a6d64de">View</a> (<a class="el" href="class_i_controller.html">IController</a> *<a class="el" href="class_view.html#a3c81db2aa479c8ec920170a02a88767d">controller</a>)</td></tr>
+<tr class="memdesc:a0f3106877ba0c894d61585f47a6d64de"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor  <a href="#a0f3106877ba0c894d61585f47a6d64de">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a0f3106877ba0c894d61585f47a6d64de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa02a820358e1a7bf7e34d205212ae8f3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aa02a820358e1a7bf7e34d205212ae8f3">~View</a> ()</td></tr>
+<tr class="memdesc:aa02a820358e1a7bf7e34d205212ae8f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#aa02a820358e1a7bf7e34d205212ae8f3">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa02a820358e1a7bf7e34d205212ae8f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48b5d13e00ba62c22c2b30168b835056"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a48b5d13e00ba62c22c2b30168b835056">askForEvent</a> ()</td></tr>
+<tr class="memdesc:a48b5d13e00ba62c22c2b30168b835056"><td class="mdescLeft">&#160;</td><td class="mdescRight">ask to the windowManager if there is events  <a href="#a48b5d13e00ba62c22c2b30168b835056">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a48b5d13e00ba62c22c2b30168b835056"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9be55c79a0eb2a50e03abf196ac4da0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aa9be55c79a0eb2a50e03abf196ac4da0">isKeyPressed</a> (sf::Keyboard::Key key)</td></tr>
+<tr class="memdesc:aa9be55c79a0eb2a50e03abf196ac4da0"><td class="mdescLeft">&#160;</td><td class="mdescRight">ask to the windowManager if the key (param) is Pressed or not  <a href="#aa9be55c79a0eb2a50e03abf196ac4da0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa9be55c79a0eb2a50e03abf196ac4da0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5353bd99e2c883a733324933535fd1a0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a5353bd99e2c883a733324933535fd1a0">sendEvent</a> (sf::Event &amp;event)</td></tr>
+<tr class="memdesc:a5353bd99e2c883a733324933535fd1a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">sendEvent to the controller link to this view  <a href="#a5353bd99e2c883a733324933535fd1a0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5353bd99e2c883a733324933535fd1a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac10f96ed8359f76478c860b2e6014f15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#ac10f96ed8359f76478c860b2e6014f15">addViewComponent</a> (<a class="el" href="class_i_view_component.html">IViewComponent</a> *component)</td></tr>
+<tr class="memdesc:ac10f96ed8359f76478c860b2e6014f15"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new component to render  <a href="#ac10f96ed8359f76478c860b2e6014f15">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac10f96ed8359f76478c860b2e6014f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2d5c81bc47f7ba83ebaa9ba398b05e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a2d5c81bc47f7ba83ebaa9ba398b05e8b">delViewComponent</a> (<a class="el" href="class_i_view_component.html">IViewComponent</a> *component)</td></tr>
+<tr class="memdesc:a2d5c81bc47f7ba83ebaa9ba398b05e8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove a view component from components array  <a href="#a2d5c81bc47f7ba83ebaa9ba398b05e8b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2d5c81bc47f7ba83ebaa9ba398b05e8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aadd18a025bf4c867dc29f7c7b9cddb71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#aadd18a025bf4c867dc29f7c7b9cddb71">render</a> ()=0</td></tr>
+<tr class="memdesc:aadd18a025bf4c867dc29f7c7b9cddb71"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw the wiew on window  sf::RenderWindow, window to draw on  <a href="#aadd18a025bf4c867dc29f7c7b9cddb71">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aadd18a025bf4c867dc29f7c7b9cddb71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e52a828acd046c2f90d47a7d7df12ad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a1e52a828acd046c2f90d47a7d7df12ad">draw</a> (const sf::Drawable &amp;drawable, const sf::RenderStates &amp;states=sf::RenderStates::Default)=0</td></tr>
+<tr class="memdesc:a1e52a828acd046c2f90d47a7d7df12ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">draw on the view  <a href="#a1e52a828acd046c2f90d47a7d7df12ad">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1e52a828acd046c2f90d47a7d7df12ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ebabdd05383c67f5064615bcf00b09e"><td class="memItemLeft" align="right" valign="top">sf::Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a2ebabdd05383c67f5064615bcf00b09e">getSize</a> ()</td></tr>
 <tr class="separator:a2ebabdd05383c67f5064615bcf00b09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,6 +172,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
 <tr class="memitem:a724853973683c76f6c276302bf25ccd2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_view.html">View</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view.html#a724853973683c76f6c276302bf25ccd2">currentView</a></td></tr>
+<tr class="memdesc:a724853973683c76f6c276302bf25ccd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">static reference to the current view, the view displayed by the main controller  <a href="#a724853973683c76f6c276302bf25ccd2">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a724853973683c76f6c276302bf25ccd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -189,6 +199,14 @@ Attributs protégés</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>default ctor </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">controller</td><td>which manage this view </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aa02a820358e1a7bf7e34d205212ae8f3"></a>
@@ -212,6 +230,8 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>dtor </p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions membres</h2>
@@ -228,6 +248,14 @@ Attributs protégés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>add a new component to render </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to add </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -252,6 +280,8 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>ask to the windowManager if there is events </p>
+
 </div>
 </div>
 <a class="anchor" id="a2d5c81bc47f7ba83ebaa9ba398b05e8b"></a>
@@ -267,6 +297,14 @@ Attributs protégés</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>remove a view component from components array </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to Remove </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -301,6 +339,9 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>draw on the view </p>
+<dl class="section see"><dt>Voir également</dt><dd>sf::Window::draw </dd></dl>
 
 <p>Implémenté dans <a class="el" href="class_ingame_view.html#ac126319e4f9494ac76c40233c26658d1">IngameView</a>, <a class="el" href="class_game_over_view.html#a4843c9db3e8fcc2f9c0603e858961be0">GameOverView</a>, et <a class="el" href="class_main_menu_view.html#a70ad2f05925bd24697bf759e42181de1">MainMenuView</a>.</p>
 
@@ -343,6 +384,14 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>ask to the windowManager if the key (param) is Pressed or not </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>to test </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="aadd18a025bf4c867dc29f7c7b9cddb71"></a>
@@ -365,6 +414,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>draw the wiew on window  sf::RenderWindow, window to draw on </p>
 
 <p>Implémenté dans <a class="el" href="class_ingame_view.html#a95ef80c8d33c780e29748266c4ac9bbe">IngameView</a>, <a class="el" href="class_game_over_view.html#a1c1d8515ace6074d36b9ca9edb2721e7">GameOverView</a>, et <a class="el" href="class_main_menu_view.html#ab926bb0b270ea48bcc11bedc4868d28b">MainMenuView</a>.</p>
 
@@ -391,6 +442,14 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>sendEvent to the controller link to this view </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Event</td><td>event to send </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -452,6 +511,8 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>static reference to the current view, the view displayed by the main controller </p>
 
 </div>
 </div>

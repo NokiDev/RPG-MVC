@@ -115,38 +115,49 @@ $(document).ready(function(){initNavTree('class_collision_system.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Regroup all BoxCollider Components, in the System.  
+ <a href="class_collision_system.html#details">Plus de détails...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_collision_system_8hpp_source.html">CollisionSystem.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe de collaboration de CollisionSystem:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_collision_system__coll__graph.png" border="0" usemap="#_collision_system_coll__map" alt="Collaboration graph"/></div>
-<map name="_collision_system_coll__map" id="_collision_system_coll__map">
-</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ac8b1ff32bb9c9ff3e765c2b334713454"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#ac8b1ff32bb9c9ff3e765c2b334713454">CollisionSystem</a> ()</td></tr>
+<tr class="memdesc:ac8b1ff32bb9c9ff3e765c2b334713454"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor  <a href="#ac8b1ff32bb9c9ff3e765c2b334713454">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ac8b1ff32bb9c9ff3e765c2b334713454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a128d2a8b457f119368f0c9fc95ed61f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#a128d2a8b457f119368f0c9fc95ed61f6">~CollisionSystem</a> ()</td></tr>
+<tr class="memdesc:a128d2a8b457f119368f0c9fc95ed61f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#a128d2a8b457f119368f0c9fc95ed61f6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a128d2a8b457f119368f0c9fc95ed61f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb0037b7fa28facfde443e015a54462c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#adb0037b7fa28facfde443e015a54462c">addBoxCollider</a> (<a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *boxCollider)</td></tr>
+<tr class="memdesc:adb0037b7fa28facfde443e015a54462c"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a new component in the system  <a href="#adb0037b7fa28facfde443e015a54462c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adb0037b7fa28facfde443e015a54462c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4315bf27ae2d477f76808a810bdc1d86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#a4315bf27ae2d477f76808a810bdc1d86">addMovingBoxCollider</a> (<a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *boxCollider)</td></tr>
+<tr class="memdesc:a4315bf27ae2d477f76808a810bdc1d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">add a moving boxCollider in the system  <a href="#a4315bf27ae2d477f76808a810bdc1d86">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a4315bf27ae2d477f76808a810bdc1d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af05edabaa7a04afd2c830648571a14a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#af05edabaa7a04afd2c830648571a14a5">delBoxCollider</a> (<a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *boxCollider)</td></tr>
+<tr class="memdesc:af05edabaa7a04afd2c830648571a14a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">remove component in the system  <a href="#af05edabaa7a04afd2c830648571a14a5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af05edabaa7a04afd2c830648571a14a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a968165214f5eec853c2aadea39acc998"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#a968165214f5eec853c2aadea39acc998">checkCollisions</a> ()</td></tr>
+<tr class="memdesc:a968165214f5eec853c2aadea39acc998"><td class="mdescLeft">&#160;</td><td class="mdescRight">checkCollisions between moving boxes and all colliders with test for the distance etc. .. . .  <a href="#a968165214f5eec853c2aadea39acc998">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a968165214f5eec853c2aadea39acc998"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab60bb656e4b00cddd951994d95d0a291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#ab60bb656e4b00cddd951994d95d0a291">updateComponents</a> (sf::Time)</td></tr>
+<tr class="memdesc:ab60bb656e4b00cddd951994d95d0a291"><td class="mdescLeft">&#160;</td><td class="mdescRight">update components eachFrames  <a href="#ab60bb656e4b00cddd951994d95d0a291">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab60bb656e4b00cddd951994d95d0a291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Attributs publics statiques</h2></td></tr>
 <tr class="memitem:ae29c2088e555a89f4f089d9b9bb9d918"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_collision_system.html">CollisionSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision_system.html#ae29c2088e555a89f4f089d9b9bb9d918">collisionSystem</a></td></tr>
+<tr class="memdesc:ae29c2088e555a89f4f089d9b9bb9d918"><td class="mdescLeft">&#160;</td><td class="mdescRight">static reference to this  <a href="#ae29c2088e555a89f4f089d9b9bb9d918">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae29c2088e555a89f4f089d9b9bb9d918"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Regroup all BoxCollider Components, in the System. </p>
+</div><h2 class="groupheader">Documentation des constructeurs et destructeur</h2>
 <a class="anchor" id="ac8b1ff32bb9c9ff3e765c2b334713454"></a>
 <div class="memitem">
 <div class="memproto">
@@ -159,6 +170,8 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>default ctor </p>
 
 </div>
 </div>
@@ -174,6 +187,8 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>dtor </p>
 
 </div>
 </div>
@@ -192,6 +207,14 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add a new component in the system </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a4315bf27ae2d477f76808a810bdc1d86"></a>
@@ -208,6 +231,14 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add a moving boxCollider in the system </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to add </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a968165214f5eec853c2aadea39acc998"></a>
@@ -222,6 +253,8 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>checkCollisions between moving boxes and all colliders with test for the distance etc. .. . . </p>
 
 </div>
 </div>
@@ -239,6 +272,14 @@ Attributs publics statiques</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>remove component in the system </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">component</td><td>to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ab60bb656e4b00cddd951994d95d0a291"></a>
@@ -254,6 +295,14 @@ Attributs publics statiques</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>update components eachFrames </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime, time between two frames </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -275,6 +324,8 @@ Attributs publics statiques</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>static reference to this </p>
 
 </div>
 </div>

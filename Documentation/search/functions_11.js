@@ -5,5 +5,6 @@ var searchData=
   ['updatecomponents',['updateComponents',['../class_collision_system.html#ab60bb656e4b00cddd951994d95d0a291',1,'CollisionSystem::updateComponents()'],['../class_physics_system.html#a8df76da3391d7504c7d8ba2754bfda28',1,'PhysicsSystem::updateComponents()']]],
   ['updateposition',['updatePosition',['../class_view_sprite_component.html#a37796f3296019d298921bd2ea1e52fc5',1,'ViewSpriteComponent::updatePosition()'],['../class_view_text_component.html#a3d242cec3e01c39ecfdfb9d51e3ceb7c',1,'ViewTextComponent::updatePosition()']]],
   ['updaterect',['updateRect',['../class_view_sprite_component.html#aa710cd49d9bfdbbfd3998f03baf20e04',1,'ViewSpriteComponent']]],
+  ['updatestripes',['updateStripes',['../dynsections_8js.html#a8f7493ad859d4fbf2523917511ee7177',1,'dynsections.js']]],
   ['updatetext',['updateText',['../class_view_text_component.html#a2e66d9536ac8e30bcd5fc127c7c8511a',1,'ViewTextComponent']]]
 ];

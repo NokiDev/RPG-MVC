@@ -1,3 +1,3 @@
 <map id="EnemyScript" name="EnemyScript">
-<area shape="rect" id="node2" href="$class_script_component.html" title="{ScriptComponent\n|# controller\l# owner\l|+ ScriptComponent()\l+ ~ScriptComponent()\l+ update()\l+ physicsUpdate()\l+ onCollision()\l+ onTriggerEnter()\l+ onTriggerStay()\l+ onTriggerExit()\l+ getOwner()\l}" alt="" coords="5,5,156,215"/>
+<area shape="rect" id="node2" href="$class_script_component.html" title="basic class for Scripts, allow an entity to have different behaviours " alt="" coords="5,5,156,215"/>
 </map>

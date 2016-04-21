@@ -15,14 +15,6 @@ var dir_fa16193a4ea0528ebeaf3a7d983881e7 =
     [ "MainMenuView.hpp", "_main_menu_view_8hpp.html", [
       [ "MainMenuView", "class_main_menu_view.html", "class_main_menu_view" ]
     ] ],
-    [ "PauseMenuView.cpp", "_pause_menu_view_8cpp.html", null ],
-    [ "PauseMenuView.hpp", "_pause_menu_view_8hpp.html", [
-      [ "PauseMenuView", "class_pause_menu_view.html", null ]
-    ] ],
-    [ "SettingsMenuView.cpp", "_settings_menu_view_8cpp.html", null ],
-    [ "SettingsMenuView.hpp", "_settings_menu_view_8hpp.html", [
-      [ "SettingsMenuView", "class_settings_menu_view.html", null ]
-    ] ],
     [ "View.cpp", "_view_8cpp.html", null ],
     [ "View.hpp", "_view_8hpp.html", [
       [ "View", "class_view.html", "class_view" ]

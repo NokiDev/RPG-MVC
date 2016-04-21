@@ -1,3 +1,3 @@
 <map id="IngameController" name="IngameController">
-<area shape="rect" id="node2" href="$class_i_controller.html" title="{IController\n|# view\l|+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="5,5,156,273"/>
+<area shape="rect" id="node2" href="$class_i_controller.html" title="main Class for controllers " alt="" coords="5,5,156,273"/>
 </map>

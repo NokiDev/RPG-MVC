@@ -130,8 +130,8 @@ Graphe de collaboration de EventHandlerComponent:</div>
 <div class="center"><img src="class_event_handler_component__coll__graph.png" border="0" usemap="#_event_handler_component_coll__map" alt="Collaboration graph"/></div>
 <map name="_event_handler_component_coll__map" id="_event_handler_component_coll__map">
 <area shape="rect" id="node2" href="class_component.html" title="basic class for all components " alt="" coords="43,843,159,949"/>
-<area shape="rect" id="node3" href="class_entity.html" title="{Entity\n|# size\l# name\l# layer\l# id\l# components\l# scripts\l# nextId\l|+ ~Entity()\l+ getId()\l+ getScript()\l+ addScript()\l+ removeScript()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l+ getBoss()\l+ getSize()\l+ getLayer()\l+ getName()\l+ getComponentName()\l+ getComponentName()\l+ update()\l+ OnCollision()\l+ OnTriggerEnter()\l+ OnTriggerStay()\l+ OnTriggerExit()\l# Entity()\l}" alt="" coords="21,336,181,780"/>
-<area shape="rect" id="node4" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="102,5,253,273"/>
+<area shape="rect" id="node3" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="21,336,181,780"/>
+<area shape="rect" id="node4" href="class_i_controller.html" title="main Class for controllers " alt="" coords="102,5,253,273"/>
 <area shape="rect" id="node5" href="class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="205,453,363,663"/>
 <area shape="rect" id="node6" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="277,27,424,251"/>
 </map>
@@ -140,7 +140,7 @@ Graphe de collaboration de EventHandlerComponent:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:aa1a17eea9e53b501c140efca97ab03df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler_component.html#aa1a17eea9e53b501c140efca97ab03df">EventHandlerComponent</a> (<a class="el" href="class_entity.html">Entity</a> *<a class="el" href="class_component.html#a41f8bd2aafa27f6a04a212bfb2555a83">owner</a>)</td></tr>
-<tr class="memdesc:aa1a17eea9e53b501c140efca97ab03df"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor param <a class="el" href="class_entity.html">Entity</a> owner of the component  <a href="#aa1a17eea9e53b501c140efca97ab03df">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:aa1a17eea9e53b501c140efca97ab03df"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor param <a class="el" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. ">Entity</a> owner of the component  <a href="#aa1a17eea9e53b501c140efca97ab03df">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa1a17eea9e53b501c140efca97ab03df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab366f1e06a18a8a118064db7a460529c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_event_handler_component.html#ab366f1e06a18a8a118064db7a460529c">~EventHandlerComponent</a> ()</td></tr>
 <tr class="memdesc:ab366f1e06a18a8a118064db7a460529c"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#ab366f1e06a18a8a118064db7a460529c">Plus de détails...</a><br /></td></tr>
@@ -155,6 +155,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
 <tr class="separator:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a50b469b9fa9f672314889ca1263572ef">getOwner</a> () const </td></tr>
+<tr class="memdesc:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">getOwner  <a href="#a50b469b9fa9f672314889ca1263572ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -178,7 +179,7 @@ Membres hérités additionnels</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>default ctor param <a class="el" href="class_entity.html">Entity</a> owner of the component </p>
+<p>default ctor param <a class="el" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. ">Entity</a> owner of the component </p>
 
 </div>
 </div>

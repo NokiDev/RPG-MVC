@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['view',['view',['../class_i_controller.html#a252a69d9ed09384636d0c383e7eb4a66',1,'IController']]]
+  ['rayon',['rayon',['../struct_circle.html#a071d166f8d58ab6f055cdbbf494b33ce',1,'Circle']]],
+  ['rotation',['rotation',['../class_transform.html#a617cf7462e6354d7a6e73e2c8f99c20c',1,'Transform']]]
 ];

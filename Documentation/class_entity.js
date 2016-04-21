@@ -17,10 +17,10 @@ var class_entity =
     [ "removeScript", "class_entity.html#a5b00caa7e7b8a2c4b890104cbf65208d", null ],
     [ "update", "class_entity.html#a3ab5d04fbdd9a7896a98cb2b1a8d5352", null ],
     [ "boss", "class_entity.html#a7c0132a057b738fa7462bf0405648625", null ],
-    [ "components", "class_entity.html#ae7661868b3679cc4c71e1507125df379", null ],
+    [ "components", "class_entity.html#a29c5fe4c865b73e356d0fc551abf78b0", null ],
     [ "id", "class_entity.html#a14d838e5fd854a14d3ae443c5108282c", null ],
     [ "layer", "class_entity.html#ac0016bd0e2acdc4dcde4267e2908aba8", null ],
     [ "name", "class_entity.html#a931b21fbdebb1a5963b4bcab5df128f5", null ],
-    [ "scripts", "class_entity.html#a33d86e74a2c18f6716f37afc3905a92c", null ],
+    [ "scripts", "class_entity.html#ac0f88819daaa70de6c6e977e9e0509da", null ],
     [ "size", "class_entity.html#aa9aed563f069c5d28992fc91c282a063", null ]
 ];

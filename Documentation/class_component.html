@@ -127,7 +127,7 @@ Graphe d'héritage de Component:</div>
 <area shape="rect" id="node2" href="class_box_collider_component.html" title="Component, which handle collisions stuff. " alt="" coords="5,160,188,428"/>
 <area shape="rect" id="node3" href="class_event_handler_component.html" title="{EventHandlerComponent\n||+ EventHandlerComponent()\l+ ~EventHandlerComponent()\l+ handleEvents()\l+ update()\l}" alt="" coords="213,233,405,355"/>
 <area shape="rect" id="node5" href="class_physics.html" title="Physics Component , allow entity to do physics stuff (actually only velocity is handled) ..." alt="" coords="429,211,545,377"/>
-<area shape="rect" id="node6" href="class_transform.html" title="{Transform\n|+ position\l+ z\l+ direction\l+ rotation\l+ scale\l|+ Transform()\l+ ~Transform()\l+ update()\l+ move()\l}" alt="" coords="570,204,677,384"/>
+<area shape="rect" id="node6" href="class_transform.html" title="Component used for positioning entity in the window. " alt="" coords="570,204,677,384"/>
 <area shape="rect" id="node4" href="class_player_events_handler.html" title="Handles Event for the Player, events are Keyboard, mouse, window event etc... " alt="" coords="223,476,394,597"/>
 </map>
 </div>
@@ -136,8 +136,8 @@ Graphe de collaboration de Component:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_component__coll__graph.png" border="0" usemap="#_component_coll__map" alt="Collaboration graph"/></div>
 <map name="_component_coll__map" id="_component_coll__map">
-<area shape="rect" id="node2" href="class_entity.html" title="{Entity\n|# size\l# name\l# layer\l# id\l# components\l# scripts\l# nextId\l|+ ~Entity()\l+ getId()\l+ getScript()\l+ addScript()\l+ removeScript()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l+ getBoss()\l+ getSize()\l+ getLayer()\l+ getName()\l+ getComponentName()\l+ getComponentName()\l+ update()\l+ OnCollision()\l+ OnTriggerEnter()\l+ OnTriggerStay()\l+ OnTriggerExit()\l# Entity()\l}" alt="" coords="5,336,165,780"/>
-<area shape="rect" id="node3" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="86,5,237,273"/>
+<area shape="rect" id="node2" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="5,336,165,780"/>
+<area shape="rect" id="node3" href="class_i_controller.html" title="main Class for controllers " alt="" coords="86,5,237,273"/>
 <area shape="rect" id="node4" href="class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="189,453,347,663"/>
 <area shape="rect" id="node5" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="261,27,408,251"/>
 </map>
@@ -148,8 +148,10 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2e9aa4348314d981f05f67397ad2f872"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
 <tr class="separator:a2e9aa4348314d981f05f67397ad2f872"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abaa517d33a7659dd49238da8ec554837"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#abaa517d33a7659dd49238da8ec554837">update</a> (sf::Time deltaTime=sf::Time::Zero)=0</td></tr>
+<tr class="memdesc:abaa517d33a7659dd49238da8ec554837"><td class="mdescLeft">&#160;</td><td class="mdescRight">update component  <a href="#abaa517d33a7659dd49238da8ec554837">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abaa517d33a7659dd49238da8ec554837"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50b469b9fa9f672314889ca1263572ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a50b469b9fa9f672314889ca1263572ef">getOwner</a> () const </td></tr>
+<tr class="memdesc:a50b469b9fa9f672314889ca1263572ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">getOwner  <a href="#a50b469b9fa9f672314889ca1263572ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a50b469b9fa9f672314889ca1263572ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -205,6 +207,9 @@ Attributs protégés</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>getOwner </p>
+<dl class="section return"><dt>Renvoie</dt><dd><a class="el" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. ">Entity</a> &amp; owner </dd></dl>
+
 </div>
 </div>
 <a class="anchor" id="abaa517d33a7659dd49238da8ec554837"></a>
@@ -228,6 +233,14 @@ Attributs protégés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>update component </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime timeBetween two frames </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implémenté dans <a class="el" href="class_event_handler_component.html#acccea1d5445dc1adb4cfa663682a3914">EventHandlerComponent</a>, <a class="el" href="class_player_events_handler.html#a1dbf047a309d0e647c35d3e8a58920e2">PlayerEventsHandler</a>, <a class="el" href="class_transform.html#aa629a22de914ae45843c8e56c0d9cb7d">Transform</a>, <a class="el" href="class_box_collider_component.html#ab8679d58e3888db43fd614cdbfc08e0c">BoxColliderComponent</a>, et <a class="el" href="class_physics.html#aa3c2c2a8c5da4c9e9d44b571a4e22fc8">Physics</a>.</p>
 

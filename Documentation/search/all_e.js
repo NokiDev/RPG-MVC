@@ -1,15 +1,9 @@
 var searchData=
 [
-  ['readme',['README',['../md_RPG-MVC_README.html',1,'']]],
-  ['rayon',['rayon',['../struct_circle.html#a071d166f8d58ab6f055cdbbf494b33ce',1,'Circle']]],
-  ['readme_2emd',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]],
-  ['removecomponent',['removeComponent',['../class_entity.html#a590ddbda675cf9b188977d553e396a0f',1,'Entity']]],
-  ['removescript',['removeScript',['../class_entity.html#a5b00caa7e7b8a2c4b890104cbf65208d',1,'Entity']]],
-  ['render',['render',['../class_game_over_controller.html#a8c5600a411201adedc5f75c0f02fc275',1,'GameOverController::render()'],['../class_i_controller.html#abcce9215ff15e917706af9fa00f0f2ff',1,'IController::render()'],['../class_ingame_controller.html#aa56d139b4baf12bf21831a3bb85df2b1',1,'IngameController::render()'],['../class_main_menu_controller.html#a071c74785474d63cdfc97d68b672e93f',1,'MainMenuController::render()'],['../class_game_over_view.html#a1c1d8515ace6074d36b9ca9edb2721e7',1,'GameOverView::render()'],['../class_ingame_view.html#a95ef80c8d33c780e29748266c4ac9bbe',1,'IngameView::render()'],['../class_main_menu_view.html#ab926bb0b270ea48bcc11bedc4868d28b',1,'MainMenuView::render()'],['../class_view.html#aadd18a025bf4c867dc29f7c7b9cddb71',1,'View::render()']]],
-  ['ressources',['Ressources',['../class_ressources.html',1,'']]],
-  ['ressources_2ecpp',['Ressources.cpp',['../_ressources_8cpp.html',1,'']]],
-  ['ressources_2ehpp',['Ressources.hpp',['../_ressources_8hpp.html',1,'']]],
-  ['rightborder',['RIGHTBORDER',['../class_i_collision_helper.html#af4fe8b5c62fc97cc9cd4cb0eca215802afcb5bc32555fc62833d11f169cf7072d',1,'ICollisionHelper']]],
-  ['rotation',['rotation',['../class_transform.html#a617cf7462e6354d7a6e73e2c8f99c20c',1,'Transform']]],
-  ['run',['run',['../class_app.html#ae09dc71078b64c56c673b1ad1d25b5d1',1,'App::run()'],['../class_controllers_manager.html#abc134746b4ce5e9f5beaf0879a250704',1,'ControllersManager::run()']]]
+  ['onclose',['onClose',['../class_game_over_controller.html#a666fcb39a78907eee43e163453c77761',1,'GameOverController::onClose()'],['../class_i_controller.html#a479c11a677af034d95ba8f31c1edaa8c',1,'IController::onClose()'],['../class_ingame_controller.html#a24052481a9961fc929eb37539b42f0ad',1,'IngameController::onClose()'],['../class_main_menu_controller.html#a1dba8293b2d318df5be0a477157f5cdb',1,'MainMenuController::onClose()']]],
+  ['oncollision',['OnCollision',['../class_entity.html#ac03cb76b4be00f4f921fd81009d7859e',1,'Entity::OnCollision()'],['../class_box_collider_component.html#add5a35cfd449bd616502902b62f2e1fa',1,'BoxColliderComponent::onCollision(BoxColliderComponent *collider)'],['../class_box_collider_component.html#a6bcdcec67b9876977e43a09db5a8412e',1,'BoxColliderComponent::onCollision(sf::FloatRect box)'],['../class_script_component.html#a1b06af714354ca092383e4171e35dd48',1,'ScriptComponent::onCollision()']]],
+  ['ontriggerenter',['onTriggerEnter',['../class_box_collider_component.html#a8f6fb9a02be450babe496dcf9ad79a3c',1,'BoxColliderComponent::onTriggerEnter()'],['../class_script_component.html#ac7c02dc76039e6f502e20245c56e4739',1,'ScriptComponent::onTriggerEnter()'],['../class_laser_script.html#af1837f08e7125b59d3a31d774a30477f',1,'LaserScript::onTriggerEnter()'],['../class_entity.html#a3294d2b98a2debd96da4bf383b447182',1,'Entity::OnTriggerEnter()']]],
+  ['ontriggerexit',['OnTriggerExit',['../class_entity.html#a60f37f0095077dce346d1170eff8a23c',1,'Entity::OnTriggerExit()'],['../class_box_collider_component.html#a6abd335d01cfef5b2f06a1f487837454',1,'BoxColliderComponent::onTriggerExit()'],['../class_script_component.html#ab6f081c0c9546f3430ed6c6c891e8ede',1,'ScriptComponent::onTriggerExit()']]],
+  ['ontriggerstay',['OnTriggerStay',['../class_entity.html#adea5ce651b7c4383573de2b0f840186f',1,'Entity::OnTriggerStay()'],['../class_box_collider_component.html#ae46a73a9c55e70012f8a6bf4733c3043',1,'BoxColliderComponent::onTriggerStay()'],['../class_script_component.html#aae0119e7c6e9c8358d784c1ea73741c7',1,'ScriptComponent::onTriggerStay()']]],
+  ['owner',['owner',['../class_component.html#a41f8bd2aafa27f6a04a212bfb2555a83',1,'Component::owner()'],['../class_script_component.html#aade786b957e076649e6dbfdbb1178ffb',1,'ScriptComponent::owner()']]]
 ];

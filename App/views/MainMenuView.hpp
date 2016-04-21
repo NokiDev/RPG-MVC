@@ -6,6 +6,7 @@
 #define RPG_MVC_MAINMENUVIEW_HPP
 
 #include "View.hpp"
+#include "ViewTextComponent.hpp"
 
 class MainMenuView : public View {
 public:
@@ -21,6 +22,7 @@ private:
 
     sf::Sprite background;
     IController *controller;
+    ViewTextComponent* title;
 
 };
 

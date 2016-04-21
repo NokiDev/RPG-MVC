@@ -1,5 +1,5 @@
 <map id="Graphe hiérarchique des classes" name="Graphe hiérarchique des classes">
-<area shape="rect" id="node1" href="$class_entity.html" title="Entity" alt="" coords="5,81,61,108"/>
+<area shape="rect" id="node1" href="$class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="5,81,61,108"/>
 <area shape="rect" id="node2" href="$class_enemy.html" title="Enemy" alt="" coords="131,5,194,32"/>
 <area shape="rect" id="node3" href="$class_enemy_factory.html" title="EnemyFactory" alt="" coords="109,56,216,83"/>
 <area shape="rect" id="node4" href="$class_laser.html" title="Laser" alt="" coords="135,107,190,133"/>

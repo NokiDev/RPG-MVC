@@ -132,8 +132,8 @@ Graphe de collaboration de BoxColliderComponent:</div>
 <div class="center"><img src="class_box_collider_component__coll__graph.png" border="0" usemap="#_box_collider_component_coll__map" alt="Collaboration graph"/></div>
 <map name="_box_collider_component_coll__map" id="_box_collider_component_coll__map">
 <area shape="rect" id="node2" href="class_component.html" title="basic class for all components " alt="" coords="39,843,155,949"/>
-<area shape="rect" id="node3" href="class_entity.html" title="{Entity\n|# size\l# name\l# layer\l# id\l# components\l# scripts\l# nextId\l|+ ~Entity()\l+ getId()\l+ getScript()\l+ addScript()\l+ removeScript()\l+ getComponent()\l+ addComponent()\l+ removeComponent()\l+ getBoss()\l+ getSize()\l+ getLayer()\l+ getName()\l+ getComponentName()\l+ getComponentName()\l+ update()\l+ OnCollision()\l+ OnTriggerEnter()\l+ OnTriggerStay()\l+ OnTriggerExit()\l# Entity()\l}" alt="" coords="17,336,177,780"/>
-<area shape="rect" id="node4" href="class_i_controller.html" title="{IController\n||+ ~IController()\l+ askForEvents()\l+ askForRender()\l+ handleEvents()\l+ isKeyPressed()\l+ update()\l+ render()\l+ onClose()\l+ newSpriteRenderer()\l+ delSpriteRenderer()\l+ newTextRenderer()\l+ instantiate()\l+ destroy()\l+ getView()\l}" alt="" coords="97,5,248,273"/>
+<area shape="rect" id="node3" href="class_entity.html" title="Base Class for all entites it&#39;s a container of components and scripts. " alt="" coords="17,336,177,780"/>
+<area shape="rect" id="node4" href="class_i_controller.html" title="main Class for controllers " alt="" coords="97,5,248,273"/>
 <area shape="rect" id="node5" href="class_view.html" title="{View\n|# components\l|+ View()\l+ ~View()\l+ askForEvent()\l+ isKeyPressed()\l+ sendEvent()\l+ addViewComponent()\l+ delViewComponent()\l+ render()\l+ draw()\l+ getSize()\l}" alt="" coords="201,453,358,663"/>
 <area shape="rect" id="node6" href="class_window_manager.html" title="{WindowManager\n||+ WindowManager()\l+ ~WindowManager()\l+ createWindow()\l+ isKeyPressed()\l+ handleEvent()\l+ display()\l+ clear()\l+ close()\l+ Window()\l+ getWindowSize()\l+ get()\l}" alt="" coords="273,27,419,251"/>
 </map>
@@ -142,20 +142,28 @@ Graphe de collaboration de BoxColliderComponent:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:ae9b30e6364da86a29b5f33dac53336ad"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#ae9b30e6364da86a29b5f33dac53336ad">BoxColliderComponent</a> (<a class="el" href="class_entity.html">Entity</a> *<a class="el" href="class_component.html#a41f8bd2aafa27f6a04a212bfb2555a83">owner</a>, sf::Vector2u size, bool trigger=false, sf::Vector2f offset=sf::Vector2f(0.0f, 0.0f))</td></tr>
+<tr class="memdesc:ae9b30e6364da86a29b5f33dac53336ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">default ctor  <a href="#ae9b30e6364da86a29b5f33dac53336ad">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae9b30e6364da86a29b5f33dac53336ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f2fbb0d0ffe8c935986d4e330bd78a5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#a5f2fbb0d0ffe8c935986d4e330bd78a5">~BoxColliderComponent</a> ()</td></tr>
+<tr class="memdesc:a5f2fbb0d0ffe8c935986d4e330bd78a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">dtor  <a href="#a5f2fbb0d0ffe8c935986d4e330bd78a5">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5f2fbb0d0ffe8c935986d4e330bd78a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8679d58e3888db43fd614cdbfc08e0c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#ab8679d58e3888db43fd614cdbfc08e0c">update</a> (sf::Time deltaTime=sf::Time::Zero)</td></tr>
+<tr class="memdesc:ab8679d58e3888db43fd614cdbfc08e0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">update component each frame  <a href="#ab8679d58e3888db43fd614cdbfc08e0c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ab8679d58e3888db43fd614cdbfc08e0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add5a35cfd449bd616502902b62f2e1fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#add5a35cfd449bd616502902b62f2e1fa">onCollision</a> (<a class="el" href="class_box_collider_component.html">BoxColliderComponent</a> *collider)</td></tr>
+<tr class="memdesc:add5a35cfd449bd616502902b62f2e1fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">onCollision enter function called when two colliders box collides  <a href="#add5a35cfd449bd616502902b62f2e1fa">Plus de détails...</a><br /></td></tr>
 <tr class="separator:add5a35cfd449bd616502902b62f2e1fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bcdcec67b9876977e43a09db5a8412e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#a6bcdcec67b9876977e43a09db5a8412e">onCollision</a> (sf::FloatRect box)</td></tr>
+<tr class="memdesc:a6bcdcec67b9876977e43a09db5a8412e"><td class="mdescLeft">&#160;</td><td class="mdescRight">onCollision enter called when collide with window  <a href="#a6bcdcec67b9876977e43a09db5a8412e">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6bcdcec67b9876977e43a09db5a8412e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f6fb9a02be450babe496dcf9ad79a3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#a8f6fb9a02be450babe496dcf9ad79a3c">onTriggerEnter</a> (<a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collision)</td></tr>
+<tr class="memdesc:a8f6fb9a02be450babe496dcf9ad79a3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">onTrigger enter function called when a trigger Collider enter in another BoxCollider  <a href="#a8f6fb9a02be450babe496dcf9ad79a3c">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8f6fb9a02be450babe496dcf9ad79a3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae46a73a9c55e70012f8a6bf4733c3043"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#ae46a73a9c55e70012f8a6bf4733c3043">onTriggerStay</a> (<a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collision)</td></tr>
+<tr class="memdesc:ae46a73a9c55e70012f8a6bf4733c3043"><td class="mdescLeft">&#160;</td><td class="mdescRight">onTrigger stay function called when a trigger Collider stay in (mean it's already entered) another BoxCollider  <a href="#ae46a73a9c55e70012f8a6bf4733c3043">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae46a73a9c55e70012f8a6bf4733c3043"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6abd335d01cfef5b2f06a1f487837454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#a6abd335d01cfef5b2f06a1f487837454">onTriggerExit</a> (<a class="el" href="class_trigger_collision.html">TriggerCollision</a> *collision)</td></tr>
+<tr class="memdesc:a6abd335d01cfef5b2f06a1f487837454"><td class="mdescLeft">&#160;</td><td class="mdescRight">onTrigger exit function called when a trigger Collider exit box of another BoxCollider  <a href="#a6abd335d01cfef5b2f06a1f487837454">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a6abd335d01cfef5b2f06a1f487837454"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb3d1979078dc8159a7fa7d6fac33c3d"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_box_collider_component.html#adb3d1979078dc8159a7fa7d6fac33c3d">getNextBox</a> () const </td></tr>
 <tr class="separator:adb3d1979078dc8159a7fa7d6fac33c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -173,6 +181,7 @@ Fonctions membres publiques</h2></td></tr>
 <tr class="memitem:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a2e9aa4348314d981f05f67397ad2f872">~Component</a> ()</td></tr>
 <tr class="separator:a2e9aa4348314d981f05f67397ad2f872 inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_entity.html">Entity</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_component.html#a50b469b9fa9f672314889ca1263572ef">getOwner</a> () const </td></tr>
+<tr class="memdesc:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">getOwner  <a href="#a50b469b9fa9f672314889ca1263572ef">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a50b469b9fa9f672314889ca1263572ef inherit pub_methods_class_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -220,6 +229,17 @@ Membres hérités additionnels</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>default ctor </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Entity*</td><td>owner of the component </td></tr>
+    <tr><td class="paramname">sf::Vector2u</td><td>size of the boxCollider </td></tr>
+    <tr><td class="paramname">bool</td><td>indicates if the box is a trigger or not default set to false </td></tr>
+    <tr><td class="paramname">sf::Vector2f</td><td>offset default set to (0,0) </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a5f2fbb0d0ffe8c935986d4e330bd78a5"></a>
@@ -234,6 +254,8 @@ Membres hérités additionnels</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>dtor </p>
 
 </div>
 </div>
@@ -342,6 +364,14 @@ Membres hérités additionnels</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>onCollision enter function called when two colliders box collides </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">BoxCollider</td><td>* collider which collide with this </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6bcdcec67b9876977e43a09db5a8412e"></a>
@@ -357,6 +387,14 @@ Membres hérités additionnels</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>onCollision enter called when collide with window </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::FloatRect</td><td>winBox </td></tr>
+  </table>
+  </dd>
+</dl>
 <p>OnCollision with Window for example </p>
 
 </div>
@@ -375,6 +413,14 @@ Membres hérités additionnels</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>onTrigger enter function called when a trigger Collider enter in another BoxCollider </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_trigger_collision.html" title="collision object for triggerColliders ">TriggerCollision</a></td><td>* collision object </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="a6abd335d01cfef5b2f06a1f487837454"></a>
@@ -391,6 +437,14 @@ Membres hérités additionnels</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>onTrigger exit function called when a trigger Collider exit box of another BoxCollider </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_trigger_collision.html" title="collision object for triggerColliders ">TriggerCollision</a></td><td>* collision object </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a class="anchor" id="ae46a73a9c55e70012f8a6bf4733c3043"></a>
@@ -406,6 +460,14 @@ Membres hérités additionnels</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>onTrigger stay function called when a trigger Collider stay in (mean it's already entered) another BoxCollider </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname"><a class="el" href="class_trigger_collision.html" title="collision object for triggerColliders ">TriggerCollision</a></td><td>* collision object </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -430,6 +492,14 @@ Membres hérités additionnels</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>update component each frame </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sf::Time</td><td>deltaTime default set to Zero </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implémente <a class="el" href="class_component.html#abaa517d33a7659dd49238da8ec554837">Component</a>.</p>
 
