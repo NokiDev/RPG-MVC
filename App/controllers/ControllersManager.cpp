@@ -2,17 +2,20 @@
 // Created by Noki, Timothé Van Deputte on 22/02/2016.
 //
 
+
 #include "ControllersManager.hpp"
+#include "App.hpp"
+#include "IController.hpp"
 #include "MainMenuController.hpp"
 #include "IngameController.hpp"
-#include <App/App.hpp>
 #include "WindowManager.hpp"
 
-ControllersManager::ControllersManager(App* app) {
+
+ControllersManager::ControllersManager(App *app) {
     this->app = app;
     nextController = nullptr;
     windowManager = new WindowManager(this);
-    windowManager->createWindow(sf::VideoMode(720,480), "MYGAME", sf::Style::Titlebar| sf::Style::Close);
+    windowManager->createWindow(sf::VideoMode(720, 480), "MYGAME", sf::Style::Titlebar | sf::Style::Close);
     currentMainController = new MainMenuController();
 }
 
@@ -30,8 +33,7 @@ void ControllersManager::setCurrentMainController(IController *newController) {
 
 void ControllersManager::run() {
 
-    if(nextController != nullptr)
-    {
+    if (nextController != nullptr) {
         currentMainController->onClose();
         delete currentMainController;
         currentMainController = nextController;

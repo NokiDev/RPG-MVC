@@ -14,7 +14,7 @@ ViewSpriteComponent::~ViewSpriteComponent() {
     View::currentView->delViewComponent(this);
 }
 
-void ViewSpriteComponent::draw(View& view) {
+void ViewSpriteComponent::draw(View &view) {
     view.draw(sprite);
 }
 

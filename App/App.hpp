@@ -5,9 +5,9 @@
 #ifndef RPG_MVC_APP_HPP
 #define RPG_MVC_APP_HPP
 
-
-#include <App/controllers/ControllersManager.hpp>
-#include "IController.hpp"
+#include <SFML/System/Time.hpp>
+#include <SFML/System/Clock.hpp>
+#include "ControllersManager.hpp"
 
 /**
  * @brief Main class of the program, start controller Manager

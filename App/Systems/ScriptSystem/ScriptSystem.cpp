@@ -4,15 +4,14 @@
 
 #include "ScriptSystem.hpp"
 
-ScriptSystem* ScriptSystem::scriptSystem;
+ScriptSystem *ScriptSystem::scriptSystem;
 
 ScriptSystem::ScriptSystem() {
-    if(scriptSystem == nullptr){
+    if (scriptSystem == nullptr) {
         scriptSystem = this;
     }
-    else
-    {
-        std::cerr<<"WARNING SINGLETON INSTANCE ALREADY EXIST FIX THIS! "<<std::endl;
+    else {
+        std::cerr << "WARNING SINGLETON INSTANCE ALREADY EXIST FIX THIS! " << std::endl;
     }
 }
 
@@ -21,13 +20,13 @@ ScriptSystem::~ScriptSystem() {
 }
 
 void ScriptSystem::update(sf::Time deltaTime) {
-    for(auto script : scripts){
+    for (auto script : scripts) {
         script->update(deltaTime);
     }
 }
 
 void ScriptSystem::physicsUpdate() {
-    for(auto script : scripts){
+    for (auto script : scripts) {
 
         script->physicsUpdate();
     }

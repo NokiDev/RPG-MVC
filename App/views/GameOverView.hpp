@@ -8,11 +8,15 @@
 #include "View.hpp"
 
 class IController;
-class GameOverView : public View{
+
+class GameOverView : public View {
 public:
-    GameOverView(IController* controller);
+    GameOverView(IController *controller);
+
     ~GameOverView();
+
     virtual void render();
+
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 
 private:

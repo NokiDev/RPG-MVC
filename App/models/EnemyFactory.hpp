@@ -7,18 +7,11 @@
 
 #include "Entity.hpp"
 
-//template<class T>
-class EnemyFactory : public Entity{
+class EnemyFactory : public Entity {
 public :
-    EnemyFactory(IController * boss, float delayForFirstLaunch, float spawnTime);
+    EnemyFactory(IController *boss, float delayForFirstLaunch, float spawnTime);
+
     ~EnemyFactory();
-
-
-
-
-
-private:
-
 };
 
 

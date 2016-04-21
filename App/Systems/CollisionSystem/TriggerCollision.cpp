@@ -4,12 +4,12 @@
 
 #include "TriggerCollision.hpp"
 #include "BoxColliderComponent.hpp"
-#include <iostream>
 
-TriggerCollision::TriggerCollision(BoxColliderComponent *trigger, BoxColliderComponent *collider) : trigger(trigger), collider(collider){
+TriggerCollision::TriggerCollision(BoxColliderComponent *trigger, BoxColliderComponent *collider) : trigger(trigger),
+                                                                                                    collider(collider) {
 }
 
-TriggerCollision::~TriggerCollision(){
+TriggerCollision::~TriggerCollision() {
 
 }
 

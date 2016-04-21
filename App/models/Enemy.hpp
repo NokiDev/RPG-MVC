@@ -9,16 +9,18 @@
 #include "Entity.hpp"
 
 class ViewSpriteComponent;
-class Enemy: public Entity{
+
+class Enemy : public Entity {
 
 public :
-    Enemy(IController* boss);
+    Enemy(IController *boss);
+
     ~Enemy();
 
     virtual void update(sf::Time deltaTime);
 
 private :
-    ViewSpriteComponent * spriteRenderer;
+    ViewSpriteComponent *spriteRenderer;
 
 };
 

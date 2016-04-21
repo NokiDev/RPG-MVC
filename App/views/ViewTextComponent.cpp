@@ -6,7 +6,7 @@
 
 ViewTextComponent::ViewTextComponent(std::string text) {
     font.loadFromFile("Ressources/fonts/space age.ttf");
-    this->text = sf::Text(text,font);
+    this->text = sf::Text(text, font);
 }
 
 void ViewTextComponent::updatePosition(sf::Vector2f position) {

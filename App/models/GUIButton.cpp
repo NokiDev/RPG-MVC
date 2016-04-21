@@ -10,26 +10,27 @@
 #include "IController.hpp"
 
 
-GUIButton::GUIButton(IController* boss, sf::Vector2f pos, std::string text, GUIButton::StateButton state) {
+GUIButton::GUIButton(IController *boss, sf::Vector2f pos, std::string text, GUIButton::StateButton state) {
     GUIButton(boss, pos, sf::Vector2u(100, 50), "GuiMenu.png", text, state);
 }
 
-GUIButton::GUIButton(IController* boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, GUIButton::StateButton state) :
+GUIButton::GUIButton(IController *boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text,
+                     GUIButton::StateButton state) :
         boss(boss),
         position(pos),
         size(size),
         texture(texture),
         textStr(text),
-        state(state){
+        state(state) {
 
     //SpriteRenderer reference, allow us to keep dependency
     viewRenderer = boss->newSpriteRenderer(texture);
-    viewRenderer->updateRect(sf::IntRect(0,0, size.x, size.y));
+    viewRenderer->updateRect(sf::IntRect(0, 0, size.x, size.y));
     viewRenderer->updatePosition(pos);
 
     //TextRenderer reference, allow us to keep dependency
     textRenderer = boss->newTextRenderer(text);
-    textRenderer->updatePosition(sf::Vector2f(pos.x + size.x/2 - 50, pos.y));
+    textRenderer->updatePosition(sf::Vector2f(pos.x + size.x / 2 - 50, pos.y));
 }
 
 GUIButton::~GUIButton() {
@@ -57,7 +58,7 @@ void GUIButton::setText(std::string text) {
 }
 
 void GUIButton::setState(GUIButton::StateButton state) {
-    switch(state){
+    switch (state) {
         case SELECTED:
             viewRenderer->updateRect(sf::IntRect(0, 40, size.x, size.y));
             break;

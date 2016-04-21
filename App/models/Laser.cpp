@@ -9,7 +9,7 @@
 #include <App/Components/Transform.hpp>
 #include "Laser.hpp"
 
-Laser::Laser(IController *boss, std::string attackLayer) : Entity(boss){
+Laser::Laser(IController *boss, std::string attackLayer) : Entity(boss) {
     size = sf::Vector2u(32, 5);
     name = "Laser";
     this->boss = boss;
@@ -20,7 +20,7 @@ Laser::Laser(IController *boss, std::string attackLayer) : Entity(boss){
     addComponent(new Physics(this));
 
     ///Need To order Scripts
-    addScript(new LaserScript(this,attackLayer));
+    addScript(new LaserScript(this, attackLayer));
     addScript(new LiveTimerScript(this, 5.5f));
 }
 
@@ -35,6 +35,6 @@ Laser::~Laser() {
 }
 
 void Laser::update(sf::Time deltaTime) {
-    Transform * t = getComponent<Transform>();
+    Transform *t = getComponent<Transform>();
     spriteRenderer->updatePosition(t->position);
 }

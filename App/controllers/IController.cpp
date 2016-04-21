@@ -2,10 +2,10 @@
 // Created by bluedragonfly on 3/29/16.
 //
 
-#include <App/App.hpp>
-#include <App/views/ViewTextComponent.hpp>
-#include <App/views/ViewSpriteComponent.hpp>
+#include "App.hpp"
 #include "IController.hpp"
+#include "ViewTextComponent.hpp"
+#include "ViewSpriteComponent.hpp"
 #include "View.hpp"
 
 

@@ -12,17 +12,21 @@ MainMenuController::MainMenuController() {
     view = new MainMenuView(this);
 
 
-    buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2 - 50), sf::Vector2u(200, 40), "GuiMenu.png", "Play"));
-    buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2), sf::Vector2u(200, 40), "GuiMenu.png", "Options"));
-    buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x/2 - 100, view->getSize().y/2 + 50), sf::Vector2u(200, 40), "GuiMenu.png", "Quit"));
+    buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x / 2 - 100, view->getSize().y / 2 - 50),
+                                    sf::Vector2u(200, 40), "GuiMenu.png", "Play"));
+    buttons.push_back(
+            new GUIButton(this, sf::Vector2f(view->getSize().x / 2 - 100, view->getSize().y / 2), sf::Vector2u(200, 40),
+                          "GuiMenu.png", "Options"));
+    buttons.push_back(new GUIButton(this, sf::Vector2f(view->getSize().x / 2 - 100, view->getSize().y / 2 + 50),
+                                    sf::Vector2u(200, 40), "GuiMenu.png", "Quit"));
     selectedButton = buttons.begin();
-    GUIButton* button = *selectedButton;
+    GUIButton *button = *selectedButton;
     button->setState(GUIButton::StateButton::SELECTED);
 }
 
 
 MainMenuController::~MainMenuController() {
-    for(auto button : buttons){
+    for (auto button : buttons) {
         delete button;
     }
     buttons.clear();
@@ -59,7 +63,7 @@ void MainMenuController::render() {
 void MainMenuController::goDown() {
     GUIButton *button = *selectedButton;
     button->setState(GUIButton::StateButton::NORMAL);
-    if (selectedButton == buttons.end()-1) {
+    if (selectedButton == buttons.end() - 1) {
         selectedButton = buttons.begin();
     }
     else {
@@ -73,7 +77,7 @@ void MainMenuController::goUp() {
     GUIButton *button = *selectedButton;
     button->setState(GUIButton::StateButton::NORMAL);
     if (selectedButton == buttons.begin()) {
-        selectedButton = buttons.end()-1; // Last value of a vector is the end of the array not a value
+        selectedButton = buttons.end() - 1; // Last value of a vector is the end of the array not a value
     }
     else {
         selectedButton--;
@@ -83,13 +87,13 @@ void MainMenuController::goUp() {
 }
 
 void MainMenuController::fireButton() {
-    GUIButton * button = *selectedButton;
+    GUIButton *button = *selectedButton;
     std::string text = button->getText();
     if (text == "Play") {
         ///Launch Game;
         App::getManager()->setCurrentMainController(new IngameController());
     }
-    else if(text == "Quit"){
+    else if (text == "Quit") {
         App::get()->close();
     }
 }

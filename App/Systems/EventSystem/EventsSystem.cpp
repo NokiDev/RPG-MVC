@@ -5,14 +5,14 @@
 #include "EventsSystem.hpp"
 #include <iostream>
 
-EventsSystem* EventsSystem::eventsSystem;
+EventsSystem *EventsSystem::eventsSystem;
 
 EventsSystem::EventsSystem() {
-    if(eventsSystem == nullptr){
+    if (eventsSystem == nullptr) {
         eventsSystem = this;
     }
-    else{
-        std::cerr<<"WARNING Singleton - Constructor called Twice, Fix This !"<<std::endl;
+    else {
+        std::cerr << "WARNING Singleton - Constructor called Twice, Fix This !" << std::endl;
     }
 }
 
@@ -21,7 +21,7 @@ EventsSystem::~EventsSystem() {
 }
 
 void EventsSystem::handleEvents(sf::Event event) {
-    for(auto eventHandler : eventHandlers){
+    for (auto eventHandler : eventHandlers) {
         eventHandler->handleEvents(event);
     }
 }
@@ -35,7 +35,7 @@ void EventsSystem::delEventHandler(EventHandlerComponent *eventHandler) {
 }
 
 void EventsSystem::update(sf::Time deltaTime) {
-    for(auto eventHandler : eventHandlers){
+    for (auto eventHandler : eventHandlers) {
         eventHandler->update(deltaTime);
     }
 }

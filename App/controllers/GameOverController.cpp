@@ -16,8 +16,8 @@ GameOverController::~GameOverController() {
 }
 
 void GameOverController::handleEvents(sf::Event &event) {
-    if(event.type == sf::Event::KeyPressed){
-        if(event.key.code == sf::Keyboard::Return){
+    if (event.type == sf::Event::KeyPressed) {
+        if (event.key.code == sf::Keyboard::Return) {
             App::get()->getManager()->setCurrentMainController(new MainMenuController());
         }
     }

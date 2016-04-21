@@ -7,9 +7,10 @@
 
 #include "IController.hpp"
 
-class GameOverController : public IController{
+class GameOverController : public IController {
 public :
     GameOverController();
+
     ~GameOverController();
 
     virtual void handleEvents(sf::Event &event);

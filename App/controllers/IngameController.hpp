@@ -14,8 +14,11 @@
 #include "IController.hpp"
 
 class ScriptSystem;
+
 class CollisionSystem;
+
 class Map;
+
 class IngameController : public IController {
 public:
 
@@ -25,8 +28,9 @@ public:
 
     virtual void handleEvents(sf::Event &event);
 
-    virtual Entity* instantiate(Entity* entity, sf::Vector2f position, sf::Vector2i direction);
-    virtual void destroy(Entity*entity);
+    virtual Entity *instantiate(Entity *entity, sf::Vector2f position, sf::Vector2i direction);
+
+    virtual void destroy(Entity *entity);
 
     virtual void update(sf::Time deltaTime = sf::Time::Zero);
 
@@ -36,22 +40,24 @@ public:
 
     virtual void onClose();
 
-    IController* getSubController();
+    IController *getSubController();
 
-    Player* getPlayer();
+    Player *getPlayer();
+
     float getTime();
 
 private:
     IController *subController;
 
-    Player* thePlayer;
-    std::set<Entity*> entities;
-    std::set<Entity*> entitiesToDestroy;
-    CollisionSystem* collSys;
-    EventsSystem* eventSys;
-    ScriptSystem* scriptSys;
-    PhysicsSystem* physicsSys;
+    Player *thePlayer;
+    std::set<Entity *> entities;
+    std::set<Entity *> entitiesToDestroy;
+    CollisionSystem *collSys;
+    EventsSystem *eventSys;
+    ScriptSystem *scriptSys;
+    PhysicsSystem *physicsSys;
     sf::Time time;
+
     bool subControllerExist() const;
 
     bool viewExist() const;

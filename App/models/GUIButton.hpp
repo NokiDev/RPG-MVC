@@ -10,14 +10,22 @@
 #include <string>
 
 class IController;
+
 class ViewSpriteComponent;
+
 class ViewTextComponent;
+
 class GUIButton {
 public:
-    enum StateButton {DISABLED =-1, NORMAL , HOVER, SELECTED, CLICK};
+    enum StateButton {
+        DISABLED = -1, NORMAL, HOVER, SELECTED, CLICK
+    };
 
-    GUIButton(IController * boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text, StateButton state = StateButton::NORMAL);
-    GUIButton(IController* boss, sf::Vector2f pos,std::string text, StateButton state = StateButton::NORMAL);
+    GUIButton(IController *boss, sf::Vector2f pos, sf::Vector2u size, std::string texture, std::string text,
+              StateButton state = StateButton::NORMAL);
+
+    GUIButton(IController *boss, sf::Vector2f pos, std::string text, StateButton state = StateButton::NORMAL);
+
     ~GUIButton();
 
     void update();
@@ -27,17 +35,22 @@ public:
     void setSize(sf::Vector2u size);
 
     void setText(std::string text);
+
     void setState(StateButton state);
 
     std::string getTexture();
+
     sf::Vector2f getPosition();
+
     sf::Vector2u getSize();
+
     std::string getText();
+
     StateButton getState();
 
 private:
 
-    IController * boss;
+    IController *boss;
 
     sf::Vector2f position;
     sf::Vector2u size;
@@ -46,8 +59,8 @@ private:
     std::string texture;
 
 
-    ViewSpriteComponent* viewRenderer;
-    ViewTextComponent * textRenderer;
+    ViewSpriteComponent *viewRenderer;
+    ViewTextComponent *textRenderer;
 };
 
 

@@ -5,30 +5,40 @@
 #ifndef RPG_MVC_MAINCONTROLLER_HPP
 #define RPG_MVC_MAINCONTROLLER_HPP
 
-
-
-#include "IController.hpp"
-
 class App;
+
 class WindowManager;
-class ControllersManager{
+
+class IController;
+/**
+ * @brief Manager of all controllers determines which controller is active
+ **/
+class ControllersManager {
 public:
-    ControllersManager(App* app);
-
+    /**
+     * @brief default ctor
+     * @param App reference to app
+     **/
+    ControllersManager(App *app);
+    /**
+     * @brief dtor
+     **/
     ~ControllersManager();
-
+    /**
+     * @brief run the manager;
+     **/
     void run();
 
     virtual void setCurrentMainController(IController *newSubController);
 
-    IController* getCurrentMainController();
+    IController *getCurrentMainController();
 
 private:
 
-    App* app;
-    WindowManager * windowManager;
+    App *app;
+    WindowManager *windowManager;
     IController *currentMainController;
-    IController * nextController;
+    IController *nextController;
 };
 
 

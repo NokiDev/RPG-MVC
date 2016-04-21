@@ -12,6 +12,7 @@
 class MainMenuController : public IController {
 public:
     MainMenuController();
+
     ~MainMenuController();
 
 
@@ -36,8 +37,8 @@ public:
 private:
 
 
-    std::vector<GUIButton*> buttons;
-    std::vector<GUIButton*>::iterator selectedButton;
+    std::vector<GUIButton *> buttons;
+    std::vector<GUIButton *>::iterator selectedButton;
 };
 
 

@@ -12,18 +12,22 @@
 #include "Entity.hpp"
 
 class View;
+
 class EventsHandler;
+
 class RenderComponent;
+
 class Player : public Entity {
 public :
-    Player(IController* boss);
+    Player(IController *boss);
+
     ~Player();
 
     virtual void update(sf::Time deltaTime);
 
 protected:
-    ViewSpriteComponent* spriteRenderer;
-    EventHandlerComponent * eventHandler;
+    ViewSpriteComponent *spriteRenderer;
+    EventHandlerComponent *eventHandler;
 };
 
 

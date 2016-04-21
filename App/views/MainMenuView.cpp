@@ -8,7 +8,7 @@
 #include "WindowManager.hpp"
 #include "IViewComponent.hpp"
 
-MainMenuView::MainMenuView(IController * controller) : View(controller){
+MainMenuView::MainMenuView(IController *controller) : View(controller) {
     this->controller = controller;
     manager = WindowManager::get();
     background.setTexture(Ressources::Load("mainBackground.jpg"));
@@ -18,11 +18,11 @@ MainMenuView::~MainMenuView() {
     components.clear();
 }
 
-void MainMenuView::render(){
-    manager->Window().setView(sf::View(sf::Vector2f(360,240), sf::Vector2f(720,480)));
+void MainMenuView::render() {
+    manager->Window().setView(sf::View(sf::Vector2f(360, 240), sf::Vector2f(720, 480)));
     draw(background);
     manager->Window().setView(manager->Window().getDefaultView());
-    for(auto component : components){
+    for (auto component : components) {
         component->draw(*this);
     }
 }

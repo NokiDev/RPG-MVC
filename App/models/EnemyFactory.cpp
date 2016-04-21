@@ -5,7 +5,7 @@
 #include <App/Components/Scripts/FactoryScript.hpp>
 #include "EnemyFactory.hpp"
 
-EnemyFactory::EnemyFactory(IController *boss, float delayForFirstLaunch, float spawnTime) : Entity(boss){
+EnemyFactory::EnemyFactory(IController *boss, float delayForFirstLaunch, float spawnTime) : Entity(boss) {
 
     addScript(new FactoryScript(this, delayForFirstLaunch, spawnTime));
 }

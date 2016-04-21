@@ -23,7 +23,7 @@ IngameController::IngameController() {
     time.Zero;
 
     //La manière la plus dégeulasse de faire un spawner, mais pas le time !
-    instantiate(new EnemyFactory(this, 1.f, 2.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1,0));
+    instantiate(new EnemyFactory(this, 1.f, 2.f), sf::Vector2f(660.f, 70.f), sf::Vector2i(-1, 0));
 
 
     //entities.insert(new Enemy(this));
@@ -32,7 +32,7 @@ IngameController::IngameController() {
 }
 
 IngameController::~IngameController() {
-    for(auto entity : entities){
+    for (auto entity : entities) {
         delete entity;
     }
     entities.clear();
@@ -48,7 +48,7 @@ void IngameController::handleEvents(sf::Event &event) {
     IController::handleEvents(event);
     if (subControllerExist())
         subController->handleEvents(event);
-    else{
+    else {
         if (event.type == sf::Event::KeyPressed) {
             ///EVENT FOR BUTTONS :
             if (event.key.code == sf::Keyboard::Escape) {
@@ -60,7 +60,7 @@ void IngameController::handleEvents(sf::Event &event) {
 }
 
 void IngameController::update(sf::Time deltaTime) {
-    if(subControllerExist()){
+    if (subControllerExist()) {
         subController->update(deltaTime);
     }
     else { //Paused
@@ -89,9 +89,9 @@ void IngameController::update(sf::Time deltaTime) {
 }
 
 void IngameController::render() {
-    if(viewExist()){
+    if (viewExist()) {
         view->render();
-        if(subControllerExist()) {
+        if (subControllerExist()) {
             subController->render();
         }
     }
@@ -114,9 +114,9 @@ IController *IngameController::getSubController() {
     return subController;
 }
 
-Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf::Vector2i direction) {
+Entity *IngameController::instantiate(Entity *entity, sf::Vector2f position, sf::Vector2i direction) {
     entities.insert(entity);
-    Transform * t = entity->getComponent<Transform>();
+    Transform *t = entity->getComponent<Transform>();
     t->position = position;
     t->direction = direction;
 
@@ -124,7 +124,7 @@ Entity* IngameController::instantiate(Entity *entity, sf::Vector2f position, sf:
 }
 
 void IngameController::destroy(Entity *entity) {
-    if(entitiesToDestroy.find(entity) == entitiesToDestroy.end())///Test if the Entity is deleted Twice
+    if (entitiesToDestroy.find(entity) == entitiesToDestroy.end())///Test if the Entity is deleted Twice
         entitiesToDestroy.insert(entity);
 }
 

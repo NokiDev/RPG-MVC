@@ -8,13 +8,16 @@
 #include "IViewComponent.hpp"
 #include <SFML/Graphics/Text.hpp>
 
-class ViewTextComponent : public IViewComponent{
+class ViewTextComponent : public IViewComponent {
 public:
     ViewTextComponent(std::string text);
-    ~ViewTextComponent() {};
 
-    virtual void draw(View & view);
+    ~ViewTextComponent() { };
+
+    virtual void draw(View &view);
+
     void updatePosition(sf::Vector2f position);
+
     void updateText(std::string text);
 
 

@@ -12,24 +12,28 @@
 
 class IngameView : public View {
 public:
-    IngameView(IController* controller);
+    IngameView(IController *controller);
+
     ~IngameView();
+
     virtual void render();
+
     virtual void draw(const sf::Drawable &drawable, const sf::RenderStates &states = sf::RenderStates::Default);
 
-    template <typename T> std::string toString(const T& t) {
+    template<typename T>
+    std::string toString(const T &t) {
         std::ostringstream os;
-        os<<t;
+        os << t;
         return os.str();
     }
 
 
 private:
-    IController * controller;
-    Damageable * playerHealth;
+    IController *controller;
+    Damageable *playerHealth;
     sf::Sprite background;
-    ViewTextComponent * hp;
-    ViewTextComponent * time;
+    ViewTextComponent *hp;
+    ViewTextComponent *time;
 };
 
 

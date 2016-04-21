@@ -2,7 +2,6 @@
 // Created by Noki, Timothé Van Deputte on 12/02/2016.
 //
 
-#include <App/controllers/IngameController.hpp>
 #include "App.hpp"
 
 App *App::app;

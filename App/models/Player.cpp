@@ -15,12 +15,12 @@
 #include <App/Components/Physics.hpp>
 
 
-Player::Player(IController* boss) : Entity(boss){
+Player::Player(IController *boss) : Entity(boss) {
 
-    Transform * t = getComponent<Transform>();
-    t->direction = sf::Vector2i(1,0);
+    Transform *t = getComponent<Transform>();
+    t->direction = sf::Vector2i(1, 0);
     name = "Player";
-    size = sf::Vector2u(64,64);
+    size = sf::Vector2u(64, 64);
     addComponent(new BoxColliderComponent(this, size));///Allow to collide with things !
     addComponent(new Physics(this));///Allow to move
     //NeedToChangeThis to script
@@ -28,7 +28,7 @@ Player::Player(IController* boss) : Entity(boss){
 
     addComponent(new PlayerEventsHandler(this));
 
-    addScript(new Damageable(this, 50.f));
+    addScript(new Damageable(this, 20.f));
 
     layer = "Player";
 
@@ -50,6 +50,6 @@ Player::~Player() {
 }
 
 void Player::update(sf::Time deltaTime) {
-    Transform * t = getComponent<Transform>();
+    Transform *t = getComponent<Transform>();
     spriteRenderer->updatePosition(t->position);
 }

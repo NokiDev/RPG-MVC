@@ -7,8 +7,7 @@
 Ressources Ressources::ressourcesLoader;
 
 sf::Texture &Ressources::Load(std::string textureName) {
-    if(!ressourcesLoader.exist(textureName))
-    {
+    if (!ressourcesLoader.exist(textureName)) {
         ressourcesLoader.add(textureName);
     }
     return ressourcesLoader.get(textureName);
@@ -25,7 +24,7 @@ sf::Texture &Ressources::get(std::string index) {
 
 void Ressources::add(std::string index) {
     sf::Texture texture;
-    texture.loadFromFile("Ressources/sprites/"+ index);
+    texture.loadFromFile("Ressources/sprites/" + index);
     textures[index] = texture;
 }
 

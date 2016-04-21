@@ -10,13 +10,13 @@
 GameOverView::GameOverView(IController *controller) : View(controller) {
     this->controller = controller;
     manager = WindowManager::get();
-    ViewTextComponent* t = new ViewTextComponent("GAME OVER !");
-    t->updatePosition(sf::Vector2f(getSize().x/2 - 50,getSize().y/2 -70));
+    ViewTextComponent *t = new ViewTextComponent("GAME OVER !");
+    t->updatePosition(sf::Vector2f(getSize().x / 2 - 50, getSize().y / 2 - 70));
     addViewComponent(t);
     t = new ViewTextComponent("Press Enter ...");
-    t->updatePosition(sf::Vector2f(getSize().x/2 - 70,getSize().y/2 + 25));
+    t->updatePosition(sf::Vector2f(getSize().x / 2 - 70, getSize().y / 2 + 25));
     addViewComponent(t);
-    background.create(getSize().x, getSize().y, sf::Color(125,125,125,125));
+    background.create(getSize().x, getSize().y, sf::Color(125, 125, 125, 125));
     texture.loadFromImage(background);
     sprite.setTexture(texture);
 }
@@ -28,8 +28,7 @@ GameOverView::~GameOverView() {
 void GameOverView::render() {
 
     manager->Window().draw(sprite);
-    for(auto component : components)
-    {
+    for (auto component : components) {
         component->draw(*this);
     }
 }

@@ -10,14 +10,17 @@
 #include <App/Components/BoxColliderComponent.hpp>
 #include "Entity.hpp"
 
-class Laser : public Entity{
-    public :
-        Laser(IController*boss, std::string attackLayer);
-        ~Laser();
-        virtual void update(sf::Time deltaTime);
-    private:
-        IController* boss;
-        ViewSpriteComponent * spriteRenderer;
+class Laser : public Entity {
+public :
+    Laser(IController *boss, std::string attackLayer);
+
+    ~Laser();
+
+    virtual void update(sf::Time deltaTime);
+
+private:
+    IController *boss;
+    ViewSpriteComponent *spriteRenderer;
 };
 
 

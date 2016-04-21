@@ -7,18 +7,22 @@
 
 #include "IViewComponent.hpp"
 
-class ViewSpriteComponent : public IViewComponent{
+class ViewSpriteComponent : public IViewComponent {
 
 public :
     ViewSpriteComponent(std::string textureName);
+
     ~ViewSpriteComponent();
+
     virtual void update(sf::Time deltaTime);
-    virtual void draw(View & view);
+
+    virtual void draw(View &view);
+
     void updatePosition(sf::Vector2f position);
+
     void updateRect(sf::IntRect textRect);
+
     void updateColor(sf::Color color);
-
-
 
 
 protected:
