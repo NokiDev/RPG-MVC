@@ -8,8 +8,8 @@
 **Sujet : Créer un jeu de type Beats them all en C++**
 
 # Contributeurs :
-- Timothé
-- Léo
+- Timothé <NokiDev>
+- Léo <LeoAttn>
 
 ## But du jeu :
 Tuer tous les ennemis en leur tirant dessus et en esquivant leurs tirs pour ne pas mourir.
